@@ -1,0 +1,22 @@
+import {
+  html,
+  CSSResultGroup,
+  TemplateResult,
+} from 'lit-element';
+
+import { OscdComponent } from '@openscd/core';
+
+import styles from './<%= selector %>.styles.js';
+
+/**
+ * @tag <%= selector %>
+ */
+export class <%= className %> extends OscdComponent {
+
+  static styles: CSSResultGroup = styles;
+
+  render(): TemplateResult {
+    return html`<span><%= selector %> works!</span>`
+  }
+
+}

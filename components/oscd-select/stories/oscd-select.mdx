@@ -1,0 +1,22 @@
+import { Meta, Story, Canvas } from '@storybook/blocks';
+
+import { Markdown } from '@storybook/addon-docs';
+
+import * as OscdSelectStories from './oscd-select.stories';
+
+import Readme from '../../packages/oscd-select/README.md';
+import Changelog from '../../packages/oscd-select/CHANGELOG.md';
+
+<Meta title="MDX/oscd-select" of={OscdSelectStories} />
+
+# oscd-select
+
+<Markdown>{Readme}</Markdown>
+
+# Changelog
+
+<Markdown>{Changelog}</Markdown>
+
+<Canvas>
+  <Story of={OscdSelectStories.Regular} />
+</Canvas>

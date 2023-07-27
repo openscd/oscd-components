@@ -1,0 +1,22 @@
+{
+  "name": "@openscd/core",
+  "version": "0.0.1",
+  "description": "Core for Volturi Framework",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf .tsbuildinfo dist"
+  },
+  "dependencies": {
+    "lit": "^2.7.6"
+  },
+  "author": "OpenSCD",
+  "license": "ISC",
+  "devDependencies": {
+    "@open-wc/scoped-elements": "^2.2.0",
+    "tslib": "^2.6.0",
+    "typescript": "^5.1.6"
+  }
+}

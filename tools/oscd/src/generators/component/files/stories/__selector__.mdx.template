@@ -1,0 +1,22 @@
+import { Meta, Story, Canvas } from "@storybook/blocks";
+
+import { Markdown } from "@storybook/addon-docs";
+
+import * as <%= className %>Stories from './<%= selector %>.stories';
+
+import Readme from "../../packages/<%= name %>/README.md";
+import Changelog from "../../packages/<%= name %>/CHANGELOG.md";
+
+<Meta title="MDX/<%= selector %>" of={ <%= className %>Stories } />
+
+# <%= selector %>
+
+<Markdown>{Readme}</Markdown>
+
+# Changelog
+
+<Markdown>{Changelog}</Markdown>
+
+<Canvas>
+  <Story of={ <%= className %>Stories.Regular } />
+</Canvas>

@@ -1,0 +1,20 @@
+import { html, TemplateResult } from 'lit';
+
+export default {
+  title: '<%= name %>/<%= className %>',
+  component: '<%= selector %>',
+  argTypes: {},
+};
+
+interface Story<T> {
+  (args: T): TemplateResult;
+  args?: Partial<T>;
+  argTypes?: Record<string, unknown>;
+}
+
+interface ArgTypes {}
+
+const Template: Story<ArgTypes> = ({}: ArgTypes) =>
+  html`<<%= selector %>></<%= selector %>>`;
+
+export const Regular = Template.bind({});

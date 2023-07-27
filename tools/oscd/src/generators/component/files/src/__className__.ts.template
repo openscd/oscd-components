@@ -1,0 +1,4 @@
+import { <%= className %> } from './<%= selector %>.js';
+
+window.customElements.define('<%= selector %>', <%= className %>);
+export { <%= className %> };

@@ -1,4 +1,4 @@
-import { VtCheckbox } from '@volturi/vt-checkbox';
+import { OscdTextfield } from '../components/oscd-textfield/src/oscd-textfield';
 
 function defineCustomElement(
   name: string,
@@ -7,4 +7,4 @@ function defineCustomElement(
   customElements.get(name) || customElements.define(name, element);
 }
 
-defineCustomElement('vt-checkbox', VtCheckbox);
+defineCustomElement('oscd-textfield', OscdTextfield);

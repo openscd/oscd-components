@@ -30,10 +30,6 @@ jobs:
         with:
           node-version: 14
           registry-url: 'http://registry.npmjs.org'
-      
-      - name: Install Nx Linux (Workaround for M1)
-        if: ${{ steps.release.outputs.releases_created }}
-        run: npm i @nx/nx-linux-x64-gnu
          
       - name: Install Dependencies
         if: ${{ steps.release.outputs.releases_created }}

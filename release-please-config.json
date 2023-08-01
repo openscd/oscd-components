@@ -9,7 +9,7 @@
         "prerelease": false
       },
       "components/oscd-textfield": {
-        "changelog-path": "CHANGELOG.md",
+        "changelog-path": "components/oscd-textfield/CHANGELOG.md",
         "release-type": "node",
         "bump-minor-pre-major": false,
         "bump-patch-for-minor-pre-major": false,
@@ -18,5 +18,6 @@
       }
     },
     "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
-    "bootstrap-sha": "3578a631f9e6f04c95b556f33c10a8e205941b8e"
+    "bootstrap-sha": "3578a631f9e6f04c95b556f33c10a8e205941b8e",
+    "release-type": "node"
   }

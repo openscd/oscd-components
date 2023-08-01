@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.4](https://github.com/openscd/oscd-components/compare/oscd-textfield-v0.0.3...oscd-textfield-v0.0.4) (2023-08-01)
+
+
+### Bug Fixes
+
+* Added value in README.md example ([34ff2e2](https://github.com/openscd/oscd-components/commit/34ff2e288c3f88ca19eb351ba396a758663d3693))
+
 ## [0.0.3](https://github.com/openscd/oscd-components/compare/oscd-textfield-v0.0.2...oscd-textfield-v0.0.3) (2023-08-01)
 
 

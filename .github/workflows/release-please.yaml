@@ -35,7 +35,7 @@ jobs:
         if: ${{ steps.release.outputs.releases_created }}
         run: |
           npm i @nx/nx-linux-x64-gnu
-          npm ci
+          npm ci --workspaces
           npm run build:all
       
       - name: Publish to NPM

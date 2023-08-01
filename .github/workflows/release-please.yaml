@@ -34,7 +34,7 @@ jobs:
       - name: Build Packages
         if: ${{ steps.release.outputs.releases_created }}
         run: |
-          npm i @nrwl/nx-linux-x64-gnu
+          npm i @nx/nx-darwin-x64
           npm ci
           npm run build:all
       

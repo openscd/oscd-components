@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.13](https://github.com/openscd/oscd-components/compare/@openscd/oscd-textfield-v0.0.12...@openscd/oscd-textfield-v0.0.13) (2023-08-01)
+
+
+### 🐞 Bug Fixes
+
+* Added newline for release-please trigger ([0068a11](https://github.com/openscd/oscd-components/commit/0068a1177ae4095acf3dd8673c81255fa7a98044))
+
 ## [0.0.12](https://github.com/openscd/oscd-components/compare/@openscd/oscd-textfield-v0.0.11...@openscd/oscd-textfield-v0.0.12) (2023-08-01)
 
 

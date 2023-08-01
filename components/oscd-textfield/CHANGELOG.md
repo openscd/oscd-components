@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.10](https://github.com/openscd/oscd-components/compare/@openscd/oscd-textfield-v0.0.9...@openscd/oscd-textfield-v0.0.10) (2023-08-01)
+
+
+### 🐞 Bug Fixes
+
+* Added correct nx for darwin ([489008e](https://github.com/openscd/oscd-components/commit/489008ef88f401eb3d54e02d7e229c8ab4291969))
+
 ## [0.0.9](https://github.com/openscd/oscd-components/compare/@openscd/oscd-textfield-v0.0.8...@openscd/oscd-textfield-v0.0.9) (2023-08-01)
 
 

@@ -5,7 +5,8 @@
     "module": "CommonJS",
     "skipLibCheck": true,
     "paths": {
-      "oscd": ["./tools/oscd/src/index.ts"]
+      "oscd": ["./tools/oscd/src/index.ts"],
+      "@openscd/core": ["lib/core/src/index.ts"]
     }
   },
   "exclude": ["./**/test/**"]

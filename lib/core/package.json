@@ -11,8 +11,7 @@
     "clean": "rimraf .tsbuildinfo dist"
   },
   "dependencies": {
-    "lit": "^2.7.6",
-    "@open-wc/scoped-elements": "^2.2.0"
+    "lit": "^2.7.6"
   },
   "author": "OpenSCD",
   "license": "ISC",

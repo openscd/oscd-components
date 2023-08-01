@@ -1,5 +1,5 @@
 # oscd-textfield
 
 ```html
-<oscd-textfield label="Username"></oscd-textfield>
+<oscd-textfield label="Username" value="John Doe"></oscd-textfield>
 ```

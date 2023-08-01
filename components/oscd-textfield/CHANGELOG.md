@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.5](https://github.com/openscd/oscd-components/compare/oscd-textfield-v0.0.4...oscd-textfield-v0.0.5) (2023-08-01)
+
+
+### Bug Fixes
+
+* Added example header ([30a4d64](https://github.com/openscd/oscd-components/commit/30a4d64a37cdab964f9237ea9c902261df0c065a))
+
 ## [0.0.4](https://github.com/openscd/oscd-components/compare/oscd-textfield-v0.0.3...oscd-textfield-v0.0.4) (2023-08-01)
 
 

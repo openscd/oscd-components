@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.14](https://github.com/openscd/oscd-components/compare/@openscd/oscd-textfield-v0.0.13...@openscd/oscd-textfield-v0.0.14) (2023-08-01)
+
+
+### 🐞 Bug Fixes
+
+* changed nx arch ([13b2aec](https://github.com/openscd/oscd-components/commit/13b2aec1daa2c7644a539b852aa32cbd5898fb9c))
+
 ## [0.0.13](https://github.com/openscd/oscd-components/compare/@openscd/oscd-textfield-v0.0.12...@openscd/oscd-textfield-v0.0.13) (2023-08-01)
 
 

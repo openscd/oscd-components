@@ -2,8 +2,6 @@
 
 | In progress
 
-
-
 ## Example
 
 ```html

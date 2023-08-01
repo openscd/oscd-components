@@ -4,5 +4,4 @@
   "type": "commonjs",
   "executors": "./executors.json",
   "generators": "./generators.json"
-
 }

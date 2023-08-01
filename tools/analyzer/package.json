@@ -1,0 +1,23 @@
+{
+    "name": "@openscd/analyzer",
+    "version": "0.0.1",
+    "type": "module",
+    "exports": [
+        "./dist/analyze.js"
+    ],
+    "scripts": {
+        "analyze": "npm run build && node dist/analyze.js",
+        "build": "tsc"
+    },
+    "dependencies": {
+        "@custom-elements-manifest/to-markdown": "^0.1.0"
+    },
+    "devDependencies": {
+        "custom-elements-manifest": "^2.0.0",
+        "mdast-builder": "^1.1.1",
+        "mdast-util-to-markdown": "^2.1.0",
+        "remark-stringify": "^10.0.3",
+        "ts-node": "^10.9.1",
+        "unified": "^10.1.2"
+    }
+}

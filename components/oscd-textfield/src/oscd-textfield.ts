@@ -24,6 +24,12 @@ import { OscdComponent } from '@openscd/core';
 
 import styles from './oscd-textfield.styles.js';
 
+/**
+ * @cssprop [--oscd-theme-textfield-error, --oscd-theme-error] Color when errored of the underline, the outline, the caret and the icons.
+ * @cssprop [--oscd-theme-textfield-primary, --oscd-theme-primary] Color when active of the underline, ripple, the outline, and the caret.
+ *
+ * @tagname oscd-textfield
+ */
 export class OscdTextfield extends OscdComponent {
   static styles: CSSResultGroup = styles;
 
@@ -31,6 +37,10 @@ export class OscdTextfield extends OscdComponent {
     return {};
   }
 
+  /**
+   * OscdTextfield can be nullable. If true, use the [[maybeValue]]
+   * @default false
+   */
   @property({
     type: Boolean,
   })
@@ -41,6 +51,9 @@ export class OscdTextfield extends OscdComponent {
   })
   multipliers = [null, ''];
 
+  /**
+   * @internal
+   */
   private multiplierIndex = 0;
 
   @property({
@@ -59,18 +72,31 @@ export class OscdTextfield extends OscdComponent {
     this.suffix = (this.multiplier ?? '') + this.unit;
   }
 
+  /**
+   * Unit for OscdTextfield
+   * @default ''
+   */
   @property({
     type: String,
   })
   unit = '';
 
+  /**
+   * @internal
+   */
   private isNull = false;
 
+  /**
+   * @internal
+   */
   @state()
   private get null(): boolean {
     return this.nullable && this.isNull;
   }
 
+  /**
+   * @internal
+   */
   private set null(value: boolean) {
     if (!this.nullable || value === this.isNull) return;
     this.isNull = value;
@@ -99,30 +125,49 @@ export class OscdTextfield extends OscdComponent {
     }
   }
 
-  /** The default `value` displayed if [[`maybeValue`]] is `null`. */
+  /**
+   * The default `value` displayed if [[`maybeValue`]] is `null`.
+   * @default ''
+   */
   @property({ type: String })
   defaultValue = '';
-  /** Additional values that cause validation to fail. */
+
+  /**
+   * Additional values that cause validation to fail.
+   * @default []
+   */
   @property({ type: Array })
   reservedValues: string[] = [];
 
+  /**
+   * Suffix of OscdTextfield
+   * @default ''
+   */
   @property({
     type: String,
   })
   suffix = '';
 
+  /**
+   * OscdTextfield should be disabled
+   * @default false
+   */
   @property({
     type: Boolean,
   })
   disabled = false;
 
+  /**
+   * OscdTextfield helper should be persistent
+   * @default false
+   */
   @property({
     type: Boolean,
   })
   helperPersistent = false;
 
   /**
-   * @prop {String} value - The value of the Form Control
+   * The value of the Form Control
    */
   @property({
     type: String,
@@ -144,46 +189,82 @@ export class OscdTextfield extends OscdComponent {
    */
   private _value = '';
 
+  /**
+   * Label for OscdTextfield
+   * @default ''
+   */
   @property({
     type: String,
   })
   label = '';
 
+  /**
+   * Required input
+   * @default false
+   */
   @property({
     type: Boolean,
   })
   required = false;
 
+  /**
+   * Helper text below the OscdTextfield
+   * @default ''
+   */
   @property({
     type: String,
   })
   helper = '';
 
+  /**
+   * Validation message for OscdTextfield (empty string if no validation should be shown)
+   * @default ''
+   */
   @property({
     type: String,
   })
   validationMessage = '';
 
+  /**
+   * Pattern the OscdTextfield must obey
+   * @default ''
+   */
   @property({
     type: String,
   })
   pattern = '';
 
+  /**
+   * Min length of the OscdTextfield (-1 if unlimited)
+   * @default -1
+   */
   @property({
     type: Number,
   })
   minLength = -1;
 
+  /**
+   * Max length of the OscdTextfield (-1 if unlimited)
+   * @default -1
+   */
   @property({
     type: Number,
   })
   maxLength = -1;
 
+  /**
+   * Min number of the OscdTextfield (-1 if unlimited)
+   * @default -1
+   */
   @property({
     type: Number,
   })
   min = -1;
 
+  /**
+   * Max number of the OscdTextfield (-1 if unlimited)
+   * @default -1
+   */
   @property({
     type: Number,
   })
@@ -192,21 +273,35 @@ export class OscdTextfield extends OscdComponent {
   // FIXME: workaround to allow disable of the whole component - need basic refactor
   private disabledSwitch = false;
 
-  @query('mwc-switch') nullSwitch?: Switch;
-  @query('mwc-menu') multiplierMenu?: Menu;
-  @query('mwc-icon-button') multiplierButton?: IconButton;
+  @query('mwc-switch')
+  protected nullSwitch?: Switch;
+
+  @query('mwc-menu')
+  protected multiplierMenu?: Menu;
+
+  @query('mwc-icon-button')
+  protected multiplierButton?: IconButton;
 
   @query('mwc-textfield')
-  textfield!: TextField;
+  protected textfield!: TextField;
 
+  /**
+   * @internal
+   */
   private nulled: string | null = null;
 
   private rendered = false;
 
+  /**
+   * @internal
+   */
   private selectMultiplier(se: SingleSelectedEvent): void {
     this.multiplier = this.multipliers[se.detail.index];
   }
 
+  /**
+   * @internal
+   */
   private enable(): void {
     if (this.nulled === null) return;
     this.value = this.nulled;
@@ -215,6 +310,9 @@ export class OscdTextfield extends OscdComponent {
     this.disabled = false;
   }
 
+  /**
+   * @internal
+   */
   private disable(): void {
     if (this.nulled !== null) return;
     this.nulled = this.value;
@@ -224,6 +322,9 @@ export class OscdTextfield extends OscdComponent {
     this.disabled = true;
   }
 
+  /**
+   * @internal
+   */
   async firstUpdated(
     _changedProperties: Map<string | number | symbol, unknown>
   ): Promise<void> {
@@ -251,6 +352,9 @@ export class OscdTextfield extends OscdComponent {
     return this.textfield.checkValidity();
   }
 
+  /**
+   * @hidden
+   */
   constructor() {
     super();
     this.disabledSwitch = this.hasAttribute('disabled');
@@ -287,7 +391,6 @@ export class OscdTextfield extends OscdComponent {
   renderSwitch(): TemplateResult {
     if (this.nullable) {
       return html`<mwc-switch
-        style="margin-left: 12px;"
         ?selected=${!this.null}
         ?disabled=${this.disabledSwitch}
         @click=${() => {
@@ -298,6 +401,9 @@ export class OscdTextfield extends OscdComponent {
     return html``;
   }
 
+  /**
+   * @internal
+   */
   private renderTextfield(): TemplateResult {
     return html`<mwc-textfield
       value=${this.value}
@@ -317,12 +423,10 @@ export class OscdTextfield extends OscdComponent {
   render(): TemplateResult {
     this.rendered = true;
     return html`
-      <div style="display: flex; flex-direction: row;">
-        <div style="flex: auto;">${this.renderTextfield()}</div>
+      <div class="oscd-textfield__container">
+        <div>${this.renderTextfield()}</div>
         ${this.renderUnitSelector()}
-        <div style="display: flex; align-items: center; height: 56px;">
-          ${this.renderSwitch()}
-        </div>
+        <div class="oscd-textfield__switch">${this.renderSwitch()}</div>
       </div>
     `;
   }

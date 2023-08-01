@@ -1,8 +1,24 @@
 import type { StorybookConfig } from '@storybook/web-components-vite';
 
 const config: StorybookConfig = {
-  stories: ['../components/**/stories/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
-  addons: ['@storybook/addon-essentials'],
+  stories: [
+    '../components/**/stories/*.stories.@(js|jsx|ts|tsx)',
+    '../components/**/stories/**/*.mdx',
+  ],
+
+  addons: [
+    '@storybook/addon-essentials',
+    {
+      name: '@storybook/addon-docs',
+      options: {
+        jsxOptions: {},
+        csfPluginOptions: null,
+        mdxPluginOptions: {},
+        transcludeMarkdown: true,
+      },
+    },
+    '@etchteam/storybook-addon-css-variables-theme',
+  ],
   framework: {
     name: '@storybook/web-components-vite',
     options: {
@@ -10,6 +26,10 @@ const config: StorybookConfig = {
         viteConfigPath: '',
       },
     },
+  },
+  docs: {
+    autodocs: 'tag',
+    defaultName: 'Documentation',
   },
 };
 

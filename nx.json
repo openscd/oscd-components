@@ -18,9 +18,7 @@
     "test": {
       "inputs": [
         "default",
-        "^default",
-        "{workspaceRoot}/jest.preset.js",
-        "{workspaceRoot}/jest.preset.js"
+        "^default"
       ]
     }
   }

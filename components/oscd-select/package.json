@@ -1,16 +1,16 @@
 {
-  "name": "<%= scope %>/<%= selector %>",
-  "description": "Webcomponent <%= selector %> following open-wc recommendations",
+  "name": "@oscd/oscd-select",
+  "description": "Webcomponent oscd-select following open-wc recommendations",
   "license": "Apache-2.0",
   "author": "OpenSCD",
-  "version": "<%= version %>",
-  "browser": "./dist/<%= className %>.js",
-  "module": "./dist/<%= className %>.js",
+  "version": "0.0.1",
+  "browser": "./dist/OscdSelect.js",
+  "module": "./dist/OscdSelect.js",
   "files": [
     "dist/**/*"
   ],
   "exports": {
-    ".": "./dist/<%= className %>.js"
+    ".": "./dist/OscdSelect.js"
   },
   "type": "module",
   "scripts": {

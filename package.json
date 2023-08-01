@@ -50,7 +50,6 @@
   "dependencies": {
     "@nx/devkit": "16.5.5",
     "@nx/plugin": "^16.5.5",
-    "@openscd/oscd-textfield": "*",
     "@swc/helpers": "~0.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

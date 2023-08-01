@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.6](https://github.com/openscd/oscd-components/compare/oscd-textfield-v0.0.5...oscd-textfield-v0.0.6) (2023-08-01)
+
+
+### Bug Fixes
+
+* Added gitignore and npmignore ([2a9bbe4](https://github.com/openscd/oscd-components/commit/2a9bbe410092f557f87a432fc8252dd8218f0f92))
+
 ## [0.0.5](https://github.com/openscd/oscd-components/compare/oscd-textfield-v0.0.4...oscd-textfield-v0.0.5) (2023-08-01)
 
 

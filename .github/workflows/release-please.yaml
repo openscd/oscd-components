@@ -37,7 +37,7 @@ jobs:
          
       - name: Install Dependencies
         if: ${{ steps.release.outputs.releases_created }}
-        run: npm ci --workspaces
+        run: npm i --workspaces
 
       - name: Build
         if: ${{ steps.release.outputs.releases_created }}

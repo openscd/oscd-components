@@ -11,12 +11,12 @@
     "clean": "rimraf .tsbuildinfo dist"
   },
   "dependencies": {
-    "lit": "^2.7.6"
+    "lit": "^2.7.6",
+    "@open-wc/scoped-elements": "^2.2.0"
   },
   "author": "OpenSCD",
   "license": "ISC",
   "devDependencies": {
-    "@open-wc/scoped-elements": "^2.2.0",
     "tslib": "^2.6.0",
     "typescript": "^5.1.6"
   }

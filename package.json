@@ -4,9 +4,9 @@
   "description": "OSCD Components",
   "main": "index.js",
   "workspaces": [
-    "./components/**/*",
-    "./lib/**/*",
-    "./tools/**/*"
+    "./components/*",
+    "./lib/*",
+    "./tools/*"
   ],
   "scripts": {
     "clean": "lerna run clean",

@@ -1,3 +1,5 @@
 {
-    "components/oscd-textfield": "0.0.20"
+  "components/oscd-textfield": "0.0.20",
+  "components/oscd-card": "0.0.1",
+  "components/oscd-button": "0.0.1"
 }

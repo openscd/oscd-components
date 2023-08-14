@@ -1,11 +1,9 @@
-import { fixture } from '@open-wc/testing';
-import { html } from 'lit';
+import { fixture, html } from '@open-wc/testing';
 
 import { visualDiff } from '@web/test-runner-visual-regression';
 
-import { OscdTextfield } from '../src/oscd-textfield.js';
-
-customElements.define('oscd-textfield', OscdTextfield);
+import '../src';
+import { OscdTextfield } from '../src';
 
 const factor = process.env.CI ? 2 : 1;
 

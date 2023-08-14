@@ -1,7 +1,14 @@
 import { TemplateResult } from 'lit-element';
 import { html } from 'lit-html';
+import { ifDefined } from 'lit-html/directives/if-defined.js';
 
 import { withActions } from '@storybook/addon-actions/decorator';
+
+import '../src/OscdTextfield';
+
+import { createBadges } from '@oscd/utils';
+
+import pckgJson from '../package.json';
 
 export default {
   title: 'Form/OscdTextfield',
@@ -9,6 +16,10 @@ export default {
   argTypes: {},
   parameters: {
     actions: {},
+    status: {
+      type: 'beta',
+    },
+    badges: createBadges(pckgJson),
   },
   decorators: [withActions],
 };
@@ -21,8 +32,8 @@ interface Story<T> {
 
 interface ArgTypes {
   label: string;
-  value?: string | null;
-  maybeValue?: string | null;
+  value?: string;
+  maybeValue?: string;
   required?: boolean;
   disabled?: boolean;
   readonly?: boolean;
@@ -42,13 +53,13 @@ const Template: Story<ArgTypes> = ({
 }: ArgTypes) =>
   html` <oscd-textfield
     .label=${label}
-    .value=${value}
-    .maybeValue=${maybeValue}
+    value="${ifDefined(value)}"
+    maybeValue=${ifDefined(maybeValue)}
     ?required=${required}
     ?disabled=${disabled}
     ?readonly=${readonly}
     ?nullable=${nullabe}
-    .defaultValue=${defaultValue || null}
+    .defaultValue=${defaultValue || ''}
   ></oscd-textfield>`;
 
 export const Regular = Template.bind({});

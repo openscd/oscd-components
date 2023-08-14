@@ -1,0 +1,15 @@
+## Tools
+/tools/ @Pascalwilbrink
+
+## GitHub Actions
+/.github/ @Pascalwilbrink
+
+## Lib
+/lib/ @Pascalwilbrink
+
+# Themes
+/themes/ @Pascalwilbrink
+
+## Components
+/components/oscd-textfield/ @Pascalwilbrink
+/components/oscd-button @PascalWilbrink

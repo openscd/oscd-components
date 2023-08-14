@@ -1,0 +1,20 @@
+{
+  "name": "@oscd/scripts",
+  "version": "1.0.0",
+  "description": "Various Oscd Scripts",
+  "scripts": {
+    "build": "tsc",
+    "readme": "node dist/markdown.js",
+    "component:readme": "node dist/component-markdown.js"
+  },
+  "author": "OpenSCD",
+  "license": "ISC",
+  "dependencies": {
+    "mdast-builder": "^1.1.1",
+    "mdast-util-to-markdown": "^2.1.0",
+    "ts-markdown": "^0.3.0-beta.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
+}

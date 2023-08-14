@@ -22,7 +22,10 @@
       ]
     },
     "build": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["^clean", "^build"]
+    },
+    "build:all": {
+      "dependsOn": ["^clean"]
     }
   }
 }

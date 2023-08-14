@@ -1,6 +1,13 @@
-# OpenSCD Components
+# OSCD Components
+This is the component library for OSCD Components.
 
 
+
+## Components
+
+| Name           | Package                                                            | Status |
+| -------------- | ------------------------------------------------------------------ | ------ |
+| oscd-textfield | [components/oscd-textfield](./components/oscd-textfield/README.md) | stable |
 
 ## Scripts
 

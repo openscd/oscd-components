@@ -5,14 +5,15 @@ import { styles } from '@openscd/core';
 export default css`
   ${styles}
 
-  mwc-textfield {
+  mwc-textfield,
+  mwc-switch {
     --mdc-theme-primary: var(
       --oscd-theme-textfield-primary,
       var(--oscd-theme-primary)
     );
     --mdc-theme-error: var(
-      --oscd-theme-textfield-error,
-      var(--oscd-theme-error)
+      --oscd-theme-textfield-state-danger,
+      var(--oscd-theme-state-danger)
     );
   }
 

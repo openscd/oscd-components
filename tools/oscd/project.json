@@ -44,7 +44,8 @@
           "oscd/**/*.ts",
           "oscd/package.json",
           "tools/oscd/executors.json",
-          "tools/oscd/package.json"
+          "tools/oscd/package.json",
+          "tools/oscd/generators.json"
         ]
       }
     },

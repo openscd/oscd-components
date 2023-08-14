@@ -25,9 +25,30 @@ import { OscdComponent } from '@openscd/core';
 import styles from './oscd-textfield.styles.js';
 
 /**
- * @cssprop [--oscd-theme-textfield-error, --oscd-theme-error] Color when errored of the underline, the outline, the caret and the icons.
- * @cssprop [--oscd-theme-textfield-primary, --oscd-theme-primary] Color when active of the underline, ripple, the outline, and the caret.
+ * @cssprop [--oscd-theme-textfield-error=--oscd-theme-error] Color when errored of the underline, the outline, the caret and the icons.
+ * @cssprop [--oscd-theme-textfield-primary= -oscd-theme-primary] Color when active of the underline, ripple, the outline, and the caret.
+ * @attribute {boolean} required - Textfield is required
+ * @attribute {boolean} nullable - Textfield is nullable
+ * @attribute {array} multipliers - Multipliers
+ * @attribute {string} multiplier - Multiplier
+ * @attribute {string} unit - Unit
+ * @attribute {String} maybeValue - Maybevalue
+ * @attribute {String} defaultValue - Default Value
+ * @attribute {Array} reservedValues - Reserved Values
+ * @attribute {String} suffix - Suffix
+ * @attribute {boolean} disabled - Textfield is disabled
+ * @attribute {boolean} helperPersistent - Helper message is persistent
+ * @attribute {String} value - Textfield Value
+ * @attribute {String} label - Textfield Label
+ * @attribute {String} helper - Helper Text
+ * @attribute {string} validationMessage - Validation Message
+ * @attribute {String} pattern - Textfield Pattern
+ * @attribute {Number} minLength - Minimum length of Textfield value
+ * @attribute {Number} maxLength - Maximum length of Textfield value
+ * @attribute {Number} min - Minimum of Textfield value
+ * @attribute {Number} max - Maximum of Textfield value
  *
+ * @example <oscd-textfield value="John Doe" label="Name"></oscd-textfield>
  * @tagname oscd-textfield
  */
 export class OscdTextfield extends OscdComponent {
@@ -199,6 +220,7 @@ export class OscdTextfield extends OscdComponent {
   label = '';
 
   /**
+   * @attribute {boolean} required - Textfield is required
    * Required input
    * @default false
    */
@@ -417,6 +439,7 @@ export class OscdTextfield extends OscdComponent {
       .maxLength=${this.maxLength}
       .min=${this.min}
       .max=${this.max}
+      .validationMessage=${this.validationMessage}
     ></mwc-textfield>`;
   }
 

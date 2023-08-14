@@ -23,9 +23,7 @@ const createStyleTags = (url) => {
   };
 };
 
-const OpenSCD = createStyleTags('../themes/oscd.css?inline');
-
-import { OscdTextfield } from '../components/oscd-textfield/src/oscd-textfield';
+const OpenSCD = createStyleTags('../themes/prebuilt/oscd.css?inline');
 
 export const decorators = [cssVariablesTheme];
 
@@ -37,12 +35,3 @@ export const parameters = {
     defaultTheme: 'Oscd Theme',
   },
 };
-
-function defineCustomElement(
-  name: string,
-  element: CustomElementConstructor
-): void {
-  customElements.get(name) || customElements.define(name, element);
-}
-
-defineCustomElement('oscd-textfield', OscdTextfield);

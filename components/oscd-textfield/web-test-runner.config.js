@@ -21,7 +21,6 @@ const filteredLogs = [
 const browsers = [
   playwrightLauncher({
     product: 'chromium',
-    launchOptions: { headless: false },
   }),
   playwrightLauncher({ product: 'firefox' }),
   playwrightLauncher({ product: 'webkit' }),

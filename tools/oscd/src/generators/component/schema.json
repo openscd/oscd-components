@@ -12,9 +12,16 @@
         "index": 0
       },
       "x-prompt": "What name would you like to use?"
+    },
+    "codeOwner": {
+      "type": "string",
+      "description": "Who is the codeowner?",
+      "x-prompt": "Who is the codeOwner?",
+      "pattern": "@\\S+"
     }
   },
   "required": [
-    "name"
+    "name",
+    "codeOwner"
   ]
 }

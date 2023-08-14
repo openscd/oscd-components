@@ -1,1 +1,1 @@
-export * from './oscd-textfield';
+export * from './OscdTextfield.js';

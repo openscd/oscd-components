@@ -4,19 +4,25 @@ const config: StorybookConfig = {
   stories: [
     '../components/**/stories/*.stories.@(js|jsx|ts|tsx)',
     '../components/**/stories/**/*.mdx',
+    '../stories/*.stories.@(js|jsx|ts|tsx)',
+    '../stories/**/*.mdx',
   ],
-
   addons: [
-    '@storybook/addon-essentials',
+    '@storybook/addon-docs',
+    '@storybook/addon-controls',
+    '@storybook/addon-actions',
+    '@storybook/addon-backgrounds',
+    '@storybook/addon-a11y',
+    '@storybook/addon-links',
     {
-      name: '@storybook/addon-docs',
+      name: '@storybook/adddon-essentials',
       options: {
-        jsxOptions: {},
-        csfPluginOptions: null,
-        mdxPluginOptions: {},
-        transcludeMarkdown: true,
+        background: false,
       },
     },
+    'storybook-addon-themes',
+    'storybook-design-token',
+    '@etchteam/storybook-addon-status/register',
     '@etchteam/storybook-addon-css-variables-theme',
   ],
   framework: {
@@ -34,7 +40,3 @@ const config: StorybookConfig = {
 };
 
 export default config;
-
-// To customize your Vite configuration you can use the viteFinal field.
-// Check https://storybook.js.org/docs/react/builders/vite#configuration
-// and https://nx.dev/packages/storybook/documents/custom-builder-configs

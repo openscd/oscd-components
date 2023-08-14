@@ -1,0 +1,11 @@
+@import '../built/oscd/variables.css';
+
+:root {
+    --oscd-theme-primary: var(--color-oscd-sys-light-primary);
+    --oscd-theme-on-primary: var(--color-oscd-sys-light-on-primary);
+    --oscd-theme-secondary: var(--color-oscd-sys-light-secondary);
+    --oscd-theme-on-secondary: var(--color-oscd-sys-light-on-secondary);
+    --oscd-theme-state-danger: var(--color-oscd-sys-light-danger);
+}
+
+

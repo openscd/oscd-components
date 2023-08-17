@@ -29,5 +29,5 @@ jobs:
         run: npm run build:all
 
       - name: Chromatic
-        run: npx chromatic --project-token=${ {secrets.CHROMATIC_TOKEN }}
+        run: npx chromatic --project-token=${{ secrets.CHROMATIC_TOKEN }}
 

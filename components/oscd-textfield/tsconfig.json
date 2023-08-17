@@ -21,10 +21,5 @@
     "resolveJsonModule": true 
   },
   "include": ["./src/**/*.ts"],
-  "exclude": ["**/*.stories.ts", "**/*.stories.js"],
-  "references": [
-    {
-      "path": "./tsconfig.storybook.json"
-    }
-  ]
+  "exclude": ["**/*.stories.ts", "**/*.stories.js"]
 }

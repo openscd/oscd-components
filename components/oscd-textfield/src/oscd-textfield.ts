@@ -19,7 +19,7 @@ import { IconButton } from '@material/mwc-icon-button';
 import { Menu } from '@material/mwc-menu';
 import { SingleSelectedEvent } from '@material/mwc-list/mwc-list-foundation';
 
-import type { OscdSwitch } from '@openscd/oscd-switch';
+import type { OscdSwitch, OscdSwitchChangeEvent } from '@openscd/oscd-switch';
 
 import { TextField } from '@material/mwc-textfield';
 
@@ -428,7 +428,7 @@ export class OscdTextfield extends OscdComponent {
       return html`<oscd-switch
         ?selected=${!this.null}
         ?disabled=${this.disabledSwitch}
-        @change=${(evt) => {
+        @change=${(evt: OscdSwitchChangeEvent) => {
           this.null = !evt.detail.selected;
         }}
       ></oscd-switch>`;

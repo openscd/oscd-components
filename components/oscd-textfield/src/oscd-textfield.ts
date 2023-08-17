@@ -20,7 +20,7 @@ import { Menu } from '@material/mwc-menu';
 import { SingleSelectedEvent } from '@material/mwc-list/mwc-list-foundation';
 
 import type { OscdSwitch } from '@openscd/oscd-switch';
-import type { OscdSwitchChangeEvent } from '@openscd/oscd-switch/oscd-switch.js';
+import type { OscdSwitchChangeEvent } from '@openscd/oscd-switch';
 
 import { TextField } from '@material/mwc-textfield';
 

@@ -61,18 +61,8 @@
       "prerelease": false,
       "initial-version": "0.0.1"
     },
-    "components/oscd-card": {
-      "component": "@openscd/oscd-card",
-      "changelog-path": "CHANGELOG.md",
-      "release-type": "node",
-      "bump-minor-pre-major": false,
-      "bump-patch-for-minor-pre-major": false,
-      "draft": false,
-      "prerelease": false,
-      "initial-version": "0.0.1"
-    },
-    "components/oscd-button": {
-      "component": "@openscd/oscd-button",
+    "components/oscd-switch": {
+      "component": "@openscd/oscd-switch",
       "changelog-path": "CHANGELOG.md",
       "release-type": "node",
       "bump-minor-pre-major": false,

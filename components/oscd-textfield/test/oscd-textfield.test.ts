@@ -2,8 +2,8 @@ import { fixture, html } from '@open-wc/testing';
 
 import { visualDiff } from '@web/test-runner-visual-regression';
 
-import '../src';
-import { OscdTextfield } from '../src';
+import '../src/OscdTextfield.js';
+import type { OscdTextfield } from '../src/OscdTextfield.js';
 
 const factor = process.env.CI ? 2 : 1;
 

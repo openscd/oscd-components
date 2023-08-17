@@ -4,19 +4,27 @@
     "module": "esnext",
     "moduleResolution": "node",
     "noEmitOnError": true,
-    "lib": ["es2017", "dom"],
+    "lib": ["es2018", "dom"],
     "strict": true,
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
+    "declaration": true,
     "importHelpers": true,
-    "skipLibCheck": true,
     "outDir": "dist",
     "sourceMap": true,
     "inlineSources": true,
     "rootDir": "./src",
-    "declaration": true,
-    "incremental": true
+    "tsBuildInfoFile": ".tsbuildinfo",
+    "incremental": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true 
   },
-  "include": ["src/*.ts"]
+  "include": ["./src/**/*.ts"],
+  "exclude": ["**/*.stories.ts", "**/*.stories.js"],
+  "references": [
+    {
+      "path": "./tsconfig.storybook.json"
+    }
+  ]
 }

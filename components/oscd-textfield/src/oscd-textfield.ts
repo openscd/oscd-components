@@ -10,14 +10,17 @@ import {
 import '@material/mwc-icon-button';
 import '@material/mwc-list/mwc-list-item';
 import '@material/mwc-menu';
-import '@material/mwc-switch';
 import '@material/mwc-textfield';
+
+import '@openscd/oscd-switch';
 
 import { IconButton } from '@material/mwc-icon-button';
 
 import { Menu } from '@material/mwc-menu';
 import { SingleSelectedEvent } from '@material/mwc-list/mwc-list-foundation';
-import { Switch } from '@material/mwc-switch';
+
+import type { OscdSwitch } from '@openscd/oscd-switch';
+
 import { TextField } from '@material/mwc-textfield';
 
 import { OscdComponent } from '@openscd/core';
@@ -26,27 +29,34 @@ import styles from './oscd-textfield.styles.js';
 
 /**
  * @cssprop [--oscd-theme-textfield-error=--oscd-theme-error] Color when errored of the underline, the outline, the caret and the icons.
- * @cssprop [--oscd-theme-textfield-primary= -oscd-theme-primary] Color when active of the underline, ripple, the outline, and the caret.
- * @attribute {boolean} required - Textfield is required
- * @attribute {boolean} nullable - Textfield is nullable
- * @attribute {array} multipliers - Multipliers
- * @attribute {string} multiplier - Multiplier
- * @attribute {string} unit - Unit
- * @attribute {String} maybeValue - Maybevalue
- * @attribute {String} defaultValue - Default Value
- * @attribute {Array} reservedValues - Reserved Values
- * @attribute {String} suffix - Suffix
- * @attribute {boolean} disabled - Textfield is disabled
- * @attribute {boolean} helperPersistent - Helper message is persistent
- * @attribute {String} value - Textfield Value
- * @attribute {String} label - Textfield Label
- * @attribute {String} helper - Helper Text
- * @attribute {string} validationMessage - Validation Message
- * @attribute {String} pattern - Textfield Pattern
- * @attribute {Number} minLength - Minimum length of Textfield value
- * @attribute {Number} maxLength - Maximum length of Textfield value
- * @attribute {Number} min - Minimum of Textfield value
- * @attribute {Number} max - Maximum of Textfield value
+ * @cssprop [--oscd-theme-textfield-primary=--oscd-theme-primary] Color when active of the underline, ripple, the outline, and the caret.
+ * @cssprop [--oscd-theme-textfield-primary-surface=--oscd-theme-primary-surface] Color of the Switch track
+ * @cssprop [--oscd-theme-textfield-primary-surface-active=--oscd-theme-primary-surface-active] Color of the Switch Hover state
+ * @cssprop [--oscd-theme-textfield-primary-active=--oscd-theme-primary-active] Color of the Switch Hover state
+ * @cssprop [--oscd-theme-textfield-fill] Color of the textfield Fill
+ * @cssprop [--oscd-theme-textfield-ink] Color of the textfield Text
+ * @cssprop [--oscd-theme-textfield-line] Color of the textfield Line
+ *
+ * @prop {boolean} required - Textfield is required
+ * @prop {boolean} nullable - Textfield is nullable
+ * @prop {array} multipliers - Multipliers
+ * @prop {string} multiplier - Multiplier
+ * @prop {string} unit - Unit
+ * @prop {string} maybeValue - Maybevalue
+ * @prop {string} defaultValue - Default Value
+ * @prop {array} reservedValues - Reserved Values
+ * @prop {string} suffix - Suffix
+ * @prop {boolean} disabled - Textfield is disabled
+ * @prop {boolean} helperPersistent - Helper message is persistent
+ * @prop {string} value - Textfield Value
+ * @prop {string} label - Textfield Label
+ * @prop {string} helper - Helper Text
+ * @prop {string} validationMessage - Validation Message
+ * @prop {string} pattern - Textfield Pattern
+ * @prop {number} minLength - Minimum length of Textfield value
+ * @prop {number} maxLength - Maximum length of Textfield value
+ * @prop {number} min - Minimum of Textfield value
+ * @prop {number} max - Maximum of Textfield value
  *
  * @example <oscd-textfield value="John Doe" label="Name"></oscd-textfield>
  * @tagname oscd-textfield
@@ -54,6 +64,9 @@ import styles from './oscd-textfield.styles.js';
 export class OscdTextfield extends OscdComponent {
   static styles: CSSResultGroup = styles;
 
+  /**
+   * @internal
+   */
   static get scopedElements() {
     return {};
   }
@@ -295,8 +308,8 @@ export class OscdTextfield extends OscdComponent {
   // FIXME: workaround to allow disable of the whole component - need basic refactor
   private disabledSwitch = false;
 
-  @query('mwc-switch')
-  protected nullSwitch?: Switch;
+  @query('oscd-switch')
+  protected nullSwitch?: OscdSwitch;
 
   @query('mwc-menu')
   protected multiplierMenu?: Menu;
@@ -412,13 +425,13 @@ export class OscdTextfield extends OscdComponent {
 
   renderSwitch(): TemplateResult {
     if (this.nullable) {
-      return html`<mwc-switch
+      return html`<oscd-switch
         ?selected=${!this.null}
         ?disabled=${this.disabledSwitch}
-        @click=${() => {
-          this.null = !this.nullSwitch!.selected;
+        @change=${(evt) => {
+          this.null = !evt.detail.selected;
         }}
-      ></mwc-switch>`;
+      ></oscd-switch>`;
     }
     return html``;
   }
@@ -440,6 +453,7 @@ export class OscdTextfield extends OscdComponent {
       .min=${this.min}
       .max=${this.max}
       .validationMessage=${this.validationMessage}
+      .helper=${this.helper}
     ></mwc-textfield>`;
   }
 

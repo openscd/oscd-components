@@ -1,17 +1,23 @@
-import cssVariablesTheme from '@etchteam/storybook-addon-css-variables-theme';
-import { createStyleTags } from '@oscd/utils';
+import { setCustomElementsManifest } from '@storybook/web-components';
 
-const OpenSCD = createStyleTags('../../../../themes/prebuilt/oscd.css?inline');
+import { html } from 'lit';
+import { withRootAttribute } from 'storybook-addon-root-attribute';
 
-export const decorators = [cssVariablesTheme];
+import '../../../themes/prebuilt/oscd.css';
+
+import customElements from '../custom-elements.json';
+
+setCustomElementsManifest(customElements);
+
+export const decorators = [
+  withRootAttribute,
+  (story) => html`<div class="story-wrapper">${story()}</div>`,
+];
 
 export const parameters = {
-  cssVariables: {
-    files: {
-      'Oscd Theme': OpenSCD,
-    },
-    defaultTheme: 'Oscd Theme',
-  },
+  controls: { expanded: true },
+  actions: { argTypesRegex: '^on.*' },
+
   statuses: {
     released: {
       background: '#0000ff',
@@ -23,5 +29,19 @@ export const parameters = {
       color: '#FFFFFF',
       description: 'This component is still in beta',
     },
+  },
+  rootAttribute: {
+    defaultState: {
+      name: 'Light',
+      value: null,
+    },
+    attribute: 'dark',
+    tooltip: true,
+    states: [
+      {
+        name: 'Dark',
+        value: 'dark',
+      },
+    ],
   },
 };

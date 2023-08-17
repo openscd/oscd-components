@@ -1,12 +1,15 @@
 /**
  * Do not edit directly
- * Generated on Mon, 07 Aug 2023 08:14:41 GMT
+ * Generated on Wed, 16 Aug 2023 08:01:12 GMT
  */
 
 export const ColorOscdWhite = "#ffffff";
 export const ColorOscdBlack = "#000000";
 export const ColorOscdSysLightPrimary = "#389add";
 export const ColorOscdSysLightOnPrimary = "#ffffff";
+export const ColorOscdSysLightPrimarySurface = "#b2dbf8";
+export const ColorOscdSysLightPrimarySurfaceActive = "#72bcf0";
+export const ColorOscdSysLightPrimaryActive = "#1779bd";
 export const ColorOscdSysLightSecondary = "#ae7ce9";
 export const ColorOscdSysLightSuccess = "#66bf3b";
 export const ColorOscdSysLightOnSuccess = "#ffffff";
@@ -16,6 +19,20 @@ export const ColorOscdSysLightWarning = "#ea9e08";
 export const ColorOscdSysLightOnWarning = "#ffffff";
 export const ColorOscdSysLightDanger = "#bf3b3b";
 export const ColorOscdSysLightOnDanger = "#ffffff";
+export const ColorOscdSysDarkPrimary = "#389add";
+export const ColorOscdSysDarkOnPrimary = "#ffffff";
+export const ColorOscdSysDarkPrimarySurface = "#b2dbf8";
+export const ColorOscdSysDarkPrimarySurfaceActive = "#72bcf0";
+export const ColorOscdSysDarkPrimaryActive = "#1779bd";
+export const ColorOscdSysDarkSecondary = "#ae7ce9";
+export const ColorOscdSysDarkSuccess = "#66bf3b";
+export const ColorOscdSysDarkOnSuccess = "#ffffff";
+export const ColorOscdSysDarkInfo = "#3b72bf";
+export const ColorOscdSysDarkOnInfo = "#ffffff";
+export const ColorOscdSysDarkWarning = "#ea9e08";
+export const ColorOscdSysDarkOnWarning = "#ffffff";
+export const ColorOscdSysDarkDanger = "#bf3b3b";
+export const ColorOscdSysDarkOnDanger = "#ffffff";
 export const ColorOscdRefPrimaryPrimary100 = "#b2dbf8";
 export const ColorOscdRefPrimaryPrimary200 = "#72bcf0";
 export const ColorOscdRefPrimaryPrimary300 = "#389add";
@@ -28,3 +45,14 @@ export const ColorOscdRefSecondarySecondary300 = "#ae7ce9";
 export const ColorOscdRefSecondarySecondary400 = "#8c61be";
 export const ColorOscdRefSecondarySecondary500 = "#6a4792";
 export const ColorOscdRefSecondarySecondary600 = "#483164";
+export const ColorOscdRefGrayGray0 = "#ffffff";
+export const ColorOscdRefGrayGray100 = "#f5f5f5";
+export const ColorOscdRefGrayGray200 = "#e5e5e5";
+export const ColorOscdRefGrayGray300 = "#dadada";
+export const ColorOscdRefGrayGray400 = "#969696";
+export const ColorOscdRefGrayGray500 = "#727272";
+export const ColorOscdRefGrayGray600 = "#646464";
+export const ColorOscdRefGrayGray700 = "#424242";
+export const ColorOscdRefGrayGray800 = "#363636";
+export const ColorOscdRefGrayGray900 = "#242424";
+export const ColorOscdRefGrayGray1000 = "#000000";

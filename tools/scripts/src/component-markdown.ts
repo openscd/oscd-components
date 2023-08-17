@@ -8,7 +8,12 @@ import {
   H1Entry,
   ImageEntry,
 } from 'ts-markdown';
-import { getComponentDirs, readPackageJson, hasFile } from './utils/utils';
+import {
+  getComponentDirs,
+  readPackageJson,
+  hasFile,
+  readFile,
+} from './utils/utils';
 import { readJsonFile } from '@nx/devkit';
 
 const getCustomElements = (componentDir: string): any[] => {
@@ -26,45 +31,69 @@ const getCustomElements = (componentDir: string): any[] => {
   return [];
 };
 
-const getScreenshotImage = (customElement: any): ImageEntry => {
-  return {
-    img: {
-      source: path.join(
-        'screenshots',
-        'Chromium',
-        'baseline',
-        `${customElement.tagName}.png`
-      ),
-      alt: customElement.tagName,
-    },
-  };
-};
-
 const generateCustomElementSection = (
+  componentDir: string,
   customElement: any,
   packageJson: any
 ): MarkdownEntryOrPrimitive[] => {
   return [
-    generateHeader(customElement, packageJson.version),
+    generateHeader(customElement, packageJson.version, packageJson.oscd.status),
     {
       hr: true,
     },
-    getScreenshotImage(customElement),
+    getIntro(componentDir),
     {
-      h2: 'Attributes',
+      text: '',
+    },
+    {
+      h2: 'Example',
+    },
+    getExample(componentDir),
+    {
+      hr: true,
+    },
+    {
+      h3: 'Attributes',
     },
     generateAttributesTable(customElement),
     {
-      h2: 'Css Properties',
+      h3: 'Css Properties',
     },
     generateCssPropertiesTable(customElement),
   ];
 };
 
-const generateHeader = (customElement: any, version: string): H1Entry => {
+const generateHeader = (
+  customElement: any,
+  version: string,
+  status: string
+): H1Entry => {
+  const color: string =
+    status === 'stable'
+      ? '66bf3b'
+      : status === 'beta'
+      ? 'ea9e08'
+      : status === 'WIP'
+      ? '3b72bf'
+      : status === 'deprecated'
+      ? 'bf3b3b'
+      : 'ababab';
+
   return {
-    h1: `\`<${customElement.tagName}>\` ![NPM](https://img.shields.io/badge/NPM-${version}-cb0001)`,
+    h1: `\`<${customElement.tagName}>\` ![NPM](https://img.shields.io/badge/NPM-${version}-cb0001) ![Status](https://img.shields.io/badge/${status}-${color})`,
   };
+};
+
+const getIntro = (componentDir: string): string => {
+  const file: string = path.join(componentDir, 'INTRO.md');
+
+  return hasFile(file) ? readFile(file) : '';
+};
+
+const getExample = (componentDir: string): string => {
+  const file: string = path.join(componentDir, 'EXAMPLE.md');
+
+  return hasFile(file) ? readFile(file) : '';
 };
 
 const generateAttributesTable = (customElement: any): TableEntry => {
@@ -102,12 +131,12 @@ const generateReadme = (componentDir: string): void => {
   const readme: MarkdownEntryOrPrimitive[] = getCustomElements(
     componentDir
   ).flatMap((customElement) =>
-    generateCustomElementSection(customElement, packageJson)
+    generateCustomElementSection(componentDir, customElement, packageJson)
   );
 
   const res = tsMarkdown(readme);
 
-  fs.writeFileSync(path.join(componentDir, 'README-new.md'), res, {
+  fs.writeFileSync(path.join(componentDir, 'README.md'), res, {
     encoding: 'utf8',
   });
 };

@@ -26,6 +26,9 @@
     },
     "build:all": {
       "dependsOn": ["^clean"]
+    },
+    "storybook": {
+      "dependsOn": [ "analyze", "component:readme"]
     }
   }
 }

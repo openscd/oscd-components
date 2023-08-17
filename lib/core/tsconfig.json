@@ -11,7 +11,7 @@
       "experimentalDecorators": true,
       "declaration": true,
       "importHelpers": true,
-      "outDir": "dist",
+      "outDir": "./dist",
       "sourceMap": true,
       "inlineSources": true,
       "rootDir": "./src",

@@ -1,111 +1,157 @@
-import { TemplateResult } from 'lit-element';
-import { html } from 'lit-html';
-import { ifDefined } from 'lit-html/directives/if-defined.js';
+import type { Meta, StoryObj } from '@storybook/web-components';
+import { action } from '@storybook/addon-actions';
 
-import { withActions } from '@storybook/addon-actions/decorator';
+import { html, TemplateResult } from 'lit';
 
 import '../src/OscdTextfield';
 
-import { createBadges } from '@oscd/utils';
+import { createBadge } from '@oscd/utils';
 
 import pckgJson from '../package.json';
 
-export default {
-  title: 'Form/OscdTextfield',
-  component: 'OscdTextfield',
-  argTypes: {},
+const meta: Meta = {
+  title: 'Forms/OscdTextfield',
+  component: 'oscd-textfield',
   parameters: {
-    actions: {},
     status: {
-      type: 'beta',
+      type: createBadge(pckgJson),
     },
-    badges: createBadges(pckgJson),
   },
-  decorators: [withActions],
 };
 
-interface Story<T> {
-  (args: T): TemplateResult;
-  args?: Partial<T>;
-  argTypes?: Record<string, unknown>;
-}
+export default meta;
 
-interface ArgTypes {
-  label: string;
-  value?: string;
-  maybeValue?: string;
-  required?: boolean;
-  disabled?: boolean;
-  readonly?: boolean;
-  nullabe?: boolean;
-  defaultValue?: string | null;
-}
+type Story = StoryObj;
 
-const Template: Story<ArgTypes> = ({
-  label,
-  value,
-  maybeValue,
-  required,
-  disabled,
-  readonly,
-  nullabe,
-  defaultValue,
-}: ArgTypes) =>
-  html` <oscd-textfield
-    .label=${label}
-    value="${ifDefined(value)}"
-    maybeValue=${ifDefined(maybeValue)}
-    ?required=${required}
-    ?disabled=${disabled}
-    ?readonly=${readonly}
-    ?nullable=${nullabe}
-    .defaultValue=${defaultValue || ''}
-  ></oscd-textfield>`;
-
-export const Regular = Template.bind({});
-
-Regular.args = {
-  label: 'Name',
-  value: 'John Doe',
-  maybeValue: null,
+/**
+ * Basic
+ */
+export const Basic: Story = {
+  args: {
+    label: 'Name',
+    value: 'John Doe',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Basic OSCD Textfield',
+      },
+    },
+  },
 };
 
-export const MaybeValue = Template.bind({});
-
-MaybeValue.args = {
-  ...Regular.args,
-  value: null,
-  maybeValue: 'Jane Doe',
+/**
+ * Disabled
+ */
+export const Disabled: Story = {
+  args: {
+    ...Basic.args,
+    disabled: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Disabled OSCD Textfield',
+      },
+    },
+  },
 };
 
-export const Required = Template.bind({});
-
-Required.args = {
-  ...Regular.args,
-  required: true,
+/**
+ * Required
+ */
+export const Required: Story = {
+  args: {
+    ...Basic.args,
+    required: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Required OSCD Textfield',
+      },
+    },
+  },
 };
 
-export const Disabled = Template.bind({});
-
-Disabled.args = {
-  ...Regular.args,
-  disabled: true,
+/**
+ * Nullable
+ */
+export const Nullable: Story = {
+  args: {
+    ...Basic.args,
+    nullable: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Nullable OSCD Textfield',
+      },
+    },
+  },
 };
 
-export const Readonly = Template.bind({});
-Readonly.args = {
-  ...Regular.args,
-  readonly: true,
+/**
+ * Nullable With Default Value
+ */
+export const NullableWithDefaultValue: Story = {
+  args: {
+    ...Nullable.args,
+    defaultValue: 'James Bond',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Nullable OSCD Textfield with Default Value',
+      },
+    },
+  },
 };
 
-export const Nullable = Template.bind({});
-Nullable.args = {
-  ...Regular.args,
-  nullabe: true,
+/**
+ * Suffix
+ */
+export const WithSuffix: Story = {
+  args: {
+    value: 'John.Doe',
+    label: 'Email',
+    suffix: '@example.org',
+  },
+};
+/**
+ * MaybeValue
+ */
+export const MaybeValue: Story = {
+  args: {
+    ...Basic.args,
+    maybeValue: 'Jane Doe',
+  },
 };
 
-export const DefaultValue = Template.bind({});
-DefaultValue.args = {
-  ...Nullable.args,
-  defaultValue: 'Jane Doe',
+/**
+ * Helper
+ */
+export const WithHelper: Story = {
+  args: {
+    ...Basic.args,
+    helper: 'Please enter your name',
+  },
+};
+
+/**
+ * Persistent Helper
+ */
+export const WithPersistentHelper: Story = {
+  args: {
+    ...WithHelper.args,
+    helperPersistent: true,
+  },
+};
+
+/** Validation Message */
+export const WithValidationMessage: Story = {
+  args: {
+    ...Required.args,
+    validationMessage: 'We need your name',
+  },
 };

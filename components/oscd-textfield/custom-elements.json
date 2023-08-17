@@ -71,15 +71,37 @@
             {
               "description": "Color when active of the underline, ripple, the outline, and the caret.",
               "name": "--oscd-theme-textfield-primary",
-              "default": "-oscd-theme-primary"
+              "default": "--oscd-theme-primary"
+            },
+            {
+              "description": "Color of the Switch track",
+              "name": "--oscd-theme-textfield-primary-surface",
+              "default": "--oscd-theme-primary-surface"
+            },
+            {
+              "description": "Color of the Switch Hover state",
+              "name": "--oscd-theme-textfield-primary-surface-active",
+              "default": "--oscd-theme-primary-surface-active"
+            },
+            {
+              "description": "Color of the Switch Hover state",
+              "name": "--oscd-theme-textfield-primary-active",
+              "default": "--oscd-theme-primary-active"
+            },
+            {
+              "description": "Color of the textfield Fill",
+              "name": "--oscd-theme-textfield-fill"
+            },
+            {
+              "description": "Color of the textfield Text",
+              "name": "--oscd-theme-textfield-ink"
+            },
+            {
+              "description": "Color of the textfield Line",
+              "name": "--oscd-theme-textfield-line"
             }
           ],
           "members": [
-            {
-              "kind": "field",
-              "name": "scopedElements",
-              "static": true
-            },
             {
               "kind": "field",
               "name": "nullable",
@@ -87,7 +109,7 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "OscdTextfield can be nullable. If true, use the [[maybeValue]]"
+              "description": "Textfield is nullable"
             },
             {
               "kind": "field",
@@ -95,14 +117,16 @@
               "type": {
                 "text": "array"
               },
-              "default": "[null, '']"
+              "default": "[null, '']",
+              "description": "Multipliers"
             },
             {
               "kind": "field",
               "name": "multiplier",
               "type": {
-                "text": "string | null"
-              }
+                "text": "string"
+              },
+              "description": "Multiplier"
             },
             {
               "kind": "field",
@@ -111,14 +135,15 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "Unit for OscdTextfield"
+              "description": "Unit"
             },
             {
               "kind": "field",
               "name": "maybeValue",
               "type": {
-                "text": "string | null"
-              }
+                "text": "string"
+              },
+              "description": "Maybevalue"
             },
             {
               "kind": "field",
@@ -127,16 +152,16 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "The default `value` displayed if [[`maybeValue`]] is `null`."
+              "description": "Default Value"
             },
             {
               "kind": "field",
               "name": "reservedValues",
               "type": {
-                "text": "string[]"
+                "text": "array"
               },
               "default": "[]",
-              "description": "Additional values that cause validation to fail."
+              "description": "Reserved Values"
             },
             {
               "kind": "field",
@@ -145,7 +170,7 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "Suffix of OscdTextfield"
+              "description": "Suffix"
             },
             {
               "kind": "field",
@@ -154,7 +179,7 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "OscdTextfield should be disabled"
+              "description": "Textfield is disabled"
             },
             {
               "kind": "field",
@@ -163,12 +188,12 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "OscdTextfield helper should be persistent"
+              "description": "Helper message is persistent"
             },
             {
               "kind": "field",
               "name": "value",
-              "description": "The value of the Form Control",
+              "description": "Textfield Value",
               "type": {
                 "text": "string"
               }
@@ -180,7 +205,7 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "Label for OscdTextfield"
+              "description": "Textfield Label"
             },
             {
               "kind": "field",
@@ -188,7 +213,8 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "false"
+              "default": "false",
+              "description": "Textfield is required"
             },
             {
               "kind": "field",
@@ -197,7 +223,7 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "Helper text below the OscdTextfield"
+              "description": "Helper Text"
             },
             {
               "kind": "field",
@@ -206,7 +232,7 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "Validation message for OscdTextfield (empty string if no validation should be shown)"
+              "description": "Validation Message"
             },
             {
               "kind": "field",
@@ -215,7 +241,7 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "Pattern the OscdTextfield must obey"
+              "description": "Textfield Pattern"
             },
             {
               "kind": "field",
@@ -224,7 +250,7 @@
                 "text": "number"
               },
               "default": "-1",
-              "description": "Min length of the OscdTextfield (-1 if unlimited)"
+              "description": "Minimum length of Textfield value"
             },
             {
               "kind": "field",
@@ -233,7 +259,7 @@
                 "text": "number"
               },
               "default": "-1",
-              "description": "Max length of the OscdTextfield (-1 if unlimited)"
+              "description": "Maximum length of Textfield value"
             },
             {
               "kind": "field",
@@ -242,7 +268,7 @@
                 "text": "number"
               },
               "default": "-1",
-              "description": "Min number of the OscdTextfield (-1 if unlimited)"
+              "description": "Minimum of Textfield value"
             },
             {
               "kind": "field",
@@ -251,7 +277,7 @@
                 "text": "number"
               },
               "default": "-1",
-              "description": "Max number of the OscdTextfield (-1 if unlimited)"
+              "description": "Maximum of Textfield value"
             },
             {
               "kind": "field",
@@ -266,7 +292,7 @@
               "kind": "field",
               "name": "nullSwitch",
               "type": {
-                "text": "Switch | undefined"
+                "text": "OscdSwitch | undefined"
               },
               "privacy": "protected"
             },
@@ -338,148 +364,6 @@
                   "text": "TemplateResult"
                 }
               }
-            }
-          ],
-          "attributes": [
-            {
-              "type": {
-                "text": "boolean"
-              },
-              "description": "Textfield is required",
-              "name": "required"
-            },
-            {
-              "type": {
-                "text": "boolean"
-              },
-              "description": "Textfield is nullable",
-              "name": "nullable"
-            },
-            {
-              "type": {
-                "text": "array"
-              },
-              "description": "Multipliers",
-              "name": "multipliers"
-            },
-            {
-              "type": {
-                "text": "string"
-              },
-              "description": "Multiplier",
-              "name": "multiplier"
-            },
-            {
-              "type": {
-                "text": "string"
-              },
-              "description": "Unit",
-              "name": "unit"
-            },
-            {
-              "type": {
-                "text": "String"
-              },
-              "description": "Maybevalue",
-              "name": "maybeValue"
-            },
-            {
-              "type": {
-                "text": "String"
-              },
-              "description": "Default Value",
-              "name": "defaultValue"
-            },
-            {
-              "type": {
-                "text": "Array"
-              },
-              "description": "Reserved Values",
-              "name": "reservedValues"
-            },
-            {
-              "type": {
-                "text": "String"
-              },
-              "description": "Suffix",
-              "name": "suffix"
-            },
-            {
-              "type": {
-                "text": "boolean"
-              },
-              "description": "Textfield is disabled",
-              "name": "disabled"
-            },
-            {
-              "type": {
-                "text": "boolean"
-              },
-              "description": "Helper message is persistent",
-              "name": "helperPersistent"
-            },
-            {
-              "type": {
-                "text": "String"
-              },
-              "description": "Textfield Value",
-              "name": "value"
-            },
-            {
-              "type": {
-                "text": "String"
-              },
-              "description": "Textfield Label",
-              "name": "label"
-            },
-            {
-              "type": {
-                "text": "String"
-              },
-              "description": "Helper Text",
-              "name": "helper"
-            },
-            {
-              "type": {
-                "text": "string"
-              },
-              "description": "Validation Message",
-              "name": "validationMessage"
-            },
-            {
-              "type": {
-                "text": "String"
-              },
-              "description": "Textfield Pattern",
-              "name": "pattern"
-            },
-            {
-              "type": {
-                "text": "Number"
-              },
-              "description": "Minimum length of Textfield value",
-              "name": "minLength"
-            },
-            {
-              "type": {
-                "text": "Number"
-              },
-              "description": "Maximum length of Textfield value",
-              "name": "maxLength"
-            },
-            {
-              "type": {
-                "text": "Number"
-              },
-              "description": "Minimum of Textfield value",
-              "name": "min"
-            },
-            {
-              "type": {
-                "text": "Number"
-              },
-              "description": "Maximum of Textfield value",
-              "name": "max"
             }
           ],
           "superclass": {

@@ -11,7 +11,6 @@ const config: StorybookConfig = {
     '@storybook/addon-docs',
     '@storybook/addon-controls',
     '@storybook/addon-actions',
-    '@storybook/addon-backgrounds',
     '@storybook/addon-a11y',
     '@storybook/addon-links',
     {
@@ -20,10 +19,8 @@ const config: StorybookConfig = {
         background: false,
       },
     },
-    'storybook-addon-themes',
-    'storybook-design-token',
     '@etchteam/storybook-addon-status/register',
-    '@etchteam/storybook-addon-css-variables-theme',
+    'storybook-addon-root-attribute/register',
   ],
   framework: {
     name: '@storybook/web-components-vite',

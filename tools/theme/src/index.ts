@@ -1,13 +1,30 @@
-import path from 'path';
+#!/usr/bin/env node
+
+import yargs from 'yargs';
+import { hideBin } from 'yargs/helpers';
 
 import StyleDictionary from 'style-dictionary';
 
+interface Args {
+  theme: string;
+}
+
+const args: Args = yargs(hideBin(process.argv))
+  .options({
+    theme: {
+      type: 'string',
+      default: 'oscd',
+      demandOption: true,
+    },
+  })
+  .parseSync();
+
 const rootFolder = '../../';
 
-const themeName = 'oscd';
+const themeName = args.theme;
 
 StyleDictionary.extend({
-  source: [`${rootFolder}/themes/tokens/**/*.json`],
+  source: [`${rootFolder}/themes/tokens/${themeName}/**/*.json`],
   platforms: {
     scss: {
       transformGroup: 'scss',

@@ -1,9 +1,23 @@
 import { html, TemplateResult } from 'lit';
 
+import { withActions } from '@storybook/addon-actions/decorator';
+
+import { createBadge } from '@oscd/utils';
+
+import pckgJson from '../package.json';
+
+import '../src/<%= className %>';
+
 export default {
   title: '<%= name %>/<%= className %>',
   component: '<%= selector %>',
   argTypes: {},
+  parameters: {
+    status: {
+      type: createBadge(pckgJson),
+    },
+  },
+  decorators: [withActions],
 };
 
 interface Story<T> {
@@ -17,4 +31,5 @@ interface ArgTypes {}
 const Template: Story<ArgTypes> = ({}: ArgTypes) =>
   html`<<%= selector %>></<%= selector %>>`;
 
+/** Regular */
 export const Regular = Template.bind({});

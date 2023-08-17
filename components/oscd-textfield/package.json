@@ -25,6 +25,7 @@
     "@material/mwc-switch": "^0.27.0",
     "@material/mwc-textfield": "^0.27.0",
     "@openscd/core": "*",
+    "@openscd/oscd-switch": "*",
     "lit": "^2.7.6"
   },
   "author": "OpenSCD",
@@ -46,12 +47,13 @@
     "@web/test-runner-playwright": "^0.9.0",
     "@web/test-runner-visual-regression": "^0.7.0",
     "concurrently": "^8.2.0",
+    "storybook-addon-root-attribute": "^1.0.2",
     "tslib": "^2.6.0",
     "typedoc": "^0.24.8",
     "typescript": "^5.1.6"
   },
   "customElements": "custom-elements.json",
   "oscd": {
-    "status": "deprecated"
+    "status": "stable"
   }
 }

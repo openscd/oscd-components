@@ -1,2 +1,2 @@
-export * from './create-badges';
+export * from './create-badge';
 export * from './create-style-tags';

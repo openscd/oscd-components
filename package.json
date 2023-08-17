@@ -6,7 +6,8 @@
   "workspaces": [
     "./components/*",
     "./lib/*",
-    "./tools/*"
+    "./tools/*",
+    "./storybook/*"
   ],
   "scripts": {
     "clean": "lerna run clean",
@@ -28,9 +29,7 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "@etchteam/storybook-addon-css-variables-theme": "^1.5.1",
     "@etchteam/storybook-addon-status": "^4.2.4",
-    "@geometricpanda/storybook-addon-badges": "^2.0.0",
     "@nx/js": "16.5.5",
     "@nx/storybook": "^16.5.3",
     "@storybook/addon-a11y": "^7.2.1",
@@ -47,12 +46,11 @@
     "chromatic": "^6.21.0",
     "css-loader": "^6.8.1",
     "lerna": "^7.1.4",
-    "lit": "^2.6.1",
     "nx": "^16.5.3",
     "prettier": "^2.6.2",
     "rimraf": "^5.0.1",
-    "storybook-addon-themes": "^6.1.0",
-    "storybook-design-token": "^2.9.0",
+    "storybook-addon-root-attribute": "^1.0.2",
+    "storybook-design-token": "^3.0.0-beta.5",
     "style-loader": "^3.3.3",
     "ts-jest": "^29.1.0",
     "ts-node": "10.9.1",

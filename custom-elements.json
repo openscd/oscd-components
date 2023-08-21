@@ -1,0 +1,757 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-switch/src/OscdSwitch.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "oscd-switch",
+          "declaration": {
+            "name": "OscdSwitch",
+            "module": "/components/oscd-switch/src/oscd-switch.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "OscdSwitch",
+          "declaration": {
+            "name": "OscdSwitch",
+            "module": "components/oscd-switch/src/OscdSwitch.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "OscdSwitchChangeEvent",
+          "declaration": {
+            "name": "OscdSwitchChangeEvent",
+            "module": "./oscd-switch.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-switch/src/oscd-switch.styles.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "components/oscd-switch/src/oscd-switch.styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-switch/src/oscd-switch.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "OscdSwitch",
+          "members": [
+            {
+              "kind": "field",
+              "name": "selected",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Selected state of the Switch",
+              "attribute": "selected"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disabled state of the Switch",
+              "attribute": "disabled"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "'on'",
+              "description": "Value of the Switch",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Name of the Switch",
+              "attribute": "name"
+            },
+            {
+              "kind": "field",
+              "name": "switch",
+              "type": {
+                "text": "Switch"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "onClick"
+            }
+          ],
+          "events": [
+            {
+              "description": "{OscdSwitchChangeEvent} Fired whenever `selected` changes due to user interaction (bubbles and composed).",
+              "name": "change"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "selected",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Selected state of the Switch",
+              "fieldName": "selected"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disabled state of the Switch",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "'on'",
+              "description": "Value of the Switch",
+              "fieldName": "value"
+            },
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Name of the Switch",
+              "fieldName": "name"
+            }
+          ],
+          "superclass": {
+            "name": "OscdComponent",
+            "package": "@openscd/core"
+          },
+          "tagName": "oscd-switch",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "OscdSwitch",
+          "declaration": {
+            "name": "OscdSwitch",
+            "module": "components/oscd-switch/src/oscd-switch.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-textfield/src/OscdTextfield.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "oscd-textfield",
+          "declaration": {
+            "name": "OscdTextfield",
+            "module": "/components/oscd-textfield/src/oscd-textfield"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "OscdTextfield",
+          "declaration": {
+            "name": "OscdTextfield",
+            "module": "components/oscd-textfield/src/OscdTextfield.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-textfield/src/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./OscdTextfield.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-textfield/src/oscd-textfield.styles.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "components/oscd-textfield/src/oscd-textfield.styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-textfield/src/oscd-textfield.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "OscdTextfield",
+          "cssProperties": [
+            {
+              "description": "Color when errored of the underline, the outline, the caret and the icons.",
+              "name": "--oscd-theme-textfield-error",
+              "default": "--oscd-theme-error"
+            },
+            {
+              "description": "Color when active of the underline, ripple, the outline, and the caret.",
+              "name": "--oscd-theme-textfield-primary",
+              "default": "--oscd-theme-primary"
+            },
+            {
+              "description": "Color of the Switch track",
+              "name": "--oscd-theme-textfield-primary-surface",
+              "default": "--oscd-theme-primary-surface"
+            },
+            {
+              "description": "Color of the Switch Hover state",
+              "name": "--oscd-theme-textfield-primary-surface-active",
+              "default": "--oscd-theme-primary-surface-active"
+            },
+            {
+              "description": "Color of the Switch Hover state",
+              "name": "--oscd-theme-textfield-primary-active",
+              "default": "--oscd-theme-primary-active"
+            },
+            {
+              "description": "Color of the textfield Fill",
+              "name": "--oscd-theme-textfield-fill"
+            },
+            {
+              "description": "Color of the textfield Text",
+              "name": "--oscd-theme-textfield-ink"
+            },
+            {
+              "description": "Color of the textfield Line",
+              "name": "--oscd-theme-textfield-line"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "nullable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Textfield is nullable",
+              "attribute": "nullable"
+            },
+            {
+              "kind": "field",
+              "name": "multipliers",
+              "type": {
+                "text": "array"
+              },
+              "default": "[null, '']",
+              "description": "Multipliers",
+              "attribute": "multipliers"
+            },
+            {
+              "kind": "field",
+              "name": "multiplier",
+              "type": {
+                "text": "string"
+              },
+              "description": "Multiplier",
+              "attribute": "multiplier"
+            },
+            {
+              "kind": "field",
+              "name": "unit",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Unit",
+              "attribute": "unit"
+            },
+            {
+              "kind": "field",
+              "name": "maybeValue",
+              "type": {
+                "text": "string"
+              },
+              "description": "Maybevalue",
+              "attribute": "maybeValue"
+            },
+            {
+              "kind": "field",
+              "name": "defaultValue",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Default Value",
+              "attribute": "defaultValue"
+            },
+            {
+              "kind": "field",
+              "name": "reservedValues",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]",
+              "description": "Reserved Values",
+              "attribute": "reservedValues"
+            },
+            {
+              "kind": "field",
+              "name": "suffix",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Suffix",
+              "attribute": "suffix"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Textfield is disabled",
+              "attribute": "disabled"
+            },
+            {
+              "kind": "field",
+              "name": "helperPersistent",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Helper message is persistent",
+              "attribute": "helperPersistent"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "description": "Textfield Value",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Textfield Label",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Textfield is required",
+              "attribute": "required"
+            },
+            {
+              "kind": "field",
+              "name": "helper",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Helper Text",
+              "attribute": "helper"
+            },
+            {
+              "kind": "field",
+              "name": "validationMessage",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Validation Message",
+              "attribute": "validationMessage"
+            },
+            {
+              "kind": "field",
+              "name": "pattern",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Textfield Pattern",
+              "attribute": "pattern"
+            },
+            {
+              "kind": "field",
+              "name": "minLength",
+              "type": {
+                "text": "number"
+              },
+              "default": "-1",
+              "description": "Minimum length of Textfield value",
+              "attribute": "minLength"
+            },
+            {
+              "kind": "field",
+              "name": "maxLength",
+              "type": {
+                "text": "number"
+              },
+              "default": "-1",
+              "description": "Maximum length of Textfield value",
+              "attribute": "maxLength"
+            },
+            {
+              "kind": "field",
+              "name": "min",
+              "type": {
+                "text": "number"
+              },
+              "default": "-1",
+              "description": "Minimum of Textfield value",
+              "attribute": "min"
+            },
+            {
+              "kind": "field",
+              "name": "max",
+              "type": {
+                "text": "number"
+              },
+              "default": "-1",
+              "description": "Maximum of Textfield value",
+              "attribute": "max"
+            },
+            {
+              "kind": "field",
+              "name": "disabledSwitch",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "nullSwitch",
+              "type": {
+                "text": "OscdSwitch | undefined"
+              },
+              "privacy": "protected"
+            },
+            {
+              "kind": "field",
+              "name": "multiplierMenu",
+              "type": {
+                "text": "Menu | undefined"
+              },
+              "privacy": "protected"
+            },
+            {
+              "kind": "field",
+              "name": "multiplierButton",
+              "type": {
+                "text": "IconButton | undefined"
+              },
+              "privacy": "protected"
+            },
+            {
+              "kind": "field",
+              "name": "textfield",
+              "type": {
+                "text": "TextField"
+              },
+              "privacy": "protected"
+            },
+            {
+              "kind": "field",
+              "name": "rendered",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "method",
+              "name": "checkValidity",
+              "return": {
+                "type": {
+                  "text": "boolean"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "renderUnitSelector",
+              "return": {
+                "type": {
+                  "text": "TemplateResult"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "renderMulplierList",
+              "return": {
+                "type": {
+                  "text": "TemplateResult"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "renderSwitch",
+              "return": {
+                "type": {
+                  "text": "TemplateResult"
+                }
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "nullable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Textfield is nullable",
+              "fieldName": "nullable"
+            },
+            {
+              "name": "multipliers",
+              "type": {
+                "text": "array"
+              },
+              "default": "[null, '']",
+              "description": "Multipliers",
+              "fieldName": "multipliers"
+            },
+            {
+              "name": "multiplier",
+              "type": {
+                "text": "string"
+              },
+              "description": "Multiplier",
+              "fieldName": "multiplier"
+            },
+            {
+              "name": "unit",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Unit",
+              "fieldName": "unit"
+            },
+            {
+              "name": "maybeValue",
+              "type": {
+                "text": "string"
+              },
+              "description": "Maybevalue",
+              "fieldName": "maybeValue"
+            },
+            {
+              "name": "defaultValue",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Default Value",
+              "fieldName": "defaultValue"
+            },
+            {
+              "name": "reservedValues",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]",
+              "description": "Reserved Values",
+              "fieldName": "reservedValues"
+            },
+            {
+              "name": "suffix",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Suffix",
+              "fieldName": "suffix"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Textfield is disabled",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "helperPersistent",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Helper message is persistent",
+              "fieldName": "helperPersistent"
+            },
+            {
+              "name": "value",
+              "description": "Textfield Value",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "value"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Textfield Label",
+              "fieldName": "label"
+            },
+            {
+              "name": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Textfield is required",
+              "fieldName": "required"
+            },
+            {
+              "name": "helper",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Helper Text",
+              "fieldName": "helper"
+            },
+            {
+              "name": "validationMessage",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Validation Message",
+              "fieldName": "validationMessage"
+            },
+            {
+              "name": "pattern",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Textfield Pattern",
+              "fieldName": "pattern"
+            },
+            {
+              "name": "minLength",
+              "type": {
+                "text": "number"
+              },
+              "default": "-1",
+              "description": "Minimum length of Textfield value",
+              "fieldName": "minLength"
+            },
+            {
+              "name": "maxLength",
+              "type": {
+                "text": "number"
+              },
+              "default": "-1",
+              "description": "Maximum length of Textfield value",
+              "fieldName": "maxLength"
+            },
+            {
+              "name": "min",
+              "type": {
+                "text": "number"
+              },
+              "default": "-1",
+              "description": "Minimum of Textfield value",
+              "fieldName": "min"
+            },
+            {
+              "name": "max",
+              "type": {
+                "text": "number"
+              },
+              "default": "-1",
+              "description": "Maximum of Textfield value",
+              "fieldName": "max"
+            }
+          ],
+          "superclass": {
+            "name": "OscdComponent",
+            "package": "@openscd/core"
+          },
+          "tagName": "oscd-textfield",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "OscdTextfield",
+          "declaration": {
+            "name": "OscdTextfield",
+            "module": "components/oscd-textfield/src/oscd-textfield.ts"
+          }
+        }
+      ]
+    }
+  ]
+}

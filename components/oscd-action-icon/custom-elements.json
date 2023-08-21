@@ -1,0 +1,187 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/OscdActionIcon.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "oscd-action-icon",
+          "declaration": {
+            "name": "OscdActionIcon",
+            "module": "/src/oscd-action-icon"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "OscdActionIcon",
+          "declaration": {
+            "name": "OscdActionIcon",
+            "module": "src/OscdActionIcon.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./OscdActionIcon.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/oscd-action-icon.styles.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/oscd-action-icon.styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/oscd-action-icon.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "OscdActionIcon",
+          "cssProperties": [
+            {
+              "description": "Border and hover color.",
+              "name": "--oscd-action-icon-theme-primary",
+              "default": "--oscd-theme-primary"
+            },
+            {
+              "description": "Font color inside hover field.",
+              "name": "--oscd-action-icon-theme-on-primary",
+              "default": "--oscd-theme-on-primary"
+            },
+            {
+              "description": "Secondary border and hover color.",
+              "name": "--oscd-action-icon-theme-secondary",
+              "default": "--oscd-theme-secondary"
+            },
+            {
+              "description": "Icon and label color.",
+              "name": "--oscd-action-icon-theme-on-surface",
+              "default": "--oscd-theme-on-surface"
+            },
+            {
+              "description": "Font for label and hover text.",
+              "name": "--oscd-action-icon-theme-font",
+              "default": "--oscd-theme-font"
+            }
+          ],
+          "slots": [
+            {
+              "description": "May contain up to eight icon buttons.",
+              "name": "action"
+            },
+            {
+              "description": "If filled overrides the icon property.",
+              "name": "icon"
+            },
+            {
+              "description": "The default slot will be rendered into the pane body in a single column.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "scopedElements",
+              "static": true
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "description": "Caption text, displayed in the header"
+            },
+            {
+              "kind": "field",
+              "name": "icon",
+              "type": {
+                "text": "string"
+              },
+              "description": "Icon name, displayed unlesss the \"icon\" slot is filled"
+            },
+            {
+              "kind": "field",
+              "name": "secondary",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Color header with secondary theme color while focus is within"
+            },
+            {
+              "kind": "field",
+              "name": "highlighted",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Highlight pane with dotted outline"
+            },
+            {
+              "kind": "field",
+              "name": "hideActions",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disabled CSS adoption"
+            },
+            {
+              "kind": "method",
+              "name": "renderIcon",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "TemplateResult"
+                }
+              }
+            }
+          ],
+          "superclass": {
+            "name": "OscdComponent",
+            "package": "@openscd/core"
+          },
+          "tagName": "oscd-action-icon",
+          "summary": "A responsive container rendering actions in a header.",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "OscdActionIcon",
+          "declaration": {
+            "name": "OscdActionIcon",
+            "module": "src/oscd-action-icon.ts"
+          }
+        }
+      ]
+    }
+  ]
+}

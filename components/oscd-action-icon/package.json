@@ -1,26 +1,24 @@
 {
-  "name": "@openscd/oscd-switch",
-  "description": "Webcomponent oscd-switch following open-wc recommendations",
+  "name": "@openscd/oscd-action-icon",
+  "description": "Webcomponent oscd-action-icon following open-wc recommendations",
   "license": "Apache-2.0",
   "author": "OpenSCD",
   "version": "0.0.1",
-  "browser": "./dist/OscdSwitch.js",
-  "module": "./dist/OscdSwitch.js",
-  "types": "./dist/OscdSwitch.d.ts",
+  "browser": "./dist/OscdActionIcon.js",
+  "module": "./dist/OscdActionIcon.js",
   "files": [
-    "./dist/**/*"
+    "dist/**/*"
   ],
   "exports": {
-    ".": "./dist/OscdSwitch.js",
-    "./oscd-switch.js": "./dist/oscd-switch.js"
+    ".": "./dist/OscdActionIcon.js"
   },
   "type": "module",
   "readme": "./README.md",
   "scripts": {
     "analyze": "cem analyze",
-    "build": "tsc --build tsconfig.json",
+    "build": "tsc",
     "clean": "rimraf .tsbuildinfo dist",
-    "storybook": "npx nx storybook oscd-switch",
+    "storybook": "npx nx storybook oscd-action-icon",
     "typedoc": "typedoc",
     "test": "tsc --p tsconfig.test.json && wtr --coverage",
     "test:unit": "tsc --p tsconfig.test.json && wtr --group default",
@@ -32,6 +30,8 @@
     "@openscd/core": "*",
     "lit": "^2.7.6"
   },
+  "author": "OpenSCD",
+  "license": "ISC",
   "devDependencies": {
     "@commitlint/cli": "^17.3.0",
     "@commitlint/config-conventional": "^17.3.0",

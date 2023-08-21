@@ -70,6 +70,26 @@
       "draft": false,
       "prerelease": false,
       "initial-version": "0.0.1"
+    },
+    "components/oscd-action-icon": {
+      "component": "@openscd/oscd-action-icon",
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "node",
+      "bump-minor-pre-major": false,
+      "bump-patch-for-minor-pre-major": false,
+      "draft": false,
+      "prerelease": false,
+      "initial-version": "0.0.1"
+    },
+    "components/oscd-action-pane": {
+      "component": "@openscd/oscd-action-pane",
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "node",
+      "bump-minor-pre-major": false,
+      "bump-patch-for-minor-pre-major": false,
+      "draft": false,
+      "prerelease": false,
+      "initial-version": "0.0.1"
     }
   },
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",

@@ -15,3 +15,5 @@
 /components/oscd-button @PascalWilbrink
 /components/oscd-switch @PascalWilbrink
 /components/oscd-switch @PascalWilbrink
+/components/oscd-action-icon @PascalWilbrink
+/components/oscd-action-pane @PascalWilbrink

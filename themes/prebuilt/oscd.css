@@ -23,6 +23,8 @@
 
     --oscd-theme-switch-disabled: var(--color-oscd-ref-gray-gray700);
     --oscd-theme-disabled: var(--color-oscd-ref-gray-gray700);
+
+    --oscd-theme-text-color: var(--color-oscd-black);
     /**
      * @tokens-end
      */
@@ -48,5 +50,8 @@
 
     --oscd-theme-switch-disabled: var(--color-oscd-ref-gray-gray300);
     --oscd-theme-disabled: var(--color-oscd-ref-gray-gray300);
+
+    --oscd-theme-text-color: var(--color-oscd-white);
+
 }
 

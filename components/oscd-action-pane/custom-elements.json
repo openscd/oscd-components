@@ -1,0 +1,237 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/OscdActionPane.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "oscd-action-pane",
+          "declaration": {
+            "name": "OscdActionPane",
+            "module": "/src/oscd-action-pane"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "OscdActionPane",
+          "declaration": {
+            "name": "OscdActionPane",
+            "module": "src/OscdActionPane.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./OscdActionPane.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/oscd-action-pane.styles.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/oscd-action-pane.styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/oscd-action-pane.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "OscdActionPane",
+          "cssProperties": [
+            {
+              "description": "Color for border on even levels.",
+              "name": "--oscd-action-icon-theme-primary",
+              "default": "--oscd-theme-primary"
+            },
+            {
+              "description": "Pane color for the uneven levels.",
+              "name": "--oscd-action-icon-theme-on-primary",
+              "default": "--oscd-theme-on-primary"
+            },
+            {
+              "description": "Color for border on uneven levels.",
+              "name": "--oscd-action-icon-theme-secondary",
+              "default": "--oscd-theme-secondary"
+            },
+            {
+              "description": "Pane color for the even levels.",
+              "name": "--oscd-action-pane-theme-surface",
+              "default": "--oscd-theme-surface"
+            },
+            {
+              "description": "Icon and label color.",
+              "name": "--oscd-action-icon-theme-on-surface",
+              "default": "--oscd-theme-on-surface"
+            },
+            {
+              "description": "Font for label.",
+              "name": "--oscd-action-icon-theme-font",
+              "default": "--oscd-theme-font"
+            }
+          ],
+          "slots": [
+            {
+              "description": "May contain up to eight icon buttons.",
+              "name": "action"
+            },
+            {
+              "description": "If filled overrides the icon property.",
+              "name": "icon"
+            },
+            {
+              "description": "The default slot will be rendered into the pane body in a single column.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "description": "Caption text, displayed in the header",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "icon",
+              "type": {
+                "text": "string"
+              },
+              "description": "Icon name, displayed unless the \"icon\" slot is filled",
+              "attribute": "icon"
+            },
+            {
+              "kind": "field",
+              "name": "secondary",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Color header with Secondary theme color while focus is within",
+              "attribute": "secondary"
+            },
+            {
+              "kind": "field",
+              "name": "highlighted",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Highlight pane with dotted outline",
+              "attribute": "highlighted"
+            },
+            {
+              "kind": "field",
+              "name": "level",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "description": "Nesting level, default (closes pane ancestors level) + 1",
+              "attribute": "level"
+            },
+            {
+              "kind": "method",
+              "name": "renderHeader",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "TemplateResult"
+                }
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "description": "Caption text, displayed in the header",
+              "fieldName": "label"
+            },
+            {
+              "name": "icon",
+              "type": {
+                "text": "string"
+              },
+              "description": "Icon name, displayed unless the \"icon\" slot is filled",
+              "fieldName": "icon"
+            },
+            {
+              "name": "secondary",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Color header with Secondary theme color while focus is within",
+              "fieldName": "secondary"
+            },
+            {
+              "name": "highlighted",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Highlight pane with dotted outline",
+              "fieldName": "highlighted"
+            },
+            {
+              "name": "level",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "description": "Nesting level, default (closes pane ancestors level) + 1",
+              "fieldName": "level"
+            }
+          ],
+          "superclass": {
+            "name": "OscdComponent",
+            "package": "@openscd/core"
+          },
+          "tagName": "oscd-action-pane",
+          "summary": "A responsive container rendering actions in a header.",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "OscdActionPane",
+          "declaration": {
+            "name": "OscdActionPane",
+            "module": "src/oscd-action-pane.ts"
+          }
+        }
+      ]
+    }
+  ]
+}

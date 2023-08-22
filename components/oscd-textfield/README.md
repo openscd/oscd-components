@@ -15,28 +15,8 @@ The textfield is used for XML input and can be optional.
 
 ### Attributes
 
-| Name              | Type    | Description                       |
-| ----------------- | ------- | --------------------------------- |
-| required          | boolean | Textfield is required             |
-| nullable          | boolean | Textfield is nullable             |
-| multipliers       | array   | Multipliers                       |
-| multiplier        | string  | Multiplier                        |
-| unit              | string  | Unit                              |
-| maybeValue        | String  | Maybevalue                        |
-| defaultValue      | String  | Default Value                     |
-| reservedValues    | Array   | Reserved Values                   |
-| suffix            | String  | Suffix                            |
-| disabled          | boolean | Textfield is disabled             |
-| helperPersistent  | boolean | Helper message is persistent      |
-| value             | String  | Textfield Value                   |
-| label             | String  | Textfield Label                   |
-| helper            | String  | Helper Text                       |
-| validationMessage | string  | Validation Message                |
-| pattern           | String  | Textfield Pattern                 |
-| minLength         | Number  | Minimum length of Textfield value |
-| maxLength         | Number  | Maximum length of Textfield value |
-| min               | Number  | Minimum of Textfield value        |
-| max               | Number  | Maximum of Textfield value        |
+| Name | Type | Description |
+| ---- | ---- | ----------- |
 
 ### Css Properties
 

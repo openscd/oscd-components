@@ -306,18 +306,32 @@ export class OscdTextfield extends OscdComponent {
   })
   max = -1;
 
-  // FIXME: workaround to allow disable of the whole component - need basic refactor
-  private disabledSwitch = false;
+  /**
+   * @internal
+   */
+  private _disabledSwitch: boolean = false;
 
+  /**
+   * @internal
+   */
   @query('oscd-switch')
   protected nullSwitch?: OscdSwitch;
 
+  /**
+   * @internal
+   */
   @query('mwc-menu')
   protected multiplierMenu?: Menu;
 
+  /**
+   * @internal
+   */
   @query('mwc-icon-button')
   protected multiplierButton?: IconButton;
 
+  /**
+   * @internal
+   */
   @query('mwc-textfield')
   protected textfield!: TextField;
 
@@ -326,6 +340,9 @@ export class OscdTextfield extends OscdComponent {
    */
   private nulled: string | null = null;
 
+  /**
+   * @internal
+   */
   private rendered = false;
 
   /**
@@ -373,6 +390,7 @@ export class OscdTextfield extends OscdComponent {
     if (!this.maybeValue) {
       this.disable();
     }
+    this._disabledSwitch = this.hasAttribute('disabled');
   }
 
   checkValidity(): boolean {
@@ -389,20 +407,22 @@ export class OscdTextfield extends OscdComponent {
   }
 
   /**
-   * @hidden
+   * @internal
    */
   constructor() {
     super();
-    this.disabledSwitch = this.hasAttribute('disabled');
   }
 
-  renderUnitSelector(): TemplateResult {
+  /**
+   * @internal
+   */
+  protected renderUnitSelector(): TemplateResult {
     if (this.multipliers.length && this.unit)
       return html`<div style="position:relative;">
         <mwc-icon-button
           style="margin:5px;"
           icon="more"
-          ?disabled=${this.null || this.disabledSwitch}
+          ?disabled=${this.null || this._disabledSwitch}
           @click=${() => this.multiplierMenu?.show()}
         ></mwc-icon-button>
         <mwc-menu
@@ -415,7 +435,10 @@ export class OscdTextfield extends OscdComponent {
     else return html``;
   }
 
-  renderMulplierList(): TemplateResult {
+  /**
+   * @internal
+   */
+  protected renderMulplierList(): TemplateResult {
     return html`${this.multipliers.map(
       (multiplier) =>
         html`<mwc-list-item ?selected=${multiplier === this.multiplier}
@@ -424,11 +447,14 @@ export class OscdTextfield extends OscdComponent {
     )}`;
   }
 
-  renderSwitch(): TemplateResult {
+  /**
+   * @internal
+   */
+  protected renderSwitch(): TemplateResult {
     if (this.nullable) {
       return html`<oscd-switch
         ?selected=${!this.null}
-        ?disabled=${this.disabledSwitch}
+        ?disabled=${this._disabledSwitch}
         @change=${(evt: OscdSwitchChangeEvent) => {
           this.null = !evt.detail.selected;
         }}

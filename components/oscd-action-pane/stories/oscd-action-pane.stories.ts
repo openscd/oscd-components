@@ -25,17 +25,19 @@ type Story = StoryObj;
 
 /** Basic */
 export const Basic: Story = {
-  render: ({ label, description, highlighted, secondary, level }) =>
+  render: ({ label, description, highlighted, secondary, level, icon }) =>
     html`<oscd-action-pane
       .label=${label}
       ?highlighted=${highlighted}
       ?secondary=${secondary}
       .level=${level}
+      .icon=${icon}
       >${description}</oscd-action-pane
     >`,
   args: {
     label: 'Label',
     description: 'Some Text',
+    level: 0,
   },
 };
 
@@ -55,5 +57,46 @@ export const Nested: Story = {
     </oscd-action-pane>`,
   args: {
     ...Basic.args,
+  },
+};
+
+/**
+ * With Icon
+ */
+export const WithIcon: Story = {
+  render: ({ label, description, highlighted, secondary, level, icon }) =>
+    html`<oscd-action-pane
+      .label=${label}
+      ?highlighted=${highlighted}
+      ?secondary=${secondary}
+      .level=${level}
+      .icon=${icon}
+      >${description}</oscd-action-pane
+    >`,
+  args: {
+    ...Basic.args,
+    icon: 'edit',
+  },
+};
+
+/**
+ * With Actions
+ */
+export const WithActions: Story = {
+  render: ({ label, description, highlighted, secondary, level, icon }) =>
+    html`<oscd-action-pane
+      .label=${label}
+      ?highlighted=${highlighted}
+      ?secondary=${secondary}
+      .level=${level}
+      .icon=${icon}
+    >
+      ${description}
+      <mwc-icon slot="action">edit</mwc-icon>
+      <mwc-icon slot="action">delete</mwc-icon>
+    </oscd-action-pane>`,
+  args: {
+    ...Basic.args,
+    icon: 'edit',
   },
 };

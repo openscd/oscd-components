@@ -64,6 +64,9 @@ export class OscdSwitch extends OscdComponent {
   })
   name: string = '';
 
+  /**
+   * @internal
+   */
   @query('mwc-switch')
   switch!: Switch;
 

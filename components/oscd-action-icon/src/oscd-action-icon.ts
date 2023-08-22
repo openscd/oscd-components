@@ -31,6 +31,9 @@ import styles from './oscd-action-icon.styles.js';
 export class OscdActionIcon extends OscdComponent {
   static styles: CSSResultGroup = styles;
 
+  /**
+   * @internal
+   */
   static get scopedElements() {
     return {};
   }

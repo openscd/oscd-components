@@ -28,9 +28,9 @@ function closestTo<E extends Element>(node: Node, selector: string): E | null {
 
 /**
  *
- * @slot action - May contain up to eight icon buttons.
- * @slot icon - If filled overrides the icon property.
- * @slot - The default slot will be rendered into the pane body in a single column.
+ * @slot `action` - May contain up to eight icon buttons.
+ * @slot `icon` - If filled overrides the icon property.
+ * @slot `[default]` - The default slot will be rendered into the pane body in a single column.
  *
  * @cssprop [--oscd-action-icon-theme-primary=--oscd-theme-primary] - Color for border on even levels.
  * @cssprop [--oscd-action-icon-theme-on-primary=--oscd-theme-on-primary] - Pane color for the uneven levels.

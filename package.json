@@ -14,11 +14,13 @@
     "clean": "lerna run clean",
     "build": "lerna run build",
     "build:all": "nx run-many -t build --all",
+    "prestorybook": "npm run analyze",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "generate:component": "nx generate oscd:component",
     "component:status": "nx generate oscd:status",
-    "analyze": "cem analyze"
+    "analyze": "cem analyze",
+    "test": "lerna run test"
   },
   "keywords": [
     "OpenSCD",

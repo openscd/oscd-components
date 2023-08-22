@@ -23,5 +23,20 @@ describe('oscd-switch', () => {
     document.body.prepend(element);
   });
 
+  it('Should look like screenshot', async () => {
+    await element.updateComplete;
+    await timeout(500);
+    await visualDiff(element, 'oscd-switch');
+  });
+
+  describe('selected', () => {
+    it('Should look like screenshot', async () => {
+      element.selected = true;
+      await element.updateComplete;
+      await timeout(500);
+      await visualDiff(element, 'oscd-switch-selected');
+    });
+  });
+
   afterEach(() => element.remove());
 });

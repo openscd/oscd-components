@@ -7,7 +7,7 @@ describe('Basic component oscd-checkbox', () => {
   let element: OscdCheckbox;
 
   beforeEach(async () => {
-    element = await fixture(html`<oscd-checkbox</oscd-checkbox>`);
+    element = await fixture(html`<oscd-checkbox></oscd-checkbox>`);
     await element.updateComplete;
   });
 });

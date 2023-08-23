@@ -3,7 +3,7 @@ import { fixture, html } from '@open-wc/testing';
 import { visualDiff } from '@web/test-runner-visual-regression';
 
 import '../src';
-import { OscdSelect> } from '../src';
+import { OscdSelect } from '../src';
 
 const factor = process.env.CI ? 2 : 1;
 
@@ -18,14 +18,10 @@ mocha.timeout(2000 * factor);
 describe('oscd-select', () => {
   let element: OscdSelect;
 
-
   beforeEach(async () => {
-    element = await fixture(
-      html`<oscd-select></oscd-select>`
-    );
+    element = await fixture(html`<oscd-select></oscd-select>`);
     document.body.prepend(element);
   });
 
   afterEach(() => element.remove());
-
 });

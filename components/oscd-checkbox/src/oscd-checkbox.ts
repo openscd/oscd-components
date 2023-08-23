@@ -12,6 +12,7 @@ import { OscdFormComponent } from '@openscd/form';
 import '@material/mwc-formfield';
 import '@openscd/oscd-switch';
 import '@material/mwc-checkbox';
+
 import { Checkbox } from '@material/mwc-checkbox';
 
 import styles from './oscd-checkbox.styles.js';

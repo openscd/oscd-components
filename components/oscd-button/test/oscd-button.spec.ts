@@ -7,7 +7,7 @@ describe('Basic component oscd-button', () => {
   let element: OscdButton;
 
   beforeEach(async () => {
-    element = await fixture(html`<oscd-button</oscd-button>`);
+    element = await fixture(html`<oscd-button></oscd-button>`);
     await element.updateComplete;
   });
 });

@@ -27,8 +27,8 @@
     "test:watch": "tsc --p tsconfig.test.json && concurrently -k -r \"tsc --p tsconfig.test.json --watch --preserveWatchOutput\" \"wtr --watch\""
   },
   "dependencies": {
-    "@openscd/core": "*",
-    "@openscd/oscd-switch": "*",
+    "@openscd/form": "*",
+    "@material/mwc-select": "0.27.0",
     "lit": "^2.7.6"
   },
   "devDependencies": {

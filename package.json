@@ -20,7 +20,7 @@
     "generate:component": "nx generate oscd:component",
     "component:status": "nx generate oscd:status",
     "analyze": "cem analyze",
-    "test": "lerna run test"
+    "test": "lerna run test --concurrency 1"
   },
   "keywords": [
     "OpenSCD",

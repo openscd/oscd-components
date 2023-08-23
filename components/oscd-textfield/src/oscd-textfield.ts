@@ -5,6 +5,7 @@ import {
   state,
   CSSResultGroup,
   TemplateResult,
+  PropertyValueMap,
 } from 'lit-element';
 
 import '@material/mwc-icon-button';
@@ -12,19 +13,14 @@ import '@material/mwc-list/mwc-list-item';
 import '@material/mwc-menu';
 import '@material/mwc-textfield';
 
-import '@openscd/oscd-switch';
-
 import { IconButton } from '@material/mwc-icon-button';
 
 import { Menu } from '@material/mwc-menu';
 import { SingleSelectedEvent } from '@material/mwc-list/mwc-list-foundation';
 
-import type { OscdSwitch } from '@openscd/oscd-switch';
-import type { OscdSwitchChangeEvent } from '@openscd/oscd-switch/oscd-switch.js';
-
 import { TextField } from '@material/mwc-textfield';
 
-import { OscdComponent } from '@openscd/core';
+import { OscdFormComponent } from '@openscd/form';
 
 import styles from './oscd-textfield.styles.js';
 
@@ -62,7 +58,7 @@ import styles from './oscd-textfield.styles.js';
  * @example <oscd-textfield value="John Doe" label="Name"></oscd-textfield>
  * @tagname oscd-textfield
  */
-export class OscdTextfield extends OscdComponent {
+export class OscdTextfield extends OscdFormComponent {
   static styles: CSSResultGroup = styles;
 
   /**
@@ -119,20 +115,15 @@ export class OscdTextfield extends OscdComponent {
   /**
    * @internal
    */
-  private isNull = false;
-
-  /**
-   * @internal
-   */
   @state()
-  private get null(): boolean {
+  protected get null(): boolean {
     return this.nullable && this.isNull;
   }
 
   /**
    * @internal
    */
-  private set null(value: boolean) {
+  protected set null(value: boolean) {
     if (!this.nullable || value === this.isNull) return;
     this.isNull = value;
     if (this.null) {
@@ -309,17 +300,6 @@ export class OscdTextfield extends OscdComponent {
   /**
    * @internal
    */
-  private _disabledSwitch: boolean = false;
-
-  /**
-   * @internal
-   */
-  @query('oscd-switch')
-  protected nullSwitch?: OscdSwitch;
-
-  /**
-   * @internal
-   */
   @query('mwc-menu')
   protected multiplierMenu?: Menu;
 
@@ -391,6 +371,24 @@ export class OscdTextfield extends OscdComponent {
       this.disable();
     }
     this._disabledSwitch = this.hasAttribute('disabled');
+
+    this.styleTextfield();
+  }
+
+  protected async updated(
+    _changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>
+  ): Promise<void> {
+    await super.updated(_changedProperties);
+    this.styleTextfield();
+  }
+
+  private styleTextfield() {
+    Array.from<HTMLElement>(
+      this.textfield.shadowRoot!.querySelectorAll('.mdc-text-field__affix')
+    ).forEach((el) => {
+      console.log('el', el);
+      el.style.setProperty('color', 'var(--mdc-text-field-label-ink-color)');
+    });
   }
 
   checkValidity(): boolean {
@@ -445,22 +443,6 @@ export class OscdTextfield extends OscdComponent {
           >${multiplier === null ? 'no Multiplier' : multiplier}</mwc-list-item
         >`
     )}`;
-  }
-
-  /**
-   * @internal
-   */
-  protected renderSwitch(): TemplateResult {
-    if (this.nullable) {
-      return html`<oscd-switch
-        ?selected=${!this.null}
-        ?disabled=${this._disabledSwitch}
-        @change=${(evt: OscdSwitchChangeEvent) => {
-          this.null = !evt.detail.selected;
-        }}
-      ></oscd-switch>`;
-    }
-    return html``;
   }
 
   /**

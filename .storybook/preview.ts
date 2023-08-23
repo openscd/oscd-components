@@ -9,11 +9,6 @@ import customElements from '../custom-elements.json';
 
 setCustomElementsManifest(customElements);
 
-export const decorators = [
-  withRootAttribute,
-  (story) => html`<div class="story-wrapper">${story()}</div>`,
-];
-
 export const parameters = {
   statuses: {
     released: {

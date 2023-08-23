@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
-import { action } from '@storybook/addon-actions';
+import { userEvent, within } from '@storybook/testing-library';
 
-import { html, TemplateResult } from 'lit';
+import { html } from 'lit';
 
 import '../src/OscdTextfield';
 
@@ -27,6 +27,8 @@ type Story = StoryObj;
  * Basic
  */
 export const Basic: Story = {
+  render: ({ label, value }) =>
+    html`<oscd-textfield .label=${label} .value=${value}></oscd-textfield>`,
   args: {
     label: 'Name',
     value: 'John Doe',
@@ -153,5 +155,18 @@ export const WithValidationMessage: Story = {
   args: {
     ...Required.args,
     validationMessage: 'We need your name',
+  },
+};
+
+/**
+ * Multiplier
+ */
+export const WithMultiplier: Story = {
+  args: {
+    ...Basic.args,
+    label: 'Memory',
+    value: 4096,
+    multipliers: ['Kilo', 'Mega', 'Giga'],
+    unit: 'Byte',
   },
 };

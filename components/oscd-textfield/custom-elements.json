@@ -280,56 +280,6 @@
               "description": "Maximum of Textfield value"
             },
             {
-              "kind": "field",
-              "name": "disabledSwitch",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "nullSwitch",
-              "type": {
-                "text": "OscdSwitch | undefined"
-              },
-              "privacy": "protected"
-            },
-            {
-              "kind": "field",
-              "name": "multiplierMenu",
-              "type": {
-                "text": "Menu | undefined"
-              },
-              "privacy": "protected"
-            },
-            {
-              "kind": "field",
-              "name": "multiplierButton",
-              "type": {
-                "text": "IconButton | undefined"
-              },
-              "privacy": "protected"
-            },
-            {
-              "kind": "field",
-              "name": "textfield",
-              "type": {
-                "text": "TextField"
-              },
-              "privacy": "protected"
-            },
-            {
-              "kind": "field",
-              "name": "rendered",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
               "kind": "method",
               "name": "checkValidity",
               "return": {
@@ -337,38 +287,11 @@
                   "text": "boolean"
                 }
               }
-            },
-            {
-              "kind": "method",
-              "name": "renderUnitSelector",
-              "return": {
-                "type": {
-                  "text": "TemplateResult"
-                }
-              }
-            },
-            {
-              "kind": "method",
-              "name": "renderMulplierList",
-              "return": {
-                "type": {
-                  "text": "TemplateResult"
-                }
-              }
-            },
-            {
-              "kind": "method",
-              "name": "renderSwitch",
-              "return": {
-                "type": {
-                  "text": "TemplateResult"
-                }
-              }
             }
           ],
           "superclass": {
-            "name": "OscdComponent",
-            "package": "@openscd/core"
+            "name": "OscdFormComponent",
+            "package": "@openscd/form"
           },
           "tagName": "oscd-textfield",
           "customElement": true

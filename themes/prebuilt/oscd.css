@@ -21,10 +21,23 @@
     --oscd-theme-textfield-disabled-fill: var(--color-oscd-ref-gray-gray300);
     --oscd-theme-textfield-disabled-ink: var(--color-oscd-ref-gray-gray500);
 
+    --oscd-theme-select-fill: var(--color-oscd-ref-gray-gray200);
+    --oscd-theme-select-ink: var(--color-oscd-ref-gray-gray900);
+    --oscd-theme-select-line: var(--color-oscd-ref-gray-gray700);
+    --oscd-theme-select-disabled-fill: var(--color-oscd-ref-gray-gray300);
+    --oscd-theme-select-disabled-ink: var(--color-oscd-ref-gray-gray500);
+
+    --oscd-theme-checkbox-ink: var(--color-oscd-ref-gray-gray900);
+    --oscd-theme-select-disabled-ink: var(--color-oscd-ref-gray-gray500);
+    --oscd-theme-checkbox-unchecked: var(--color-oscd-ref-gray-gray400);
+
     --oscd-theme-switch-disabled: var(--color-oscd-ref-gray-gray700);
     --oscd-theme-disabled: var(--color-oscd-ref-gray-gray700);
 
     --oscd-theme-text-color: var(--color-oscd-black);
+
+    --mdc-theme-text-primary-on-background: var(--color-oscd-black);
+
     /**
      * @tokens-end
      */
@@ -41,17 +54,29 @@
     --oscd-theme-primary-surface-active: var(--color-oscd-sys-dark-primary-surface-active);
     --oscd-theme-primary-active: var(--color-oscd-sys-dark-primary-active);
 
-
     --oscd-theme-textfield-fill: var(--color-oscd-ref-gray-gray800);
     --oscd-theme-textfield-ink: var(--color-oscd-ref-gray-gray100);
     --oscd-theme-textfield-line: var(--color-oscd-ref-gray-gray300);
     --oscd-theme-textfield-disabled-fill: var(--color-oscd-ref-gray-gray700);
     --oscd-theme-textfield-disabled-ink: var(--color-oscd-ref-gray-gray500);
 
+    --oscd-theme-select-fill: var(--color-oscd-ref-gray-gray800);
+    --oscd-theme-select-ink: var(--color-oscd-ref-gray-gray100);
+    --oscd-theme-select-line: var(--color-oscd-ref-gray-gray300);
+    --oscd-theme-select-disabled-fill: var(--color-oscd-ref-gray-gray700);
+    --oscd-theme-select-disabled-ink: var(--color-oscd-ref-gray-gray500);
+
+    --oscd-theme-checkbox-ink: var(--color-oscd-ref-gray-gray100);
+    --oscd-theme-select-disabled-ink: var(--color-oscd-ref-gray-gray500);
+    --oscd-theme-checkbox-unchecked: var(--color-oscd-ref-gray-gray600);
+
     --oscd-theme-switch-disabled: var(--color-oscd-ref-gray-gray300);
     --oscd-theme-disabled: var(--color-oscd-ref-gray-gray300);
 
     --oscd-theme-text-color: var(--color-oscd-white);
+
+    --mdc-theme-text-primary-on-background: var(--color-oscd-white);
+
 
 }
 

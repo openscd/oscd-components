@@ -9,10 +9,7 @@ import customElements from '../custom-elements.json';
 
 setCustomElementsManifest(customElements);
 
-export const decorators: Decorator[] = [
-  withRootAttribute,
-  (story) => html`<div class="story-wrapper">${story()}</div>`,
-];
+export const decorators = [withRootAttribute];
 
 export const parameters = {
   controls: { expanded: true },

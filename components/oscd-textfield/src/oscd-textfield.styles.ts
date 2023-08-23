@@ -1,15 +1,12 @@
 import { css } from 'lit-element';
 
-import { styles } from '@openscd/core';
+import { styles } from '@openscd/form';
 
 export default css`
   ${styles}
 
   mwc-textfield {
     width: 100%;
-  }
-
-  mwc-textfield {
     --mdc-theme-primary: var(
       --oscd-theme-textfield-primary,
       var(--oscd-theme-primary)
@@ -36,6 +33,10 @@ export default css`
 
   oscd-switch {
     margin-left: 12px;
+  }
+
+  mwc-icon-button {
+    color: var(--oscd-theme-textfield-ink);
   }
 
   .oscd-textfield__container {

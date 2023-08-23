@@ -1,16 +1,25 @@
-import { Meta, Story, Canvas } from "@storybook/blocks";
+import { Meta, Story, Canvas, Source, ArgTypes, Title, Description, Subtitle } from '@storybook/blocks';
 
-import { Markdown } from "@storybook/addon-docs";
+import { Markdown } from '@storybook/addon-docs';
 
 import * as <%= className %>Stories from './<%= selector %>.stories';
 
 import Readme from '../README.md?raw';
 import Changelog from '../CHANGELOG.md?raw';
 
-<Meta title="MDX/<%= selector %>" of={ <%= className %>Stories } />
+<Meta name="Docs" of={<%= className %>Stories} />
+<Title><%= selector %></Title>
+<Canvas of={<%= className %>Stories.Basic} />
+
+<Subtitle>Properties</Subtitle>
+<ArgTypes of={<%= className %>Stories} />
+
+<Description of={<%= className %>Stories.Basic} />
+
+<Source of={<%= className %>Stories.Basic} />
 
 # Example
-<Canvas of={<%= className %>Stories>.Regular} />
+<Canvas of={<%= className %>Stories.Basic} />
 
 <Markdown>{Readme}</Markdown>
 

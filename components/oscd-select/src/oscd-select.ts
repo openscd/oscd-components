@@ -13,9 +13,10 @@ import '@material/mwc-select';
 import { OscdSwitch, OscdSwitchChangeEvent } from '@openscd/oscd-switch';
 import { Select } from '@material/mwc-select';
 
-import { OscdComponent, redispatchEvent } from '@openscd/core';
+import { redispatchEvent } from '@openscd/core';
 
 import styles from './oscd-select.styles.js';
+import { OscdFormComponent } from '@openscd/form';
 
 /**
  *
@@ -32,7 +33,7 @@ import styles from './oscd-select.styles.js';
  * @example <oscd-select></oscd-select>
  * @tagname oscd-select
  */
-export class OscdSelect extends OscdComponent {
+export class OscdSelect extends OscdFormComponent {
   static styles: CSSResultGroup = styles;
 
   /**
@@ -49,20 +50,15 @@ export class OscdSelect extends OscdComponent {
   /**
    * @internal
    */
-  private isNull = false;
-
-  /**
-   * @internal
-   */
   @state()
-  private get null(): boolean {
+  protected get null(): boolean {
     return this.nullable && this.isNull;
   }
 
   /**
    * @internal
    */
-  private set null(value: boolean) {
+  protected set null(value: boolean) {
     if (!this.nullable || value === this.isNull) return;
     this.isNull = value;
     if (this.null) this.disable();
@@ -105,7 +101,7 @@ export class OscdSelect extends OscdComponent {
   }
 
   get value(): string {
-    return this.select ? this.select.value : this._value;
+    return this.select && this.select.value ? this.select.value : this._value;
   }
 
   /**
@@ -133,22 +129,21 @@ export class OscdSelect extends OscdComponent {
   })
   validationMessage = '';
 
-  @property({
-    type: Boolean,
-  })
-  disabled = false;
+  /** Disables component including null switch */
+  @property({ type: Boolean })
+  get disabled(): boolean {
+    return this._disabled;
+  }
 
-  // FIXME: workaround to allow disable of the whole component - need basic refactor
+  set disabled(value: boolean) {
+    this._disabled = value;
+    this._disabledSwitch = this._disabled;
+  }
+
   /**
    * @internal
    */
-  private disabledSwitch = false;
-
-  /**
-   * @internal
-   */
-  @query('oscd-switch')
-  protected nullSwitch?: OscdSwitch;
+  private _disabled: boolean = false;
 
   /**
    * @internal
@@ -169,11 +164,17 @@ export class OscdSelect extends OscdComponent {
   /**
    * @internal
    */
+  @state()
+  private deactivateSelect: boolean = false;
+
+  /**
+   * @internal
+   */
   private enable(): void {
     if (this.nulled === null) return;
     this.value = this.nulled;
     this.nulled = null;
-    this.disabled = false;
+    this.deactivateSelect = false;
   }
 
   /**
@@ -183,7 +184,7 @@ export class OscdSelect extends OscdComponent {
     if (this.nulled !== null) return;
     this.nulled = this.value;
     this.value = this.defaultValue;
-    this.disabled = true;
+    this.deactivateSelect = true;
   }
 
   /**
@@ -195,7 +196,7 @@ export class OscdSelect extends OscdComponent {
     await super.firstUpdated(_changedProperties);
     this.select.requestUpdate;
     await this.select.updateComplete;
-    this.disabledSwitch = this.hasAttribute('disabled');
+    this._disabledSwitch = this.hasAttribute('disabled') || this.disabled;
   }
 
   checkValidity(): boolean {
@@ -210,28 +211,11 @@ export class OscdSelect extends OscdComponent {
     });
   }
 
-  /**
-   * @internal
-   */
-  protected renderSwitch(): TemplateResult {
-    if (this.nullable) {
-      return html`<oscd-switch
-        style="margin-left: 12px;"
-        ?selected=${!this.null}
-        ?disabled=${this.disabledSwitch}
-        @change=${(evt: OscdSwitchChangeEvent) => {
-          this.null = !evt.detail.selected;
-        }}
-      ></oscd-switch>`;
-    }
-    return html``;
-  }
-
   private renderSelect(): TemplateResult {
     return html`<mwc-select
       value=${this.value}
       ?nullable=${this.nullable}
-      ?disabled=${this.disabled}
+      ?disabled=${this.disabled || this.deactivateSelect}
       ?required=${this.required}
       .label=${this.label}
       .helper=${this.helper}
@@ -243,11 +227,9 @@ export class OscdSelect extends OscdComponent {
   render(): TemplateResult {
     this.rendered = true;
     return html`
-      <div style="display: flex; flex-direction: row;">
-        <div style="flex: auto;">${this.renderSelect()}</div>
-        <div style="display: flex; align-items: center; height: 56px;">
-          ${this.renderSwitch()}
-        </div>
+      <div class="container">
+        <div>${this.renderSelect()}</div>
+        <div class="container container--switch">${this.renderSwitch()}</div>
       </div>
     `;
   }

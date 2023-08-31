@@ -11,6 +11,7 @@ setCustomElementsManifest(customElements);
 export const decorators = [withRootAttribute];
 
 export const parameters = {
+  controls: { expanded: true },
   statuses: {
     released: {
       background: '#0000ff',

@@ -18,7 +18,11 @@ import { Checkbox } from '@material/mwc-checkbox';
 import styles from './oscd-checkbox.styles.js';
 
 /**
- *
+ * @cssprop [--oscd-theme-checkbox-ink] - Ink color for the checkbox
+ * @cssprop [--oscd-theme-checkbox-unchecked] - Unchecked color for the checkbox
+ * @cssprop [--oscd-theme-checkbox-disabled] - Disabled color for the checkbox
+ * @cssprop [--oscd-theme-checkbox-secondary=--oscd-theme-secondary] - Checkobx color
+ * @cssprop [--oscd-theme-checkbox-ons-surface=--oscd-theme-on-surface] - On Surface color
  *
  * @example <oscd-checkbox></oscd-checkbox>
  * @tagname oscd-checkbox
@@ -54,6 +58,7 @@ export class OscdCheckbox extends OscdFormComponent {
   get maybeValue(): string | null {
     return this.null ? null : this.checked ? 'true' : 'false';
   }
+
   set maybeValue(check: string | null) {
     if (check === null) this.null = true;
     else {
@@ -61,47 +66,89 @@ export class OscdCheckbox extends OscdFormComponent {
       this.checked = check === 'true' ? true : false;
     }
   }
+
   /** Disables component including null switch */
-  @property({ type: Boolean })
-  disabled = false;
+  @property({ type: Boolean, reflect: true })
+  get disabled(): boolean {
+    return this._disabled;
+  }
 
-  protected isNull = false;
+  set disabled(value: boolean) {
+    this._disabled = value;
+    this._disabledSwitch = value;
+  }
 
+  /**
+   * @internal
+   */
+  private _disabled: boolean = false;
+
+  /**
+   * @internal
+   */
   @state()
   protected get null(): boolean {
     return this.nullable && this.isNull;
   }
 
+  /**
+   * @internal
+   */
+  @state()
+  private deactivateCheckbox = false;
+
+  /**
+   * @internal
+   */
   protected set null(value: boolean) {
     if (!this.nullable || value === this.isNull) return;
     this.isNull = value;
-    if (this.null) this.disable();
-    else this.enable();
+    if (this.null) {
+      this.disable();
+    } else {
+      this.enable();
+    }
   }
 
+  /**
+   * @internal
+   */
   private initChecked = false;
 
-  @state()
   get checked(): boolean {
     return this.checkbox?.checked ?? this.initChecked;
   }
+
+  @property({
+    type: Boolean,
+  })
   set checked(value: boolean) {
     if (this.checkbox) this.checkbox.checked = value;
     else this.initChecked = value;
   }
 
-  @state()
-  private deactivateCheckbox = false;
-
+  /**
+   * @internal
+   */
   @state()
   get formfieldLabel(): string {
     return this.helper ? `${this.label} (${this.helper})` : this.label;
   }
 
-  @query('mwc-checkbox') checkbox?: Checkbox;
+  /**
+   * @internal
+   */
+  @query('mwc-checkbox')
+  protected checkbox?: Checkbox;
 
+  /**
+   * @internal
+   */
   private nulled: boolean | null = null;
 
+  /**
+   * @internal
+   */
   private enable(): void {
     if (this.nulled === null) return;
     this.checked = this.nulled;
@@ -109,6 +156,9 @@ export class OscdCheckbox extends OscdFormComponent {
     this.deactivateCheckbox = false;
   }
 
+  /**
+   * @internal
+   */
   private disable(): void {
     if (this.nulled !== null) return;
     this.nulled = this.checked;
@@ -116,28 +166,37 @@ export class OscdCheckbox extends OscdFormComponent {
     this.deactivateCheckbox = true;
   }
 
-  firstUpdated(): void {
-    this.requestUpdate();
+  /**
+   * @internal
+   */
+  async firstUpdated(
+    _changedProperties: Map<string | number | symbol, unknown>
+  ): Promise<void> {
+    await super.firstUpdated(_changedProperties);
+    this.checkbox?.requestUpdate();
+    await this.checkbox?.updateComplete;
+    this._disabledSwitch = this.hasAttribute('disabled') || this.disabled;
   }
 
+  /**
+   * @internal
+   */
   render(): TemplateResult {
     return html`
-      <div style="display: flex; flex-direction: row;">
-        <div style="flex: auto;">
+      <div class="container">
+        <div>
           <mwc-formfield
             label="${this.formfieldLabel}"
-            style="${this.deactivateCheckbox || this.disabled
+            style="${this.disabled
               ? `--mdc-theme-text-primary-on-background:rgba(0, 0, 0, 0.38)`
               : ``}"
             ><mwc-checkbox
               ?checked=${this.initChecked}
-              ?disabled=${this.deactivateCheckbox || this.disabled}
+              ?disabled=${this.disabled || this.deactivateCheckbox}
             ></mwc-checkbox
           ></mwc-formfield>
         </div>
-        <div style="display: flex; align-items: center;">
-          ${this.renderSwitch()}
-        </div>
+        <div class="container container--switch">${this.renderSwitch()}</div>
       </div>
     `;
   }

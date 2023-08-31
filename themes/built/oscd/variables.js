@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 31 Aug 2023 07:52:36 GMT
+ * Generated on Thu, 31 Aug 2023 11:54:04 GMT
  */
 
 export const ColorOscdWhite = "#ffffff";
@@ -20,7 +20,7 @@ export const ColorOscdSysLightOnWarning = "#ffffff";
 export const ColorOscdSysLightDanger = "#bf3b3b";
 export const ColorOscdSysLightOnDanger = "#ffffff";
 export const ColorOscdSysDarkPrimary = "#389add";
-export const ColorOscdSysDarkOnPrimary = "#ffffff";
+export const ColorOscdSysDarkOnPrimary = "#000000";
 export const ColorOscdSysDarkPrimarySurface = "#b2dbf8";
 export const ColorOscdSysDarkPrimarySurfaceActive = "#72bcf0";
 export const ColorOscdSysDarkPrimaryActive = "#1779bd";

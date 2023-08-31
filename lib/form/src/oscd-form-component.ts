@@ -23,6 +23,7 @@ export abstract class OscdFormComponent extends OscdComponent {
   protected abstract get null(): boolean;
   protected abstract set null(value: boolean);
 
+  @state()
   protected _disabledSwitch: boolean = false;
 
   /**

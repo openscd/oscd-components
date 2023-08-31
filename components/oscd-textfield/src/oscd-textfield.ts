@@ -174,14 +174,21 @@ export class OscdTextfield extends OscdFormComponent {
   })
   suffix = '';
 
+  /** Disables component including null switch */
+  @property({ type: Boolean })
+  get disabled(): boolean {
+    return this._disabled;
+  }
+
+  set disabled(value: boolean) {
+    this._disabled = value;
+    this._disabledSwitch = this._disabled;
+  }
+
   /**
-   * OscdTextfield should be disabled
-   * @default false
+   * @internal
    */
-  @property({
-    type: Boolean,
-  })
-  disabled = false;
+  private _disabled: boolean = false;
 
   /**
    * OscdTextfield helper should be persistent
@@ -318,6 +325,12 @@ export class OscdTextfield extends OscdFormComponent {
   /**
    * @internal
    */
+  @state()
+  private deactivateTextfield: boolean = false;
+
+  /**
+   * @internal
+   */
   private nulled: string | null = null;
 
   /**
@@ -340,7 +353,7 @@ export class OscdTextfield extends OscdFormComponent {
     this.value = this.nulled;
     this.nulled = null;
     this.helperPersistent = false;
-    this.disabled = false;
+    this.deactivateTextfield = false;
   }
 
   /**
@@ -352,7 +365,7 @@ export class OscdTextfield extends OscdFormComponent {
     this.value = this.defaultValue;
 
     this.helperPersistent = true;
-    this.disabled = true;
+    this.deactivateTextfield = true;
   }
 
   /**
@@ -370,7 +383,7 @@ export class OscdTextfield extends OscdFormComponent {
     if (!this.maybeValue) {
       this.disable();
     }
-    this._disabledSwitch = this.hasAttribute('disabled');
+    this._disabledSwitch = this.hasAttribute('disabled') || this.disabled;
 
     this.styleTextfield();
   }
@@ -451,7 +464,7 @@ export class OscdTextfield extends OscdFormComponent {
   private renderTextfield(): TemplateResult {
     return html`<mwc-textfield
       value=${this.value}
-      ?disabled=${this.disabled}
+      ?disabled=${this.disabled || this.deactivateTextfield}
       ?helperPersistent=${this.helperPersistent}
       ?required=${this.required}
       .suffix=${this.suffix}
@@ -469,10 +482,10 @@ export class OscdTextfield extends OscdFormComponent {
   render(): TemplateResult {
     this.rendered = true;
     return html`
-      <div class="oscd-textfield__container">
+      <div class="container">
         <div>${this.renderTextfield()}</div>
         ${this.renderUnitSelector()}
-        <div class="oscd-textfield__switch">${this.renderSwitch()}</div>
+        <div class="container container--switch">${this.renderSwitch()}</div>
       </div>
     `;
   }

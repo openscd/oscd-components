@@ -203,3 +203,25 @@ export const WithValidationMessage: Story = {
     })}
   </oscd-select>`,
 };
+
+/**
+ * Disabled
+ */
+export const Disabled: Story = {
+  args: {
+    ...Basic.args,
+    disabled: true,
+  },
+  render: Basic.render,
+};
+
+/**
+ * Disabled
+ */
+export const DisabledNullable: Story = {
+  args: {
+    ...Nullable.args,
+    ...Disabled.args,
+  },
+  render: Basic.render,
+};

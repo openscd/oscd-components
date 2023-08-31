@@ -62,6 +62,30 @@
           "kind": "class",
           "description": "",
           "name": "OscdCheckbox",
+          "cssProperties": [
+            {
+              "description": "Ink color for the checkbox",
+              "name": "--oscd-theme-checkbox-ink"
+            },
+            {
+              "description": "Unchecked color for the checkbox",
+              "name": "--oscd-theme-checkbox-unchecked"
+            },
+            {
+              "description": "Disabled color for the checkbox",
+              "name": "--oscd-theme-checkbox-disabled"
+            },
+            {
+              "description": "Checkobx color",
+              "name": "--oscd-theme-checkbox-secondary",
+              "default": "--oscd-theme-secondary"
+            },
+            {
+              "description": "On Surface color",
+              "name": "--oscd-theme-checkbox-ons-surface",
+              "default": "--oscd-theme-on-surface"
+            }
+          ],
           "members": [
             {
               "kind": "field",
@@ -115,91 +139,6 @@
               },
               "default": "false",
               "description": "Disables component including null switch"
-            },
-            {
-              "kind": "field",
-              "name": "isNull",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "protected",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "null",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "protected"
-            },
-            {
-              "kind": "field",
-              "name": "initChecked",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "checked",
-              "type": {
-                "text": "boolean"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "deactivateCheckbox",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "formfieldLabel",
-              "type": {
-                "text": "string"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "checkbox",
-              "type": {
-                "text": "Checkbox | undefined"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "nulled",
-              "type": {
-                "text": "boolean | null"
-              },
-              "privacy": "private",
-              "default": "null"
-            },
-            {
-              "kind": "method",
-              "name": "enable",
-              "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "void"
-                }
-              }
-            },
-            {
-              "kind": "method",
-              "name": "disable",
-              "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "void"
-                }
-              }
             }
           ],
           "superclass": {

@@ -28,10 +28,9 @@
   },
   "dependencies": {
     "@openscd/core": "*",
+    "@material/mwc-dialog": "0.27.0",
     "lit": "^2.7.6"
   },
-  "author": "OpenSCD",
-  "license": "ISC",
   "devDependencies": {
     "@commitlint/cli": "^17.3.0",
     "@commitlint/config-conventional": "^17.3.0",

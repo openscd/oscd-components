@@ -1,6 +1,6 @@
 import { css } from 'lit-element';
 
-import { styles } from '@openscd/core';
+import { styles } from '@openscd/form';
 
 export default css`
   ${styles}

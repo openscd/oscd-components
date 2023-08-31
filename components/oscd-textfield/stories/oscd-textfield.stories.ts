@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
-import { userEvent, within } from '@storybook/testing-library';
 
 import { html } from 'lit';
 
@@ -168,5 +167,15 @@ export const WithMultiplier: Story = {
     value: 4096,
     multipliers: ['Kilo', 'Mega', 'Giga'],
     unit: 'Byte',
+  },
+};
+
+/**
+ * Disabled Nullable
+ */
+export const DisabledNullable: Story = {
+  args: {
+    ...Disabled.args,
+    ...Nullable.args,
   },
 };

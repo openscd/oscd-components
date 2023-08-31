@@ -69,3 +69,23 @@ export const DefaultChecked: Story = {
     defaultChecked: true,
   },
 };
+
+/**
+ * Disabled
+ */
+export const Disabled: Story = {
+  args: {
+    ...Basic.args,
+    disabled: true,
+  },
+};
+
+/**
+ * Disabled nullable
+ */
+export const DisabledNullable: Story = {
+  args: {
+    ...Nullable.args,
+    disabled: true,
+  },
+};

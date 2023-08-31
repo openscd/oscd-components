@@ -29,6 +29,7 @@ export default css`
       --oscd-action-pane-theme-primary,
       var(--oscd-theme-primary)
     );
+    color: var(--oscd-theme-text-color);
   }
 
   section.secondary {

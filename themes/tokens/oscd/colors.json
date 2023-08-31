@@ -136,7 +136,7 @@
                     "on-primary": {
                         "description": "Color on Primary color",
                         "type": "color",
-                        "value": "{color.oscd.white}"
+                        "value": "{color.oscd.black}"
                     },
                     "primary-surface": {
                         "description": "Primary Surface color",

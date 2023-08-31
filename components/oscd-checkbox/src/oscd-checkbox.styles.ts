@@ -19,4 +19,8 @@ export default css`
       var(--oscd-theme-on-surface)
     );
   }
+
+  mwc-formfield[disabled] {
+    --mdc-theme-text-primary-on-background: green;
+  }
 `;

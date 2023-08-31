@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Various Oscd Scripts",
   "scripts": {
-    "build": "tsc",
     "readme": "ts-node src/markdown.ts",
     "component:readme": "ts-node src/component-markdown.ts",
     "component:doc": "ts-node src/component-jsdoc.ts"

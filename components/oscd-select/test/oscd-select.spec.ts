@@ -18,10 +18,13 @@ describe('oscd-select', () => {
     );
   });
 
-  it('does not render a null value switch', () =>
-    expect(element.nullSwitch).to.not.exist);
+  it('does not render a null value switch', () => {
+    expect(element.shadowRoot!.querySelector('oscd-switch')).to.not.exist;
+  });
 
-  it('is enabled', () => expect(element).to.have.property('disabled', false));
+  it('is enabled', () => {
+    expect(element).to.have.property('disabled', false);
+  });
 
   it('returns the select value as its maybeValue', () => {
     element.value = 'two';
@@ -35,13 +38,17 @@ describe('oscd-select', () => {
       await element.updateComplete;
     });
 
-    it('renders a null value switch', async () =>
-      expect(element.nullSwitch).to.exist);
+    it('renders a null value switch', async () => {
+      expect(element.shadowRoot?.querySelector('oscd-switch')).to.exist;
+    });
 
     it('disables itself on switch toggle', async () => {
       expect(element).to.have.property('maybeValue', 'one');
       expect(element).to.have.property('disabled', false);
-      element.nullSwitch!.click();
+      element.shadowRoot
+        ?.querySelector('oscd-switch')
+        ?.shadowRoot?.querySelector('mwc-switch')!
+        .click();
       await element.updateComplete;
       expect(element).to.have.property('maybeValue', null);
       expect(element).to.have.property('disabled', true);
@@ -50,9 +57,15 @@ describe('oscd-select', () => {
     it('remebers its previous value on switch toggle', async () => {
       element.maybeValue = 'three';
       await element.updateComplete;
-      element.nullSwitch!.click();
+      element.shadowRoot
+        ?.querySelector('oscd-switch')
+        ?.shadowRoot?.querySelector('mwc-switch')!
+        .click();
       await element.updateComplete;
-      element.nullSwitch!.click();
+      element.shadowRoot
+        ?.querySelector('oscd-switch')
+        ?.shadowRoot?.querySelector('mwc-switch')!
+        .click();
       await element.updateComplete;
       expect(element).to.have.property('disabled', false);
       expect(element).to.have.property('maybeValue', 'three');
@@ -65,19 +78,25 @@ describe('oscd-select', () => {
       });
 
       it('enables itself on switch toggle', async () => {
-        element.nullSwitch?.click();
+        element.shadowRoot
+          ?.querySelector('oscd-switch')
+          ?.shadowRoot?.querySelector('mwc-switch')!
+          .click();
         await element.updateComplete;
         expect(element).to.have.property('disabled', false);
       });
 
-      it('has a disabled textfield', () =>
-        expect(element).to.have.property('disabled', true));
+      it('has a disabled textfield', () => {
+        expect(element).to.have.property('disabled', true);
+      });
 
-      it('does not show anything in the textfield', () =>
-        expect(element).to.have.property('value', ''));
+      it('does not show anything in the textfield', () => {
+        expect(element).to.have.property('value', '');
+      });
 
-      it('returns null', () =>
-        expect(element).to.have.property('maybeValue', null));
+      it('returns null', () => {
+        expect(element).to.have.property('maybeValue', null);
+      });
     });
   });
 
@@ -95,16 +114,27 @@ describe('oscd-select', () => {
       await element.updateComplete;
     });
 
-    it('disables select', () =>
-      expect(element).to.have.property('disabled', true));
+    it('disables select', () => {
+      expect(element).to.have.property('disabled', true);
+    });
 
-    it('disables null switch', () =>
-      expect(element.nullSwitch).to.have.property('disabled', true));
+    it('disables null switch', () => {
+      expect(element.shadowRoot!.querySelector('oscd-switch')).to.have.property(
+        'disabled',
+        true
+      );
+    });
 
     it('turns off null switch', async () => {
-      element.nullSwitch?.click();
+      element.shadowRoot
+        ?.querySelector('oscd-switch')
+        ?.shadowRoot?.querySelector('mwc-switch')!
+        .click();
       await element.updateComplete;
-      element.nullSwitch?.click();
+      element.shadowRoot
+        ?.querySelector('oscd-switch')
+        ?.shadowRoot?.querySelector('mwc-switch')!
+        .click();
       await element.updateComplete;
 
       expect(element).to.have.property('disabled', true);

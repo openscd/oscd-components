@@ -21,11 +21,11 @@
         "^default"
       ]
     },
-    "build": {
-      "dependsOn": ["^clean", "^build"]
-    },
-    "build:all": {
+    "clean": {
       "dependsOn": ["^clean"]
+    },
+    "build": {
+      "dependsOn": ["clean", "^build"]
     },
     "storybook": {
       "dependsOn": [ "analyze", "component:readme"]

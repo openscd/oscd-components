@@ -1,6 +1,5 @@
 import { setCustomElementsManifest } from '@storybook/web-components';
 
-import { html } from 'lit';
 import { withRootAttribute } from 'storybook-addon-root-attribute';
 
 import '../themes/prebuilt/oscd.css';
@@ -9,7 +8,12 @@ import customElements from '../custom-elements.json';
 
 setCustomElementsManifest(customElements);
 
+export const decorators = [withRootAttribute];
+
 export const parameters = {
+  options: {
+    enableShortcuts: false,
+  },
   statuses: {
     released: {
       background: '#0000ff',

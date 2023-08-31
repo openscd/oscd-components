@@ -6,11 +6,13 @@
   "version": "0.0.1",
   "browser": "./dist/OscdActionPane.js",
   "module": "./dist/OscdActionPane.js",
+  "types": "./dist/OscdActionPane.d.ts",
   "files": [
-    "dist/**/*"
+    "./dist/**/*"
   ],
   "exports": {
-    ".": "./dist/OscdActionPane.js"
+    ".": "./dist/OscdActionPane.js",
+    "./oscd-switch.js": "./dist/oscd-action-pane.js"
   },
   "type": "module",
   "readme": "./README.md",
@@ -30,8 +32,6 @@
     "@openscd/core": "*",
     "lit": "^2.7.6"
   },
-  "author": "OpenSCD",
-  "license": "ISC",
   "devDependencies": {
     "@commitlint/cli": "^17.3.0",
     "@commitlint/config-conventional": "^17.3.0",

@@ -233,30 +233,30 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/oscd-action-pane/src/OscdActionPane.ts",
+      "path": "components/oscd-button/src/OscdButton.ts",
       "declarations": [],
       "exports": [
         {
           "kind": "custom-element-definition",
-          "name": "oscd-action-pane",
+          "name": "oscd-button",
           "declaration": {
-            "name": "OscdActionPane",
-            "module": "/components/oscd-action-pane/src/oscd-action-pane"
+            "name": "OscdButton",
+            "module": "/components/oscd-button/src/oscd-button"
           }
         },
         {
           "kind": "js",
-          "name": "OscdActionPane",
+          "name": "OscdButton",
           "declaration": {
-            "name": "OscdActionPane",
-            "module": "components/oscd-action-pane/src/OscdActionPane.ts"
+            "name": "OscdButton",
+            "module": "components/oscd-button/src/OscdButton.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "components/oscd-action-pane/src/index.ts",
+      "path": "components/oscd-button/src/index.ts",
       "declarations": [],
       "exports": [
         {
@@ -264,87 +264,52 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./OscdActionPane.js"
+            "package": "./OscdButton.js"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "components/oscd-action-pane/src/oscd-action-pane.styles.ts",
+      "path": "components/oscd-button/src/oscd-button.styles.ts",
       "declarations": [],
       "exports": [
         {
           "kind": "js",
           "name": "default",
           "declaration": {
-            "module": "components/oscd-action-pane/src/oscd-action-pane.styles.ts"
+            "module": "components/oscd-button/src/oscd-button.styles.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "components/oscd-action-pane/src/oscd-action-pane.ts",
+      "path": "components/oscd-button/src/oscd-button.ts",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "OscdActionPane",
-          "cssProperties": [
-            {
-              "description": "Color for border on even levels.",
-              "name": "--oscd-action-icon-theme-primary",
-              "default": "--oscd-theme-primary"
-            },
-            {
-              "description": "Pane color for the uneven levels.",
-              "name": "--oscd-action-icon-theme-on-primary",
-              "default": "--oscd-theme-on-primary"
-            },
-            {
-              "description": "Color for border on uneven levels.",
-              "name": "--oscd-action-icon-theme-secondary",
-              "default": "--oscd-theme-secondary"
-            },
-            {
-              "description": "Pane color for the even levels.",
-              "name": "--oscd-action-pane-theme-surface",
-              "default": "--oscd-theme-surface"
-            },
-            {
-              "description": "Icon and label color.",
-              "name": "--oscd-action-icon-theme-on-surface",
-              "default": "--oscd-theme-on-surface"
-            },
-            {
-              "description": "Font for label.",
-              "name": "--oscd-action-icon-theme-font",
-              "default": "--oscd-theme-font"
-            }
-          ],
-          "slots": [
-            {
-              "description": "May contain up to eight icon buttons.",
-              "name": "`action`"
-            },
-            {
-              "description": "If filled overrides the icon property.",
-              "name": "`icon`"
-            },
-            {
-              "description": "The default slot will be rendered into the pane body in a single column.",
-              "name": "`[default]`"
-            }
-          ],
+          "name": "OscdButton",
           "members": [
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether the Button is disabled or not",
+              "attribute": "disabled"
+            },
             {
               "kind": "field",
               "name": "label",
               "type": {
                 "text": "string"
               },
-              "description": "Caption text, displayed in the header",
+              "default": "''",
+              "description": "Text for the Button",
               "attribute": "label"
             },
             {
@@ -353,57 +318,47 @@
               "type": {
                 "text": "string"
               },
-              "description": "Icon name, displayed unless the \"icon\" slot is filled",
+              "description": "The icon for the Button",
               "attribute": "icon"
             },
             {
               "kind": "field",
-              "name": "secondary",
+              "name": "raised",
               "type": {
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Color header with Secondary theme color while focus is within",
-              "attribute": "secondary"
+              "description": "Whether the Button is raised or not",
+              "attribute": "raised"
             },
             {
               "kind": "field",
-              "name": "highlighted",
+              "name": "outlined",
               "type": {
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Highlight pane with dotted outline",
-              "attribute": "highlighted"
-            },
-            {
-              "kind": "field",
-              "name": "level",
-              "type": {
-                "text": "number"
-              },
-              "default": "1",
-              "description": "Nesting level, default (closes pane ancestors level) + 1",
-              "attribute": "level"
-            },
-            {
-              "kind": "method",
-              "name": "renderHeader",
-              "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "TemplateResult"
-                }
-              }
+              "description": "Whether the Button is outlined or not",
+              "attribute": "outlined"
             }
           ],
           "attributes": [
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether the Button is disabled or not",
+              "fieldName": "disabled"
+            },
             {
               "name": "label",
               "type": {
                 "text": "string"
               },
-              "description": "Caption text, displayed in the header",
+              "default": "''",
+              "description": "Text for the Button",
               "fieldName": "label"
             },
             {
@@ -411,53 +366,43 @@
               "type": {
                 "text": "string"
               },
-              "description": "Icon name, displayed unless the \"icon\" slot is filled",
+              "description": "The icon for the Button",
               "fieldName": "icon"
             },
             {
-              "name": "secondary",
+              "name": "raised",
               "type": {
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Color header with Secondary theme color while focus is within",
-              "fieldName": "secondary"
+              "description": "Whether the Button is raised or not",
+              "fieldName": "raised"
             },
             {
-              "name": "highlighted",
+              "name": "outlined",
               "type": {
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Highlight pane with dotted outline",
-              "fieldName": "highlighted"
-            },
-            {
-              "name": "level",
-              "type": {
-                "text": "number"
-              },
-              "default": "1",
-              "description": "Nesting level, default (closes pane ancestors level) + 1",
-              "fieldName": "level"
+              "description": "Whether the Button is outlined or not",
+              "fieldName": "outlined"
             }
           ],
           "superclass": {
             "name": "OscdComponent",
             "package": "@openscd/core"
           },
-          "tagName": "oscd-action-pane",
-          "summary": "A responsive container rendering actions in a header.",
+          "tagName": "oscd-button",
           "customElement": true
         }
       ],
       "exports": [
         {
           "kind": "js",
-          "name": "OscdActionPane",
+          "name": "OscdButton",
           "declaration": {
-            "name": "OscdActionPane",
-            "module": "components/oscd-action-pane/src/oscd-action-pane.ts"
+            "name": "OscdButton",
+            "module": "components/oscd-button/src/oscd-button.ts"
           }
         }
       ]
@@ -745,30 +690,30 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/oscd-button/src/OscdButton.ts",
+      "path": "components/oscd-dialog/src/OscdDialog.ts",
       "declarations": [],
       "exports": [
         {
           "kind": "custom-element-definition",
-          "name": "oscd-button",
+          "name": "oscd-dialog",
           "declaration": {
-            "name": "OscdButton",
-            "module": "/components/oscd-button/src/oscd-button"
+            "name": "OscdDialog",
+            "module": "/components/oscd-dialog/src/oscd-dialog"
           }
         },
         {
           "kind": "js",
-          "name": "OscdButton",
+          "name": "OscdDialog",
           "declaration": {
-            "name": "OscdButton",
-            "module": "components/oscd-button/src/OscdButton.ts"
+            "name": "OscdDialog",
+            "module": "components/oscd-dialog/src/OscdDialog.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "components/oscd-button/src/index.ts",
+      "path": "components/oscd-dialog/src/index.ts",
       "declarations": [],
       "exports": [
         {
@@ -776,145 +721,269 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./OscdButton.js"
+            "package": "./OscdDialog.js"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "components/oscd-button/src/oscd-button.styles.ts",
+      "path": "components/oscd-dialog/src/oscd-dialog.styles.ts",
       "declarations": [],
       "exports": [
         {
           "kind": "js",
           "name": "default",
           "declaration": {
-            "module": "components/oscd-button/src/oscd-button.styles.ts"
+            "module": "components/oscd-dialog/src/oscd-dialog.styles.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "components/oscd-button/src/oscd-button.ts",
+      "path": "components/oscd-dialog/src/oscd-dialog.ts",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "OscdButton",
+          "name": "OscdDialog",
           "members": [
             {
               "kind": "field",
-              "name": "disabled",
+              "name": "open",
               "type": {
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the Button is disabled or not",
-              "attribute": "disabled"
+              "description": "Determines if the Dialog is open or not",
+              "attribute": "open",
+              "reflects": true
             },
             {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "Text for the Button",
-              "attribute": "label"
+              "kind": "method",
+              "name": "show",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
             },
             {
-              "kind": "field",
-              "name": "icon",
-              "type": {
-                "text": "string"
-              },
-              "description": "The icon for the Button",
-              "attribute": "icon"
+              "kind": "method",
+              "name": "hide",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
             },
             {
-              "kind": "field",
-              "name": "raised",
-              "type": {
-                "text": "boolean"
+              "kind": "method",
+              "name": "onClosed",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
               },
-              "default": "false",
-              "description": "Whether the Button is raised or not",
-              "attribute": "raised"
-            },
-            {
-              "kind": "field",
-              "name": "outlined",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Whether the Button is outlined or not",
-              "attribute": "outlined"
+              "parameters": [
+                {
+                  "name": "evt",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ]
             }
           ],
           "attributes": [
             {
-              "name": "disabled",
+              "name": "open",
               "type": {
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Whether the Button is disabled or not",
-              "fieldName": "disabled"
-            },
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "Text for the Button",
-              "fieldName": "label"
-            },
-            {
-              "name": "icon",
-              "type": {
-                "text": "string"
-              },
-              "description": "The icon for the Button",
-              "fieldName": "icon"
-            },
-            {
-              "name": "raised",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Whether the Button is raised or not",
-              "fieldName": "raised"
-            },
-            {
-              "name": "outlined",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Whether the Button is outlined or not",
-              "fieldName": "outlined"
+              "description": "Determines if the Dialog is open or not",
+              "fieldName": "open"
             }
           ],
           "superclass": {
             "name": "OscdComponent",
             "package": "@openscd/core"
           },
-          "tagName": "oscd-button",
+          "tagName": "oscd-dialog",
           "customElement": true
         }
       ],
       "exports": [
         {
           "kind": "js",
-          "name": "OscdButton",
+          "name": "OscdDialog",
           "declaration": {
-            "name": "OscdButton",
-            "module": "components/oscd-button/src/oscd-button.ts"
+            "name": "OscdDialog",
+            "module": "components/oscd-dialog/src/oscd-dialog.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-switch/src/OscdSwitch.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "oscd-switch",
+          "declaration": {
+            "name": "OscdSwitch",
+            "module": "/components/oscd-switch/src/oscd-switch.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "OscdSwitch",
+          "declaration": {
+            "name": "OscdSwitch",
+            "module": "components/oscd-switch/src/OscdSwitch.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "OscdSwitchChangeEvent",
+          "declaration": {
+            "name": "OscdSwitchChangeEvent",
+            "module": "./oscd-switch.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-switch/src/oscd-switch.styles.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "components/oscd-switch/src/oscd-switch.styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-switch/src/oscd-switch.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "OscdSwitch",
+          "members": [
+            {
+              "kind": "field",
+              "name": "selected",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Selected state of the Switch",
+              "attribute": "selected"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disabled state of the Switch",
+              "attribute": "disabled"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "'on'",
+              "description": "Value of the Switch",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Name of the Switch",
+              "attribute": "name"
+            },
+            {
+              "kind": "method",
+              "name": "onClick"
+            }
+          ],
+          "events": [
+            {
+              "description": "{OscdSwitchChangeEvent} Fired whenever `selected` changes due to user interaction (bubbles and composed).",
+              "name": "change"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "selected",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Selected state of the Switch",
+              "fieldName": "selected"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disabled state of the Switch",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "'on'",
+              "description": "Value of the Switch",
+              "fieldName": "value"
+            },
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Name of the Switch",
+              "fieldName": "name"
+            }
+          ],
+          "superclass": {
+            "name": "OscdComponent",
+            "package": "@openscd/core"
+          },
+          "tagName": "oscd-switch",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "OscdSwitch",
+          "declaration": {
+            "name": "OscdSwitch",
+            "module": "components/oscd-switch/src/oscd-switch.ts"
           }
         }
       ]
@@ -1184,168 +1253,6 @@
           "declaration": {
             "name": "OscdSelect",
             "module": "components/oscd-select/src/oscd-select.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/oscd-switch/src/OscdSwitch.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "custom-element-definition",
-          "name": "oscd-switch",
-          "declaration": {
-            "name": "OscdSwitch",
-            "module": "/components/oscd-switch/src/oscd-switch.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "OscdSwitch",
-          "declaration": {
-            "name": "OscdSwitch",
-            "module": "components/oscd-switch/src/OscdSwitch.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "OscdSwitchChangeEvent",
-          "declaration": {
-            "name": "OscdSwitchChangeEvent",
-            "module": "./oscd-switch.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/oscd-switch/src/oscd-switch.styles.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "module": "components/oscd-switch/src/oscd-switch.styles.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/oscd-switch/src/oscd-switch.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "OscdSwitch",
-          "members": [
-            {
-              "kind": "field",
-              "name": "selected",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Selected state of the Switch",
-              "attribute": "selected"
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disabled state of the Switch",
-              "attribute": "disabled"
-            },
-            {
-              "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "default": "'on'",
-              "description": "Value of the Switch",
-              "attribute": "value"
-            },
-            {
-              "kind": "field",
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "Name of the Switch",
-              "attribute": "name"
-            },
-            {
-              "kind": "method",
-              "name": "onClick"
-            }
-          ],
-          "events": [
-            {
-              "description": "{OscdSwitchChangeEvent} Fired whenever `selected` changes due to user interaction (bubbles and composed).",
-              "name": "change"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "selected",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Selected state of the Switch",
-              "fieldName": "selected"
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disabled state of the Switch",
-              "fieldName": "disabled"
-            },
-            {
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "default": "'on'",
-              "description": "Value of the Switch",
-              "fieldName": "value"
-            },
-            {
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "Name of the Switch",
-              "fieldName": "name"
-            }
-          ],
-          "superclass": {
-            "name": "OscdComponent",
-            "package": "@openscd/core"
-          },
-          "tagName": "oscd-switch",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "OscdSwitch",
-          "declaration": {
-            "name": "OscdSwitch",
-            "module": "components/oscd-switch/src/oscd-switch.ts"
           }
         }
       ]
@@ -1856,6 +1763,237 @@
           "declaration": {
             "name": "OscdTextfield",
             "module": "components/oscd-textfield/src/oscd-textfield.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-action-pane/src/OscdActionPane.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "oscd-action-pane",
+          "declaration": {
+            "name": "OscdActionPane",
+            "module": "/components/oscd-action-pane/src/oscd-action-pane"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "OscdActionPane",
+          "declaration": {
+            "name": "OscdActionPane",
+            "module": "components/oscd-action-pane/src/OscdActionPane.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-action-pane/src/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./OscdActionPane.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-action-pane/src/oscd-action-pane.styles.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "components/oscd-action-pane/src/oscd-action-pane.styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-action-pane/src/oscd-action-pane.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "OscdActionPane",
+          "cssProperties": [
+            {
+              "description": "Color for border on even levels.",
+              "name": "--oscd-action-icon-theme-primary",
+              "default": "--oscd-theme-primary"
+            },
+            {
+              "description": "Pane color for the uneven levels.",
+              "name": "--oscd-action-icon-theme-on-primary",
+              "default": "--oscd-theme-on-primary"
+            },
+            {
+              "description": "Color for border on uneven levels.",
+              "name": "--oscd-action-icon-theme-secondary",
+              "default": "--oscd-theme-secondary"
+            },
+            {
+              "description": "Pane color for the even levels.",
+              "name": "--oscd-action-pane-theme-surface",
+              "default": "--oscd-theme-surface"
+            },
+            {
+              "description": "Icon and label color.",
+              "name": "--oscd-action-icon-theme-on-surface",
+              "default": "--oscd-theme-on-surface"
+            },
+            {
+              "description": "Font for label.",
+              "name": "--oscd-action-icon-theme-font",
+              "default": "--oscd-theme-font"
+            }
+          ],
+          "slots": [
+            {
+              "description": "May contain up to eight icon buttons.",
+              "name": "`action`"
+            },
+            {
+              "description": "If filled overrides the icon property.",
+              "name": "`icon`"
+            },
+            {
+              "description": "The default slot will be rendered into the pane body in a single column.",
+              "name": "`[default]`"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "description": "Caption text, displayed in the header",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "icon",
+              "type": {
+                "text": "string"
+              },
+              "description": "Icon name, displayed unless the \"icon\" slot is filled",
+              "attribute": "icon"
+            },
+            {
+              "kind": "field",
+              "name": "secondary",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Color header with Secondary theme color while focus is within",
+              "attribute": "secondary"
+            },
+            {
+              "kind": "field",
+              "name": "highlighted",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Highlight pane with dotted outline",
+              "attribute": "highlighted"
+            },
+            {
+              "kind": "field",
+              "name": "level",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "description": "Nesting level, default (closes pane ancestors level) + 1",
+              "attribute": "level"
+            },
+            {
+              "kind": "method",
+              "name": "renderHeader",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "TemplateResult"
+                }
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "description": "Caption text, displayed in the header",
+              "fieldName": "label"
+            },
+            {
+              "name": "icon",
+              "type": {
+                "text": "string"
+              },
+              "description": "Icon name, displayed unless the \"icon\" slot is filled",
+              "fieldName": "icon"
+            },
+            {
+              "name": "secondary",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Color header with Secondary theme color while focus is within",
+              "fieldName": "secondary"
+            },
+            {
+              "name": "highlighted",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Highlight pane with dotted outline",
+              "fieldName": "highlighted"
+            },
+            {
+              "name": "level",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "description": "Nesting level, default (closes pane ancestors level) + 1",
+              "fieldName": "level"
+            }
+          ],
+          "superclass": {
+            "name": "OscdComponent",
+            "package": "@openscd/core"
+          },
+          "tagName": "oscd-action-pane",
+          "summary": "A responsive container rendering actions in a header.",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "OscdActionPane",
+          "declaration": {
+            "name": "OscdActionPane",
+            "module": "components/oscd-action-pane/src/oscd-action-pane.ts"
           }
         }
       ]

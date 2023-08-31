@@ -26,6 +26,33 @@ const generateComponentsTable = (): TableEntry => {
   };
 };
 
+const generateScriptsTable = (): TableEntry => {
+  return {
+    table: {
+      columns: ['Name', 'Description', 'Properties'],
+      rows: [
+        ['npm run generate:component', 'Scaffolds a new component', 'See CLI'],
+        [
+          'npx nx storybook <component>',
+          'Run Storybook for a specific component',
+          'component',
+        ],
+        ['npm run build:all', 'Builds all the components', '-'],
+        [
+          'npx nx graph',
+          'Creates a visual graph for all the component dependencies',
+          '-',
+        ],
+        [
+          'npm run documentation',
+          'Updates the documentation per component and the global README.md',
+          '-',
+        ],
+      ],
+    },
+  };
+};
+
 const readme: MarkdownEntryOrPrimitive[] = [
   {
     h1: 'Oscd Components',
@@ -46,10 +73,20 @@ const readme: MarkdownEntryOrPrimitive[] = [
     p: '',
   },
   generateComponentsTable(),
+  {
+    hr: true,
+  },
+  {
+    h2: 'Scripts',
+  },
+  {
+    p: '',
+  },
+  generateScriptsTable(),
 ];
 
 const res = tsMarkdown(readme);
 
-fs.writeFileSync(path.join(rootDir, 'README-new.md'), res, {
+fs.writeFileSync(path.join(rootDir, 'README.md'), res, {
   encoding: 'utf8',
 });

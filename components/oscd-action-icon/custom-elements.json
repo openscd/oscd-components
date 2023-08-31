@@ -106,11 +106,6 @@
           "members": [
             {
               "kind": "field",
-              "name": "scopedElements",
-              "static": true
-            },
-            {
-              "kind": "field",
               "name": "label",
               "type": {
                 "text": "string"

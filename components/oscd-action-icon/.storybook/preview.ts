@@ -1,6 +1,5 @@
 import { setCustomElementsManifest } from '@storybook/web-components';
 
-import { html } from 'lit';
 import { withRootAttribute } from 'storybook-addon-root-attribute';
 
 import '../../../themes/prebuilt/oscd.css';

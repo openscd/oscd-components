@@ -97,15 +97,15 @@
           "slots": [
             {
               "description": "May contain up to eight icon buttons.",
-              "name": "action"
+              "name": "`action`"
             },
             {
               "description": "If filled overrides the icon property.",
-              "name": "icon"
+              "name": "`icon`"
             },
             {
               "description": "The default slot will be rendered into the pane body in a single column.",
-              "name": ""
+              "name": "`[default]`"
             }
           ],
           "members": [
@@ -115,8 +115,7 @@
               "type": {
                 "text": "string"
               },
-              "description": "Caption text, displayed in the header",
-              "attribute": "label"
+              "description": "Caption text, displayed in the header"
             },
             {
               "kind": "field",
@@ -124,8 +123,7 @@
               "type": {
                 "text": "string"
               },
-              "description": "Icon name, displayed unless the \"icon\" slot is filled",
-              "attribute": "icon"
+              "description": "Icon name, displayed unless the \"icon\" slot is filled"
             },
             {
               "kind": "field",
@@ -134,8 +132,7 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Color header with Secondary theme color while focus is within",
-              "attribute": "secondary"
+              "description": "Color header with Secondary theme color while focus is within"
             },
             {
               "kind": "field",
@@ -144,8 +141,7 @@
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Highlight pane with dotted outline",
-              "attribute": "highlighted"
+              "description": "Highlight pane with dotted outline"
             },
             {
               "kind": "field",
@@ -154,8 +150,7 @@
                 "text": "number"
               },
               "default": "1",
-              "description": "Nesting level, default (closes pane ancestors level) + 1",
-              "attribute": "level"
+              "description": "Nesting level, default (closes pane ancestors level) + 1"
             },
             {
               "kind": "method",
@@ -166,51 +161,6 @@
                   "text": "TemplateResult"
                 }
               }
-            }
-          ],
-          "attributes": [
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "description": "Caption text, displayed in the header",
-              "fieldName": "label"
-            },
-            {
-              "name": "icon",
-              "type": {
-                "text": "string"
-              },
-              "description": "Icon name, displayed unless the \"icon\" slot is filled",
-              "fieldName": "icon"
-            },
-            {
-              "name": "secondary",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Color header with Secondary theme color while focus is within",
-              "fieldName": "secondary"
-            },
-            {
-              "name": "highlighted",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Highlight pane with dotted outline",
-              "fieldName": "highlighted"
-            },
-            {
-              "name": "level",
-              "type": {
-                "text": "number"
-              },
-              "default": "1",
-              "description": "Nesting level, default (closes pane ancestors level) + 1",
-              "fieldName": "level"
             }
           ],
           "superclass": {

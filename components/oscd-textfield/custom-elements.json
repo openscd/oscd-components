@@ -281,6 +281,11 @@
             },
             {
               "kind": "method",
+              "name": "styleTextfield",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
               "name": "checkValidity",
               "return": {
                 "type": {

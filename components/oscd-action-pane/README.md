@@ -14,13 +14,8 @@
 
 ### Attributes
 
-| Name        | Type    | Description                                                   |
-| ----------- | ------- | ------------------------------------------------------------- |
-| label       | string  | Caption text, displayed in the header                         |
-| icon        | string  | Icon name, displayed unless the "icon" slot is filled         |
-| secondary   | boolean | Color header with Secondary theme color while focus is within |
-| highlighted | boolean | Highlight pane with dotted outline                            |
-| level       | number  | Nesting level, default (closes pane ancestors level) + 1      |
+| Name | Type | Description |
+| ---- | ---- | ----------- |
 
 ### Css Properties
 

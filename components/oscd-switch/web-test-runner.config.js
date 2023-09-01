@@ -58,7 +58,11 @@ function defaultGetImageDiff({ baselineImage, image, options }) {
     diff.data,
     width,
     height,
-    options
+    {
+      ...options,
+      widthDiff: 5,
+      heightDiff: 5,
+    }
   );
   const diffPercentage = (numDiffPixels / (width * height)) * 100;
 

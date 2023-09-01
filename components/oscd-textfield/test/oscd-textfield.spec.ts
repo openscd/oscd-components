@@ -1,8 +1,8 @@
 import { TextField } from '@material/mwc-textfield';
 import { expect, fixture, html } from '@open-wc/testing';
 
-import '../src';
-import { OscdTextfield } from '../src';
+import '../src/OscdTextfield.js';
+import type { OscdTextfield } from '../src/oscd-textfield.js';
 
 describe('Basic component oscd-textfield', () => {
   let element: OscdTextfield;
@@ -81,7 +81,7 @@ describe('Basic component oscd-textfield', () => {
   describe('Multiplier', () => {
     beforeEach(async () => {
       element.multipliers = ['First multiplier', 'Second multiplier'];
-      //    element.unit = 'Unit';
+      element.unit = 'Unit';
       await element.updateComplete;
     });
 

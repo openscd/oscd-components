@@ -3,7 +3,7 @@ import { fixture, html } from '@open-wc/testing';
 import { visualDiff } from '@web/test-runner-visual-regression';
 
 import '../src/OscdSwitch.js';
-import { OscdSwitch } from '../src/OscdSwitch.js';
+import type { OscdSwitch } from '../src/oscd-switch.js';
 
 const factor = process.env.CI ? 2 : 1;
 

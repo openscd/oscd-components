@@ -13,7 +13,7 @@ import '@material/mwc-formfield';
 import '@openscd/oscd-switch';
 import '@material/mwc-checkbox';
 
-import { Checkbox } from '@material/mwc-checkbox';
+import type { Checkbox } from '@material/mwc-checkbox';
 
 import { OscdFormComponent } from '@openscd/form';
 
@@ -58,14 +58,16 @@ export class OscdCheckbox extends OscdFormComponent {
   /** Is `"true"` when checked, `"false"` un-checked, `null` if [[`nullable`]]. */
   @property({ type: String })
   get maybeValue(): string | null {
-    return this.null ? null : this.checked ? 'true' : 'false';
+    const res: string = this.checked ? 'true' : 'false';
+
+    return this.null ? null : res;
   }
 
   set maybeValue(check: string | null) {
     if (check === null) this.null = true;
     else {
       this.null = false;
-      this.checked = check === 'true' ? true : false;
+      this.checked = check === 'true';
     }
   }
 

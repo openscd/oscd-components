@@ -1,8 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { action } from '@storybook/addon-actions';
 
-import { html, TemplateResult } from 'lit';
-
 import '../src/OscdButton';
 
 import { createBadge } from '@oscd/utils';

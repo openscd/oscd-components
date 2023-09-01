@@ -6,15 +6,16 @@ import {
   MarkdownEntryOrPrimitive,
   TableEntry,
   H1Entry,
-  ImageEntry,
 } from 'ts-markdown';
+
+import { readJsonFile } from '@nx/devkit';
+
 import {
   getComponentDirs,
   readPackageJson,
   hasFile,
   readFile,
 } from './utils/utils';
-import { readJsonFile } from '@nx/devkit';
 
 const getCustomElements = (componentDir: string): any[] => {
   const customElementsJsonPath = path.join(

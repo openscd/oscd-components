@@ -1,13 +1,5 @@
-import {
-  addProjectConfiguration,
-  formatFiles,
-  generateFiles,
-  Tree,
-  names,
-  updateJson,
-} from '@nx/devkit';
+import { formatFiles, Tree, updateJson } from '@nx/devkit';
 import * as path from 'path';
-import { env } from 'process';
 import { OscdStatusGeneratorSchema } from './schema';
 
 export async function statusGenerator(

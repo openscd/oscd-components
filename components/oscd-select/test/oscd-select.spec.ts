@@ -3,7 +3,7 @@ import { html, fixture, expect } from '@open-wc/testing';
 import '@material/mwc-list/mwc-list-item';
 
 import '../src/OscdSelect.js';
-import { OscdSelect } from '../src/OscdSelect.js';
+import type { OscdSelect } from '../src/oscd-select.js';
 
 describe('oscd-select', () => {
   let element: OscdSelect;

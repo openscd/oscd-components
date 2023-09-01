@@ -2,8 +2,8 @@ import { fixture, html } from '@open-wc/testing';
 
 import { visualDiff } from '@web/test-runner-visual-regression';
 
-import '../src';
-import { OscdSelect } from '../src';
+import '../src/OscdSelect.js';
+import type { OscdSelect } from '../src/oscd-select.js';
 
 const factor = process.env.CI ? 2 : 1;
 

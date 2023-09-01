@@ -1,7 +1,7 @@
 import { expect, fixture, html } from '@open-wc/testing';
 
 import '../src/OscdActionPane.js';
-import { OscdActionPane } from '../src/OscdActionPane.js';
+import type { OscdActionPane } from '../src/OscdActionPane.js';
 
 describe('oscd-action-pane', () => {
   let element: OscdActionPane;

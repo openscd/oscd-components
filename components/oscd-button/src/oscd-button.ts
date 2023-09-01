@@ -55,7 +55,7 @@ export class OscdButton extends OscdComponent {
     return html`<mwc-button
       ?disabled=${this.disabled}
       .label=${this.label}
-      .icon=${this.icon || ''}
+      .icon=${this.icon ?? ''}
       ?raised=${this.raised}
       ?outlined=${this.outlined}
     >

@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
-import { action } from '@storybook/addon-actions';
 
-import { html, TemplateResult } from 'lit';
+import { html } from 'lit';
 
 import '../src/OscdSelect';
 

@@ -24,12 +24,15 @@ jobs:
           npm i @nx/nx-linux-x64-gnu
           npm ci
 
+      - name: Install playwright browsers
+        run: npx playwright install --with-deps
+        
       - name: Build 
         run: npm run build:all
       
       - name: Test
         run: npm run test
-        
+
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:

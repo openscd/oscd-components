@@ -44,14 +44,21 @@ describe('oscd-select', () => {
 
     it('disables itself on switch toggle', async () => {
       expect(element).to.have.property('maybeValue', 'one');
-      expect(element).to.have.property('disabled', false);
-      element.shadowRoot
-        ?.querySelector('oscd-switch')
-        ?.shadowRoot?.querySelector('mwc-switch')!
-        .click();
+      expect(element.shadowRoot!.querySelector('mwc-select')).to.have.property(
+        'disabled',
+        false
+      );
+      await (
+        element.shadowRoot
+          ?.querySelector('oscd-switch')
+          ?.shadowRoot?.querySelector('mwc-switch') as HTMLElement
+      ).click();
       await element.updateComplete;
       expect(element).to.have.property('maybeValue', null);
-      expect(element).to.have.property('disabled', true);
+      expect(element.shadowRoot?.querySelector('mwc-select')).to.have.property(
+        'disabled',
+        true
+      );
     });
 
     it('remebers its previous value on switch toggle', async () => {
@@ -87,7 +94,9 @@ describe('oscd-select', () => {
       });
 
       it('has a disabled textfield', () => {
-        expect(element).to.have.property('disabled', true);
+        expect(
+          element.shadowRoot?.querySelector('mwc-select')
+        ).to.have.property('disabled', true);
       });
 
       it('does not show anything in the textfield', () => {

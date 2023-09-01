@@ -27,5 +27,7 @@ export default css`
     --mdc-select-disabled-fill-color: var(--oscd-theme-select-disabled-fill);
 
     --mdc-select-dropdown-icon-color: var(--oscd-theme-select-ink);
+
+    --mdc-theme-surface: var(--oscd-theme-surface);
   }
 `;

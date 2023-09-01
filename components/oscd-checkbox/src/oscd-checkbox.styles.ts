@@ -20,7 +20,7 @@ export default css`
     );
   }
 
-  mwc-formfield[disabled] {
-    --mdc-theme-text-primary-on-background: green;
+  mwc-formfield.disabled {
+    --mdc-theme-text-primary-on-background: var(--oscd-theme-disabled);
   }
 `;

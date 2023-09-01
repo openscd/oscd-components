@@ -6,11 +6,13 @@
   "version": "0.0.1",
   "browser": "./dist/OscdSelect.js",
   "module": "./dist/OscdSelect.js",
+  "types": "./dist/OscdSelect.d.ts",
   "files": [
     "dist/**/*"
   ],
   "exports": {
-    ".": "./dist/OscdSelect.js"
+    ".": "./dist/OscdSelect.js",
+    "./oscd-select.js": "./dist/oscd-select.js"
   },
   "type": "module",
   "readme": "./README.md",

@@ -15,7 +15,6 @@ const config: StorybookConfig = {
       },
     },
     '@etchteam/storybook-addon-status/register',
-    'storybook-addon-root-attribute/register',
   ],
   framework: {
     name: '@storybook/web-components-vite',

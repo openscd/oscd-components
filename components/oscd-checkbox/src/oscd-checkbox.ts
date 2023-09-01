@@ -7,13 +7,15 @@ import {
   state,
 } from 'lit-element';
 
-import { OscdFormComponent } from '@openscd/form';
+import { classMap } from 'lit/directives/class-map.js';
 
 import '@material/mwc-formfield';
 import '@openscd/oscd-switch';
 import '@material/mwc-checkbox';
 
 import { Checkbox } from '@material/mwc-checkbox';
+
+import { OscdFormComponent } from '@openscd/form';
 
 import styles from './oscd-checkbox.styles.js';
 
@@ -187,9 +189,9 @@ export class OscdCheckbox extends OscdFormComponent {
         <div>
           <mwc-formfield
             label="${this.formfieldLabel}"
-            style="${this.disabled
-              ? `--mdc-theme-text-primary-on-background:rgba(0, 0, 0, 0.38)`
-              : ``}"
+            class="${classMap({
+              disabled: this.disabled || this.deactivateCheckbox,
+            })}"
             ><mwc-checkbox
               ?checked=${this.initChecked}
               ?disabled=${this.disabled || this.deactivateCheckbox}

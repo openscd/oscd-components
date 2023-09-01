@@ -395,11 +395,11 @@ export class OscdTextfield extends OscdFormComponent {
     this.styleTextfield();
   }
 
+  // FIXME This is done because the Material component @material/mwc-textfield does not style the affix via css variables
   private styleTextfield() {
     Array.from<HTMLElement>(
       this.textfield.shadowRoot!.querySelectorAll('.mdc-text-field__affix')
     ).forEach((el) => {
-      console.log('el', el);
       el.style.setProperty('color', 'var(--mdc-text-field-label-ink-color)');
     });
   }
@@ -420,18 +420,10 @@ export class OscdTextfield extends OscdFormComponent {
   /**
    * @internal
    */
-  constructor() {
-    super();
-  }
-
-  /**
-   * @internal
-   */
   protected renderUnitSelector(): TemplateResult {
     if (this.multipliers.length && this.unit)
-      return html`<div style="position:relative;">
+      return html`<div class="unit-selector">
         <mwc-icon-button
-          style="margin:5px;"
           icon="more"
           ?disabled=${this.null || this._disabledSwitch}
           @click=${() => this.multiplierMenu?.show()}

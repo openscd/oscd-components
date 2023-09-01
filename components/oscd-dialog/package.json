@@ -6,11 +6,13 @@
   "version": "0.0.1",
   "browser": "./dist/OscdDialog.js",
   "module": "./dist/OscdDialog.js",
+  "types": "./dist/OscdDialog.d.ts",
   "files": [
     "dist/**/*"
   ],
   "exports": {
-    ".": "./dist/OscdDialog.js"
+    ".": "./dist/OscdDialog.js",
+    "./oscd-dialog.js": "./dist/oscd-dialog.js"
   },
   "type": "module",
   "readme": "./README.md",

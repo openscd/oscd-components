@@ -9,13 +9,29 @@ rel="stylesheet"
 />
 
 <style>
-  #root-inner {
-    background: #ffffff;
-    padding: 64px;
-    margin-top: 32px;
-  }
+    html,
+    body,
+    #storybook-root {
+      display: flex;
+      height: 100%;
+      flex: 1;
+    }
 
-  :root[dark] #root-inner {
-    background: #242424;
-  }
+    #storybook-root {
+        background: #FFFFFF;
+        padding: 32px;
+    }
+
+    :root[data-theme="dark"] #storybook-root {
+        background: #242424;
+    }
 </style>
+
+<script>
+    const _customElementsDefine = window.customElements.define;
+    window.customElements.define = (name, cl, conf) => {
+      if (!customElements.get(name)) {
+        _customElementsDefine.call(window.customElements, name, cl, conf);
+      }
+    };
+</script>

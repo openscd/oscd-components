@@ -9,12 +9,20 @@ rel="stylesheet"
 />
 
 <style>
+    html,
+    body,
+    #storybook-root {
+      display: flex;
+      height: 100%;
+      flex: 1;
+    }
+
     #storybook-root {
         background: #FFFFFF;
         padding: 32px;
     }
 
-    :root[dark] #storybook-root {
+    :root[data-theme="dark"] #storybook-root {
         background: #242424;
     }
 </style>

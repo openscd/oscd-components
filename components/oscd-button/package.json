@@ -6,11 +6,13 @@
   "version": "0.0.1",
   "browser": "./dist/OscdButton.js",
   "module": "./dist/OscdButton.js",
+  "types": "./dist/OscdButton.d.ts",
   "files": [
     "dist/**/*"
   ],
   "exports": {
-    ".": "./dist/OscdButton.js"
+    ".": "./dist/OscdButton.js",
+    "./oscd-button.js": "./dist/oscd-button.js"
   },
   "type": "module",
   "readme": "./README.md",

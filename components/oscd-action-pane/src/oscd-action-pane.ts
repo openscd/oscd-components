@@ -85,6 +85,7 @@ export class OscdActionPane extends OscdComponent {
       this.parentNode!,
       'oscd-action-pane'
     );
+
     if (parentPane) this.level = parentPane.level + 1;
 
     this.level = Math.floor(this.level);
@@ -102,6 +103,7 @@ export class OscdActionPane extends OscdComponent {
       <nav><slot name="action"></slot></nav>`;
 
     const headingLevel = Math.floor(Math.max(this.level, 1));
+
     // Sometimes a TemplateResult is passed in as Label, not a string. So only when it's a string show a title.
     const title = typeof this.label === 'string' ? this.label : '';
     switch (headingLevel) {

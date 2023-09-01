@@ -77,10 +77,6 @@ export class OscdSwitch extends OscdComponent {
     return {};
   }
 
-  constructor() {
-    super();
-  }
-
   render(): TemplateResult {
     return html`<mwc-switch
       ?selected=${this.selected}

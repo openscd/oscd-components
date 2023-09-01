@@ -7,20 +7,59 @@ import * as Theme from '../../themes/built/oscd/variables.js';
 
 <ColorPalette>
   <ColorItem
-    title="theme.color.greyscale"
-    subtitle="Some of the greys"
-    colors={{ White: Theme.ColorOscdWhite, Black: Theme.ColorOscdBlack }}
+    title="Grayscale"
+    subtitle="Different Gray Colors"
+    colors={{ 
+      'Gray-0': Theme.ColorOscdRefGrayGray0, 
+      'Gray-100': Theme.ColorOscdRefGrayGray100, 
+      'Gray-200': Theme.ColorOscdRefGrayGray200, 
+      'Gray-300': Theme.ColorOscdRefGrayGray300, 
+      'Gray-400': Theme.ColorOscdRefGrayGray400, 
+      'Gray-500': Theme.ColorOscdRefGrayGray500, 
+      'Gray-600': Theme.ColorOscdRefGrayGray600, 
+      'Gray-700': Theme.ColorOscdRefGrayGray700, 
+      'Gray-800': Theme.ColorOscdRefGrayGray800, 
+      'Gray-900': Theme.ColorOscdRefGrayGray900, 
+      'Gray-1000': Theme.ColorOscdRefGrayGray1000 
+    }}
   />
-  <ColorItem 
-    title="Primary" 
-    colors={{ 'Primary-100': Theme.ColorOscdRefPrimaryPrimary100, 'Primary-200': Theme.ColorOscdRefPrimaryPrimary200, 'Primary-300': Theme.ColorOscdRefPrimaryPrimary300, 'Primary-400': Theme.ColorOscdRefPrimaryPrimary400, 'Primary-500': Theme.ColorOscdRefPrimaryPrimary500, 'Primary-600': Theme.ColorOscdRefPrimaryPrimary600  }} 
-  />
-  <ColorItem 
-    title="Secondary" 
-    colors={{ 'Secondary-100': Theme.ColorOscdRefSecondarySecondary100, 'Secondary-200': Theme.ColorOscdRefSecondarySecondary200, 'Secondary-300': Theme.ColorOscdRefSecondarySecondary300, 'Secondary-400': Theme.ColorOscdRefSecondarySecondary400, 'Secondary-500': Theme.ColorOscdRefSecondarySecondary500, 'Secondary-600': Theme.ColorOscdRefSecondarySecondary600  }} 
+  <ColorItem
+    title="Theme Colors"
+    colors={{
+      'Primary': Theme.ColorOscdSysLightPrimary,
+      'Secondary': Theme.ColorOscdSysLightSecondary
+    }} 
   />
   <ColorItem 
     title="States" 
-    colors={{ 'Success': Theme.ColorOscdSysLightSuccess, 'Info': Theme.ColorOscdSysLightInfo, 'Warning': Theme.ColorOscdSysLightWarning, 'Danger': Theme.ColorOscdSysLightDanger  }} 
+    colors={{ 
+      'Success': Theme.ColorOscdSysLightSuccess, 
+      'Info': Theme.ColorOscdSysLightInfo, 
+      'Warning': Theme.ColorOscdSysLightWarning, 
+      'Danger': Theme.ColorOscdSysLightDanger  
+    }} 
   />
+  <ColorItem 
+    title="Primary" 
+    colors={{ 
+      'Primary-100': Theme.ColorOscdRefPrimaryPrimary100, 
+      'Primary-200': Theme.ColorOscdRefPrimaryPrimary200, 
+      'Primary-300': Theme.ColorOscdRefPrimaryPrimary300, 
+      'Primary-400': Theme.ColorOscdRefPrimaryPrimary400, 
+      'Primary-500': Theme.ColorOscdRefPrimaryPrimary500, 
+      'Primary-600': Theme.ColorOscdRefPrimaryPrimary600  
+    }} 
+  />
+  <ColorItem 
+    title="Secondary" 
+    colors={{ 
+      'Secondary-100': Theme.ColorOscdRefSecondarySecondary100, 
+      'Secondary-200': Theme.ColorOscdRefSecondarySecondary200, 
+      'Secondary-300': Theme.ColorOscdRefSecondarySecondary300, 
+      'Secondary-400': Theme.ColorOscdRefSecondarySecondary400, 
+      'Secondary-500': Theme.ColorOscdRefSecondarySecondary500, 
+      'Secondary-600': Theme.ColorOscdRefSecondarySecondary600  
+    }} 
+  />
+
 </ColorPalette>

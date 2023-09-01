@@ -41,15 +41,19 @@ export class OscdActionIcon extends OscdComponent {
   /** caption text, displayed in the header */
   @property({ type: String })
   label?: string;
+
   /** icon name, displayed unless the "icon" slot is filled */
   @property({ type: String })
   icon?: string;
+
   /** color header with secondary theme color while focus is within */
   @property({ type: Boolean, reflect: true })
   secondary = false;
+
   /** highlight pane with dotted outline */
   @property({ type: Boolean, reflect: true })
   highlighted = false;
+
   /** disables CSS adoption to action buttons */
   @property({ type: Boolean, reflect: true })
   hideActions = false;

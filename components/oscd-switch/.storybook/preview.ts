@@ -1,7 +1,5 @@
 import { setCustomElementsManifest } from '@storybook/web-components';
-
-import { html } from 'lit';
-import { withRootAttribute } from 'storybook-addon-root-attribute';
+import { withThemeByDataAttribute } from '@storybook/addon-themes';
 
 import '../../../themes/prebuilt/oscd.css';
 
@@ -9,7 +7,16 @@ import customElements from '../custom-elements.json';
 
 setCustomElementsManifest(customElements);
 
-export const decorators = [withRootAttribute];
+export const decorators = [
+  withThemeByDataAttribute({
+    themes: {
+      light: '',
+      dark: 'dark',
+    },
+    defaultTheme: 'light',
+    attributeName: 'data-theme',
+  }),
+];
 
 export const parameters = {
   controls: { expanded: true },
@@ -26,19 +33,5 @@ export const parameters = {
       color: '#FFFFFF',
       description: 'This component is still in beta',
     },
-  },
-  rootAttribute: {
-    defaultState: {
-      name: 'Light',
-      value: null,
-    },
-    attribute: 'dark',
-    tooltip: true,
-    states: [
-      {
-        name: 'Dark',
-        value: 'dark',
-      },
-    ],
   },
 };

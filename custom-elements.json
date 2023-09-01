@@ -27,21 +27,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/oscd-action-icon/src/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./OscdActionIcon.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/oscd-action-icon/src/oscd-action-icon.styles.ts",
       "declarations": [],
       "exports": [
@@ -233,6 +218,290 @@
     },
     {
       "kind": "javascript-module",
+      "path": "components/oscd-button/src/OscdButton.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "oscd-button",
+          "declaration": {
+            "name": "OscdButton",
+            "module": "/components/oscd-button/src/oscd-button"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "OscdButton",
+          "declaration": {
+            "name": "OscdButton",
+            "module": "components/oscd-button/src/OscdButton.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-button/src/oscd-button.styles.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "components/oscd-button/src/oscd-button.styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-button/src/oscd-button.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "OscdButton",
+          "members": [
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether the Button is disabled or not",
+              "attribute": "disabled"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Text for the Button",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "icon",
+              "type": {
+                "text": "string"
+              },
+              "description": "The icon for the Button",
+              "attribute": "icon"
+            },
+            {
+              "kind": "field",
+              "name": "raised",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether the Button is raised or not",
+              "attribute": "raised"
+            },
+            {
+              "kind": "field",
+              "name": "outlined",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether the Button is outlined or not",
+              "attribute": "outlined"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether the Button is disabled or not",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Text for the Button",
+              "fieldName": "label"
+            },
+            {
+              "name": "icon",
+              "type": {
+                "text": "string"
+              },
+              "description": "The icon for the Button",
+              "fieldName": "icon"
+            },
+            {
+              "name": "raised",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether the Button is raised or not",
+              "fieldName": "raised"
+            },
+            {
+              "name": "outlined",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether the Button is outlined or not",
+              "fieldName": "outlined"
+            }
+          ],
+          "superclass": {
+            "name": "OscdComponent",
+            "package": "@openscd/core"
+          },
+          "tagName": "oscd-button",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "OscdButton",
+          "declaration": {
+            "name": "OscdButton",
+            "module": "components/oscd-button/src/oscd-button.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-dialog/src/OscdDialog.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "oscd-dialog",
+          "declaration": {
+            "name": "OscdDialog",
+            "module": "/components/oscd-dialog/src/oscd-dialog"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "OscdDialog",
+          "declaration": {
+            "name": "OscdDialog",
+            "module": "components/oscd-dialog/src/OscdDialog.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-dialog/src/oscd-dialog.styles.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "components/oscd-dialog/src/oscd-dialog.styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-dialog/src/oscd-dialog.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "OscdDialog",
+          "members": [
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Determines if the Dialog is open or not",
+              "attribute": "open",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "show",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "hide",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "onClosed",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "evt",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ]
+            }
+          ],
+          "attributes": [
+            {
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Determines if the Dialog is open or not",
+              "fieldName": "open"
+            }
+          ],
+          "superclass": {
+            "name": "OscdComponent",
+            "package": "@openscd/core"
+          },
+          "tagName": "oscd-dialog",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "OscdDialog",
+          "declaration": {
+            "name": "OscdDialog",
+            "module": "components/oscd-dialog/src/oscd-dialog.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "components/oscd-action-pane/src/OscdActionPane.ts",
       "declarations": [],
       "exports": [
@@ -250,21 +519,6 @@
           "declaration": {
             "name": "OscdActionPane",
             "module": "components/oscd-action-pane/src/OscdActionPane.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/oscd-action-pane/src/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./OscdActionPane.js"
           }
         }
       ]
@@ -464,537 +718,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/oscd-checkbox/src/OscdCheckbox.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "custom-element-definition",
-          "name": "oscd-checkbox",
-          "declaration": {
-            "name": "OscdCheckbox",
-            "module": "/components/oscd-checkbox/src/oscd-checkbox"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "OscdCheckbox",
-          "declaration": {
-            "name": "OscdCheckbox",
-            "module": "components/oscd-checkbox/src/OscdCheckbox.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/oscd-checkbox/src/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./OscdCheckbox.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/oscd-checkbox/src/oscd-checkbox.styles.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "module": "components/oscd-checkbox/src/oscd-checkbox.styles.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/oscd-checkbox/src/oscd-checkbox.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "OscdCheckbox",
-          "cssProperties": [
-            {
-              "description": "Ink color for the checkbox",
-              "name": "--oscd-theme-checkbox-ink"
-            },
-            {
-              "description": "Unchecked color for the checkbox",
-              "name": "--oscd-theme-checkbox-unchecked"
-            },
-            {
-              "description": "Disabled color for the checkbox",
-              "name": "--oscd-theme-checkbox-disabled"
-            },
-            {
-              "description": "Checkobx color",
-              "name": "--oscd-theme-checkbox-secondary",
-              "default": "--oscd-theme-secondary"
-            },
-            {
-              "description": "On Surface color",
-              "name": "--oscd-theme-checkbox-ons-surface",
-              "default": "--oscd-theme-on-surface"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "Text label rendered after the checkbox.",
-              "attribute": "label"
-            },
-            {
-              "kind": "field",
-              "name": "helper",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "Parenthetical information rendered after the label: `label (helper)`",
-              "attribute": "helper"
-            },
-            {
-              "kind": "field",
-              "name": "nullable",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Whether [[`maybeValue`]] may be `null`",
-              "attribute": "nullable"
-            },
-            {
-              "kind": "field",
-              "name": "defaultChecked",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "The default `checked` state while [[`maybeValue`]] is `null`.",
-              "attribute": "defaultChecked"
-            },
-            {
-              "kind": "field",
-              "name": "maybeValue",
-              "type": {
-                "text": "string | null"
-              },
-              "description": "Is `\"true\"` when checked, `\"false\"` un-checked, `null` if [[`nullable`]].",
-              "attribute": "maybeValue"
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "description": "Disables component including null switch",
-              "attribute": "disabled"
-            },
-            {
-              "kind": "field",
-              "name": "checked",
-              "type": {
-                "text": "boolean"
-              },
-              "attribute": "checked"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "Text label rendered after the checkbox.",
-              "fieldName": "label"
-            },
-            {
-              "name": "helper",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "Parenthetical information rendered after the label: `label (helper)`",
-              "fieldName": "helper"
-            },
-            {
-              "name": "nullable",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Whether [[`maybeValue`]] may be `null`",
-              "fieldName": "nullable"
-            },
-            {
-              "name": "defaultChecked",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "The default `checked` state while [[`maybeValue`]] is `null`.",
-              "fieldName": "defaultChecked"
-            },
-            {
-              "name": "maybeValue",
-              "type": {
-                "text": "string | null"
-              },
-              "description": "Is `\"true\"` when checked, `\"false\"` un-checked, `null` if [[`nullable`]].",
-              "fieldName": "maybeValue"
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "description": "Disables component including null switch",
-              "fieldName": "disabled"
-            },
-            {
-              "name": "checked",
-              "type": {
-                "text": "boolean"
-              },
-              "fieldName": "checked"
-            }
-          ],
-          "superclass": {
-            "name": "OscdFormComponent",
-            "package": "@openscd/form"
-          },
-          "tagName": "oscd-checkbox",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "OscdCheckbox",
-          "declaration": {
-            "name": "OscdCheckbox",
-            "module": "components/oscd-checkbox/src/oscd-checkbox.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/oscd-button/src/OscdButton.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "custom-element-definition",
-          "name": "oscd-button",
-          "declaration": {
-            "name": "OscdButton",
-            "module": "/components/oscd-button/src/oscd-button"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "OscdButton",
-          "declaration": {
-            "name": "OscdButton",
-            "module": "components/oscd-button/src/OscdButton.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/oscd-button/src/oscd-button.styles.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "module": "components/oscd-button/src/oscd-button.styles.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/oscd-button/src/oscd-button.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "OscdButton",
-          "members": [
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Whether the Button is disabled or not",
-              "attribute": "disabled"
-            },
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "Text for the Button",
-              "attribute": "label"
-            },
-            {
-              "kind": "field",
-              "name": "icon",
-              "type": {
-                "text": "string"
-              },
-              "description": "The icon for the Button",
-              "attribute": "icon"
-            },
-            {
-              "kind": "field",
-              "name": "raised",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Whether the Button is raised or not",
-              "attribute": "raised"
-            },
-            {
-              "kind": "field",
-              "name": "outlined",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Whether the Button is outlined or not",
-              "attribute": "outlined"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Whether the Button is disabled or not",
-              "fieldName": "disabled"
-            },
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "Text for the Button",
-              "fieldName": "label"
-            },
-            {
-              "name": "icon",
-              "type": {
-                "text": "string"
-              },
-              "description": "The icon for the Button",
-              "fieldName": "icon"
-            },
-            {
-              "name": "raised",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Whether the Button is raised or not",
-              "fieldName": "raised"
-            },
-            {
-              "name": "outlined",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Whether the Button is outlined or not",
-              "fieldName": "outlined"
-            }
-          ],
-          "superclass": {
-            "name": "OscdComponent",
-            "package": "@openscd/core"
-          },
-          "tagName": "oscd-button",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "OscdButton",
-          "declaration": {
-            "name": "OscdButton",
-            "module": "components/oscd-button/src/oscd-button.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/oscd-dialog/src/OscdDialog.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "custom-element-definition",
-          "name": "oscd-dialog",
-          "declaration": {
-            "name": "OscdDialog",
-            "module": "/components/oscd-dialog/src/oscd-dialog"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "OscdDialog",
-          "declaration": {
-            "name": "OscdDialog",
-            "module": "components/oscd-dialog/src/OscdDialog.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/oscd-dialog/src/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./OscdDialog.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/oscd-dialog/src/oscd-dialog.styles.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "module": "components/oscd-dialog/src/oscd-dialog.styles.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/oscd-dialog/src/oscd-dialog.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "OscdDialog",
-          "members": [
-            {
-              "kind": "field",
-              "name": "open",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Determines if the Dialog is open or not",
-              "attribute": "open",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "show",
-              "return": {
-                "type": {
-                  "text": "void"
-                }
-              }
-            },
-            {
-              "kind": "method",
-              "name": "hide",
-              "return": {
-                "type": {
-                  "text": "void"
-                }
-              }
-            },
-            {
-              "kind": "method",
-              "name": "onClosed",
-              "return": {
-                "type": {
-                  "text": "void"
-                }
-              },
-              "parameters": [
-                {
-                  "name": "evt",
-                  "type": {
-                    "text": "Event"
-                  }
-                }
-              ]
-            }
-          ],
-          "attributes": [
-            {
-              "name": "open",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Determines if the Dialog is open or not",
-              "fieldName": "open"
-            }
-          ],
-          "superclass": {
-            "name": "OscdComponent",
-            "package": "@openscd/core"
-          },
-          "tagName": "oscd-dialog",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "OscdDialog",
-          "declaration": {
-            "name": "OscdDialog",
-            "module": "components/oscd-dialog/src/oscd-dialog.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/oscd-select/src/OscdSelect.ts",
       "declarations": [],
       "exports": [
@@ -1012,21 +735,6 @@
           "declaration": {
             "name": "OscdSelect",
             "module": "components/oscd-select/src/OscdSelect.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/oscd-select/src/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./OscdSelect.js"
           }
         }
       ]
@@ -1424,6 +1132,224 @@
     },
     {
       "kind": "javascript-module",
+      "path": "components/oscd-checkbox/src/OscdCheckbox.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "oscd-checkbox",
+          "declaration": {
+            "name": "OscdCheckbox",
+            "module": "/components/oscd-checkbox/src/oscd-checkbox"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "OscdCheckbox",
+          "declaration": {
+            "name": "OscdCheckbox",
+            "module": "components/oscd-checkbox/src/OscdCheckbox.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-checkbox/src/oscd-checkbox.styles.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "components/oscd-checkbox/src/oscd-checkbox.styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-checkbox/src/oscd-checkbox.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "OscdCheckbox",
+          "cssProperties": [
+            {
+              "description": "Ink color for the checkbox",
+              "name": "--oscd-theme-checkbox-ink"
+            },
+            {
+              "description": "Unchecked color for the checkbox",
+              "name": "--oscd-theme-checkbox-unchecked"
+            },
+            {
+              "description": "Disabled color for the checkbox",
+              "name": "--oscd-theme-checkbox-disabled"
+            },
+            {
+              "description": "Checkobx color",
+              "name": "--oscd-theme-checkbox-secondary",
+              "default": "--oscd-theme-secondary"
+            },
+            {
+              "description": "On Surface color",
+              "name": "--oscd-theme-checkbox-ons-surface",
+              "default": "--oscd-theme-on-surface"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Text label rendered after the checkbox.",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "helper",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Parenthetical information rendered after the label: `label (helper)`",
+              "attribute": "helper"
+            },
+            {
+              "kind": "field",
+              "name": "nullable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether [[`maybeValue`]] may be `null`",
+              "attribute": "nullable"
+            },
+            {
+              "kind": "field",
+              "name": "defaultChecked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "The default `checked` state while [[`maybeValue`]] is `null`.",
+              "attribute": "defaultChecked"
+            },
+            {
+              "kind": "field",
+              "name": "maybeValue",
+              "type": {
+                "text": "string | null"
+              },
+              "description": "Is `\"true\"` when checked, `\"false\"` un-checked, `null` if [[`nullable`]].",
+              "attribute": "maybeValue"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Disables component including null switch",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "checked"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Text label rendered after the checkbox.",
+              "fieldName": "label"
+            },
+            {
+              "name": "helper",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Parenthetical information rendered after the label: `label (helper)`",
+              "fieldName": "helper"
+            },
+            {
+              "name": "nullable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether [[`maybeValue`]] may be `null`",
+              "fieldName": "nullable"
+            },
+            {
+              "name": "defaultChecked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "The default `checked` state while [[`maybeValue`]] is `null`.",
+              "fieldName": "defaultChecked"
+            },
+            {
+              "name": "maybeValue",
+              "type": {
+                "text": "string | null"
+              },
+              "description": "Is `\"true\"` when checked, `\"false\"` un-checked, `null` if [[`nullable`]].",
+              "fieldName": "maybeValue"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Disables component including null switch",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "checked"
+            }
+          ],
+          "superclass": {
+            "name": "OscdFormComponent",
+            "package": "@openscd/form"
+          },
+          "tagName": "oscd-checkbox",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "OscdCheckbox",
+          "declaration": {
+            "name": "OscdCheckbox",
+            "module": "components/oscd-checkbox/src/oscd-checkbox.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "components/oscd-textfield/src/OscdTextfield.ts",
       "declarations": [],
       "exports": [
@@ -1441,21 +1367,6 @@
           "declaration": {
             "name": "OscdTextfield",
             "module": "components/oscd-textfield/src/OscdTextfield.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/oscd-textfield/src/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./OscdTextfield.js"
           }
         }
       ]

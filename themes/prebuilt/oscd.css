@@ -32,18 +32,20 @@
     --oscd-theme-checkbox-unchecked: var(--color-oscd-ref-gray-gray400);
 
     --oscd-theme-switch-disabled: var(--color-oscd-ref-gray-gray700);
-    --oscd-theme-disabled: var(--color-oscd-ref-gray-gray700);
+    --oscd-theme-disabled: var(--color-oscd-ref-gray-gray600);
 
     --oscd-theme-text-color: var(--color-oscd-black);
 
     --mdc-theme-text-primary-on-background: var(--color-oscd-black);
+
+    --oscd-theme-surface: var(--color-oscd-white);
 
     /**
      * @tokens-end
      */
 }
 
-:root[dark] {
+:root[data-theme="dark"] {
     --oscd-theme-primary: var(--color-oscd-sys-dark-primary);
     --oscd-theme-on-primary: var(--color-oscd-sys-dark-on-primary);
     --oscd-theme-primary-surface: var(--color-oscd-sys-dark-primary-surface);
@@ -71,12 +73,13 @@
     --oscd-theme-checkbox-unchecked: var(--color-oscd-ref-gray-gray600);
 
     --oscd-theme-switch-disabled: var(--color-oscd-ref-gray-gray300);
-    --oscd-theme-disabled: var(--color-oscd-ref-gray-gray300);
+    --oscd-theme-disabled: var(--color-oscd-ref-gray-gray400);
 
     --oscd-theme-text-color: var(--color-oscd-white);
 
     --mdc-theme-text-primary-on-background: var(--color-oscd-white);
 
 
+    --oscd-theme-surface: var(--color-oscd-black);
 }
 

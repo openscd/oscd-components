@@ -12,7 +12,7 @@
   ],
   "exports": {
     ".": "./dist/OscdActionPane.js",
-    "./oscd-switch.js": "./dist/oscd-action-pane.js"
+    "./oscd-action-pane.js": "./dist/oscd-action-pane.js"
   },
   "type": "module",
   "readme": "./README.md",

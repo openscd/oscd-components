@@ -53,4 +53,12 @@ export default css`
     align-items: center;
     height: 56px;
   }
+
+  .unit-selector {
+    position: relative;
+  }
+
+  .unit-selector mwc-icon-button {
+    margin: 5px;
+  }
 `;

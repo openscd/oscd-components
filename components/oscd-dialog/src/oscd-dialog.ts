@@ -1,20 +1,15 @@
-import {
-  html,
-  CSSResultGroup,
-  TemplateResult,
-  property,
-  query,
-} from 'lit-element';
-
-import { OscdComponent, redispatchEvent } from '@openscd/core';
+import { html, CSSResultGroup, TemplateResult, property } from 'lit-element';
 
 import '@material/mwc-dialog';
+
+import { OscdComponent, redispatchEvent } from '@openscd/core';
 
 import styles from './oscd-dialog.styles.js';
 
 /**
  *
  * @prop {boolean} open - Determines if the Dialog is open or not
+ *
  * @example <oscd-dialog></oscd-dialog>
  * @tagname oscd-dialog
  */
@@ -44,7 +39,6 @@ export class OscdDialog extends OscdComponent {
 
   onClosed(evt: Event): void {
     this.hide();
-    console.log('evt: ', evt);
     redispatchEvent(this, evt);
   }
 

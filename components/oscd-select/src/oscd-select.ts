@@ -194,7 +194,7 @@ export class OscdSelect extends OscdFormComponent {
     _changedProperties: Map<string | number | symbol, unknown>
   ): Promise<void> {
     await super.firstUpdated(_changedProperties);
-    this.select.requestUpdate;
+    this.select.requestUpdate();
     await this.select.updateComplete;
     this._disabledSwitch = this.hasAttribute('disabled') || this.disabled;
   }

@@ -32,10 +32,7 @@ function defaultGetImageDiff({ baselineImage, image, options }) {
   let png = PNG.sync.read(image);
   let { width, height } = png;
 
-  const widthDiff = basePng.width - png.width;
-  const heightDiff = basePng.height - png.height;
-
-  if (widthDiff < -5 || widthDiff > 5 || heightDiff < -5 || heightDiff > 5) {
+  if (basePng.width !== png.width || basePng.height !== png.height) {
     error =
       `Screenshot is not the same width and height as the baseline. ` +
       `Baseline: { width: ${basePng.width}, height: ${basePng.height} }` +
@@ -58,11 +55,7 @@ function defaultGetImageDiff({ baselineImage, image, options }) {
     diff.data,
     width,
     height,
-    {
-      ...options,
-      widthDiff: 5,
-      heightDiff: 5,
-    }
+    options
   );
   const diffPercentage = (numDiffPixels / (width * height)) * 100;
 

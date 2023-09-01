@@ -1,7 +1,7 @@
 import { expect, fixture, html } from '@open-wc/testing';
 
 import '../src/OscdActionIcon.js';
-import { OscdActionIcon } from '../src/OscdActionIcon.js';
+import type { OscdActionIcon } from '../src/OscdActionIcon.js';
 
 describe('Basic component action-icon', () => {
   let element: OscdActionIcon;

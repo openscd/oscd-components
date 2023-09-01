@@ -1,7 +1,7 @@
 import { expect, fixture, html } from '@open-wc/testing';
 
 import '../src/OscdActionPane.js';
-import type { OscdActionPane } from '../src/OscdActionPane.js';
+import { OscdActionPane } from '../src/OscdActionPane.js';
 
 describe('oscd-action-pane', () => {
   let element: OscdActionPane;
@@ -144,5 +144,9 @@ describe('oscd-action-pane', () => {
     it('looks like the latest snapshot', () => {
       expect(element).shadowDom.to.equalSnapshot();
     });
+  });
+
+  it('Should have no scoped elements', async () => {
+    expect(OscdActionPane.scopedElements).to.be.empty;
   });
 });

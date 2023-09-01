@@ -1,3 +1,5 @@
 import { LitElement } from 'lit-element';
 
-export abstract class OscdComponent extends LitElement {}
+import { ScopedElementsMixin } from '@open-wc/scoped-elements';
+
+export abstract class OscdComponent extends ScopedElementsMixin(LitElement) {}

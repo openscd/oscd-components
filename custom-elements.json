@@ -379,129 +379,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/oscd-dialog/src/OscdDialog.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "custom-element-definition",
-          "name": "oscd-dialog",
-          "declaration": {
-            "name": "OscdDialog",
-            "module": "/components/oscd-dialog/src/oscd-dialog"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "OscdDialog",
-          "declaration": {
-            "name": "OscdDialog",
-            "module": "components/oscd-dialog/src/OscdDialog.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/oscd-dialog/src/oscd-dialog.styles.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "module": "components/oscd-dialog/src/oscd-dialog.styles.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/oscd-dialog/src/oscd-dialog.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "OscdDialog",
-          "members": [
-            {
-              "kind": "field",
-              "name": "open",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Determines if the Dialog is open or not",
-              "attribute": "open",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "show",
-              "return": {
-                "type": {
-                  "text": "void"
-                }
-              }
-            },
-            {
-              "kind": "method",
-              "name": "hide",
-              "return": {
-                "type": {
-                  "text": "void"
-                }
-              }
-            },
-            {
-              "kind": "method",
-              "name": "onClosed",
-              "return": {
-                "type": {
-                  "text": "void"
-                }
-              },
-              "parameters": [
-                {
-                  "name": "evt",
-                  "type": {
-                    "text": "Event"
-                  }
-                }
-              ]
-            }
-          ],
-          "attributes": [
-            {
-              "name": "open",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Determines if the Dialog is open or not",
-              "fieldName": "open"
-            }
-          ],
-          "superclass": {
-            "name": "OscdComponent",
-            "package": "@openscd/core"
-          },
-          "tagName": "oscd-dialog",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "OscdDialog",
-          "declaration": {
-            "name": "OscdDialog",
-            "module": "components/oscd-dialog/src/oscd-dialog.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/oscd-action-pane/src/OscdActionPane.ts",
       "declarations": [],
       "exports": [
@@ -712,420 +589,6 @@
           "declaration": {
             "name": "OscdActionPane",
             "module": "components/oscd-action-pane/src/oscd-action-pane.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/oscd-select/src/OscdSelect.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "custom-element-definition",
-          "name": "oscd-select",
-          "declaration": {
-            "name": "OscdSelect",
-            "module": "/components/oscd-select/src/oscd-select"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "OscdSelect",
-          "declaration": {
-            "name": "OscdSelect",
-            "module": "components/oscd-select/src/OscdSelect.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/oscd-select/src/oscd-select.styles.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "module": "components/oscd-select/src/oscd-select.styles.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/oscd-select/src/oscd-select.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "OscdSelect",
-          "members": [
-            {
-              "kind": "field",
-              "name": "nullable",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Whether [[`maybeValue]] may be `null`.",
-              "attribute": "nullable"
-            },
-            {
-              "kind": "field",
-              "name": "maybeValue",
-              "type": {
-                "text": "string"
-              },
-              "description": "Replacement for `value`, can only be `null` if [[`nullable`]].",
-              "attribute": "maybeValue"
-            },
-            {
-              "kind": "field",
-              "name": "defaultValue",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The default `value` displayed if [[`maybeValue`]] is `null`.",
-              "attribute": "defaultValue"
-            },
-            {
-              "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "description": "The value of the Form Control",
-              "attribute": "value"
-            },
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The label for the Form Control.",
-              "attribute": "label"
-            },
-            {
-              "kind": "field",
-              "name": "required",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Whether the Form Control is required or not.",
-              "attribute": "required"
-            },
-            {
-              "kind": "field",
-              "name": "helper",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The Helper text for the Form Control.",
-              "attribute": "helper"
-            },
-            {
-              "kind": "field",
-              "name": "validationMessage",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The Validation Message for the Form Control.",
-              "attribute": "validationMessage"
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "description": "Whether the Form Control is disabled or not.",
-              "attribute": "disabled"
-            },
-            {
-              "kind": "method",
-              "name": "checkValidity",
-              "return": {
-                "type": {
-                  "text": "boolean"
-                }
-              }
-            },
-            {
-              "kind": "method",
-              "name": "renderSelect",
-              "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "TemplateResult"
-                }
-              }
-            }
-          ],
-          "attributes": [
-            {
-              "name": "nullable",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Whether [[`maybeValue]] may be `null`.",
-              "fieldName": "nullable"
-            },
-            {
-              "name": "maybeValue",
-              "type": {
-                "text": "string"
-              },
-              "description": "Replacement for `value`, can only be `null` if [[`nullable`]].",
-              "fieldName": "maybeValue"
-            },
-            {
-              "name": "defaultValue",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The default `value` displayed if [[`maybeValue`]] is `null`.",
-              "fieldName": "defaultValue"
-            },
-            {
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "description": "The value of the Form Control",
-              "fieldName": "value"
-            },
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The label for the Form Control.",
-              "fieldName": "label"
-            },
-            {
-              "name": "required",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Whether the Form Control is required or not.",
-              "fieldName": "required"
-            },
-            {
-              "name": "helper",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The Helper text for the Form Control.",
-              "fieldName": "helper"
-            },
-            {
-              "name": "validationMessage",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The Validation Message for the Form Control.",
-              "fieldName": "validationMessage"
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "description": "Whether the Form Control is disabled or not.",
-              "fieldName": "disabled"
-            }
-          ],
-          "superclass": {
-            "name": "OscdFormComponent",
-            "package": "@openscd/form"
-          },
-          "tagName": "oscd-select",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "OscdSelect",
-          "declaration": {
-            "name": "OscdSelect",
-            "module": "components/oscd-select/src/oscd-select.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/oscd-switch/src/OscdSwitch.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "custom-element-definition",
-          "name": "oscd-switch",
-          "declaration": {
-            "name": "OscdSwitch",
-            "module": "/components/oscd-switch/src/oscd-switch.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "OscdSwitch",
-          "declaration": {
-            "name": "OscdSwitch",
-            "module": "components/oscd-switch/src/OscdSwitch.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "OscdSwitchChangeEvent",
-          "declaration": {
-            "name": "OscdSwitchChangeEvent",
-            "module": "./oscd-switch.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/oscd-switch/src/oscd-switch.styles.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "module": "components/oscd-switch/src/oscd-switch.styles.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/oscd-switch/src/oscd-switch.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "OscdSwitch",
-          "members": [
-            {
-              "kind": "field",
-              "name": "selected",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Selected state of the Switch",
-              "attribute": "selected"
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disabled state of the Switch",
-              "attribute": "disabled"
-            },
-            {
-              "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "default": "'on'",
-              "description": "Value of the Switch",
-              "attribute": "value"
-            },
-            {
-              "kind": "field",
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "Name of the Switch",
-              "attribute": "name"
-            },
-            {
-              "kind": "method",
-              "name": "onClick"
-            }
-          ],
-          "events": [
-            {
-              "description": "{OscdSwitchChangeEvent} Fired whenever `selected` changes due to user interaction (bubbles and composed).",
-              "name": "change"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "selected",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Selected state of the Switch",
-              "fieldName": "selected"
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disabled state of the Switch",
-              "fieldName": "disabled"
-            },
-            {
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "default": "'on'",
-              "description": "Value of the Switch",
-              "fieldName": "value"
-            },
-            {
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "Name of the Switch",
-              "fieldName": "name"
-            }
-          ],
-          "superclass": {
-            "name": "OscdComponent",
-            "package": "@openscd/core"
-          },
-          "tagName": "oscd-switch",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "OscdSwitch",
-          "declaration": {
-            "name": "OscdSwitch",
-            "module": "components/oscd-switch/src/oscd-switch.ts"
           }
         }
       ]
@@ -1837,6 +1300,543 @@
           "declaration": {
             "name": "OscdTextfield",
             "module": "components/oscd-textfield/src/oscd-textfield.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-switch/src/OscdSwitch.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "oscd-switch",
+          "declaration": {
+            "name": "OscdSwitch",
+            "module": "/components/oscd-switch/src/oscd-switch.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "OscdSwitch",
+          "declaration": {
+            "name": "OscdSwitch",
+            "module": "components/oscd-switch/src/OscdSwitch.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "OscdSwitchChangeEvent",
+          "declaration": {
+            "name": "OscdSwitchChangeEvent",
+            "module": "./oscd-switch.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-switch/src/oscd-switch.styles.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "components/oscd-switch/src/oscd-switch.styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-switch/src/oscd-switch.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "OscdSwitch",
+          "members": [
+            {
+              "kind": "field",
+              "name": "selected",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Selected state of the Switch",
+              "attribute": "selected"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disabled state of the Switch",
+              "attribute": "disabled"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "'on'",
+              "description": "Value of the Switch",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Name of the Switch",
+              "attribute": "name"
+            },
+            {
+              "kind": "method",
+              "name": "onClick"
+            }
+          ],
+          "events": [
+            {
+              "description": "{OscdSwitchChangeEvent} Fired whenever `selected` changes due to user interaction (bubbles and composed).",
+              "name": "change"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "selected",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Selected state of the Switch",
+              "fieldName": "selected"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disabled state of the Switch",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "'on'",
+              "description": "Value of the Switch",
+              "fieldName": "value"
+            },
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Name of the Switch",
+              "fieldName": "name"
+            }
+          ],
+          "superclass": {
+            "name": "OscdComponent",
+            "package": "@openscd/core"
+          },
+          "tagName": "oscd-switch",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "OscdSwitch",
+          "declaration": {
+            "name": "OscdSwitch",
+            "module": "components/oscd-switch/src/oscd-switch.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-select/src/OscdSelect.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "oscd-select",
+          "declaration": {
+            "name": "OscdSelect",
+            "module": "/components/oscd-select/src/oscd-select"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "OscdSelect",
+          "declaration": {
+            "name": "OscdSelect",
+            "module": "components/oscd-select/src/OscdSelect.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-select/src/oscd-select.styles.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "components/oscd-select/src/oscd-select.styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-select/src/oscd-select.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "OscdSelect",
+          "members": [
+            {
+              "kind": "field",
+              "name": "nullable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether [[`maybeValue]] may be `null`.",
+              "attribute": "nullable"
+            },
+            {
+              "kind": "field",
+              "name": "maybeValue",
+              "type": {
+                "text": "string"
+              },
+              "description": "Replacement for `value`, can only be `null` if [[`nullable`]].",
+              "attribute": "maybeValue"
+            },
+            {
+              "kind": "field",
+              "name": "defaultValue",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The default `value` displayed if [[`maybeValue`]] is `null`.",
+              "attribute": "defaultValue"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "description": "The value of the Form Control",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The label for the Form Control.",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether the Form Control is required or not.",
+              "attribute": "required"
+            },
+            {
+              "kind": "field",
+              "name": "helper",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The Helper text for the Form Control.",
+              "attribute": "helper"
+            },
+            {
+              "kind": "field",
+              "name": "validationMessage",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The Validation Message for the Form Control.",
+              "attribute": "validationMessage"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Whether the Form Control is disabled or not.",
+              "attribute": "disabled"
+            },
+            {
+              "kind": "method",
+              "name": "checkValidity",
+              "return": {
+                "type": {
+                  "text": "boolean"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "renderSelect",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "TemplateResult"
+                }
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "nullable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether [[`maybeValue]] may be `null`.",
+              "fieldName": "nullable"
+            },
+            {
+              "name": "maybeValue",
+              "type": {
+                "text": "string"
+              },
+              "description": "Replacement for `value`, can only be `null` if [[`nullable`]].",
+              "fieldName": "maybeValue"
+            },
+            {
+              "name": "defaultValue",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The default `value` displayed if [[`maybeValue`]] is `null`.",
+              "fieldName": "defaultValue"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "description": "The value of the Form Control",
+              "fieldName": "value"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The label for the Form Control.",
+              "fieldName": "label"
+            },
+            {
+              "name": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether the Form Control is required or not.",
+              "fieldName": "required"
+            },
+            {
+              "name": "helper",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The Helper text for the Form Control.",
+              "fieldName": "helper"
+            },
+            {
+              "name": "validationMessage",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The Validation Message for the Form Control.",
+              "fieldName": "validationMessage"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Whether the Form Control is disabled or not.",
+              "fieldName": "disabled"
+            }
+          ],
+          "superclass": {
+            "name": "OscdFormComponent",
+            "package": "@openscd/form"
+          },
+          "tagName": "oscd-select",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "OscdSelect",
+          "declaration": {
+            "name": "OscdSelect",
+            "module": "components/oscd-select/src/oscd-select.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-dialog/src/OscdDialog.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "oscd-dialog",
+          "declaration": {
+            "name": "OscdDialog",
+            "module": "/components/oscd-dialog/src/oscd-dialog"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "OscdDialog",
+          "declaration": {
+            "name": "OscdDialog",
+            "module": "components/oscd-dialog/src/OscdDialog.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-dialog/src/oscd-dialog.styles.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "components/oscd-dialog/src/oscd-dialog.styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-dialog/src/oscd-dialog.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "OscdDialog",
+          "members": [
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Determines if the Dialog is open or not",
+              "attribute": "open",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "show",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "hide",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "onClosed",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "evt",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ]
+            }
+          ],
+          "attributes": [
+            {
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Determines if the Dialog is open or not",
+              "fieldName": "open"
+            }
+          ],
+          "superclass": {
+            "name": "OscdComponent",
+            "package": "@openscd/core"
+          },
+          "tagName": "oscd-dialog",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "OscdDialog",
+          "declaration": {
+            "name": "OscdDialog",
+            "module": "components/oscd-dialog/src/oscd-dialog.ts"
           }
         }
       ]

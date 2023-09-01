@@ -2,7 +2,7 @@ import { TextField } from '@material/mwc-textfield';
 import { expect, fixture, html } from '@open-wc/testing';
 
 import '../src/OscdTextfield.js';
-import type { OscdTextfield } from '../src/oscd-textfield.js';
+import { OscdTextfield } from '../src/oscd-textfield.js';
 
 describe('Basic component oscd-textfield', () => {
   let element: OscdTextfield;
@@ -88,5 +88,9 @@ describe('Basic component oscd-textfield', () => {
     it('Should add multipliers', () => {
       expect(element).shadowDom.to.equalSnapshot();
     });
+  });
+
+  it('Should have no scoped elements', async () => {
+    expect(OscdTextfield.scopedElements).to.be.empty;
   });
 });

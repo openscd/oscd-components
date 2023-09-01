@@ -1,7 +1,7 @@
 import { expect, fixture, html } from '@open-wc/testing';
 
 import '../src/OscdActionIcon.js';
-import type { OscdActionIcon } from '../src/OscdActionIcon.js';
+import { OscdActionIcon } from '../src/OscdActionIcon.js';
 
 describe('Basic component action-icon', () => {
   let element: OscdActionIcon;
@@ -26,5 +26,9 @@ describe('Basic component action-icon', () => {
     it('looks like the latest snapshot', async () => {
       await expect(element).shadowDom.to.equalSnapshot();
     });
+  });
+
+  it('Should have no scoped elements', async () => {
+    expect(OscdActionIcon.scopedElements).to.be.empty;
   });
 });

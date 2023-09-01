@@ -1,7 +1,7 @@
 import { expect, fixture, html } from '@open-wc/testing';
 
 import '../src/OscdButton.js';
-import type { OscdButton } from '../src/oscd-button.js';
+import { OscdButton } from '../src/oscd-button.js';
 
 describe('Basic component oscd-button', () => {
   let element: OscdButton;
@@ -57,5 +57,9 @@ describe('Basic component oscd-button', () => {
     expect(element.shadowRoot?.querySelector('mwc-button')?.icon).to.equal(
       icon
     );
+  });
+
+  it('Should have no scoped elements', async () => {
+    expect(OscdButton.scopedElements).to.be.empty;
   });
 });

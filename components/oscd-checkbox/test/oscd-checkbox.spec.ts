@@ -1,7 +1,7 @@
 import { html, fixture, expect } from '@open-wc/testing';
 
 import '../src/OscdCheckbox.js';
-import type { OscdCheckbox } from '../src/oscd-checkbox.js';
+import { OscdCheckbox } from '../src/oscd-checkbox.js';
 
 function timeout(ms: number) {
   return new Promise((res) => {
@@ -183,5 +183,9 @@ describe('oscd-checkbox', () => {
         element.shadowRoot!.querySelector('mwc-checkbox')
       ).to.have.property('disabled', true);
     });
+  });
+
+  it('Should have no scoped elements', async () => {
+    expect(OscdCheckbox.scopedElements).to.be.empty;
   });
 });

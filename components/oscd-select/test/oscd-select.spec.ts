@@ -3,7 +3,7 @@ import { html, fixture, expect } from '@open-wc/testing';
 import '@material/mwc-list/mwc-list-item';
 
 import '../src/OscdSelect.js';
-import type { OscdSelect } from '../src/oscd-select.js';
+import { OscdSelect } from '../src/oscd-select.js';
 
 describe('oscd-select', () => {
   let element: OscdSelect;
@@ -148,5 +148,9 @@ describe('oscd-select', () => {
 
       expect(element).to.have.property('disabled', true);
     });
+  });
+
+  it('Should have no scoped elements', async () => {
+    expect(OscdSelect.scopedElements).to.be.empty;
   });
 });

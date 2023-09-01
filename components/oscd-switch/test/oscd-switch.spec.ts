@@ -2,7 +2,7 @@ import { Switch } from '@material/mwc-switch';
 import { expect, fixture, html } from '@open-wc/testing';
 
 import '../src/OscdSwitch.js';
-import type { OscdSwitch } from '../src/oscd-switch.js';
+import { OscdSwitch } from '../src/oscd-switch.js';
 
 describe('Basic component oscd-switch', () => {
   let element: OscdSwitch;
@@ -20,5 +20,9 @@ describe('Basic component oscd-switch', () => {
     const el: Switch = element.shadowRoot!.querySelector('mwc-switch')!;
 
     expect(el.selected).to.be.true;
+  });
+
+  it('Should have no scoped elements', async () => {
+    expect(OscdSwitch.scopedElements).to.be.empty;
   });
 });

@@ -176,7 +176,7 @@ export class OscdCheckbox extends OscdFormComponent {
   async firstUpdated(
     _changedProperties: Map<string | number | symbol, unknown>
   ): Promise<void> {
-    await super.firstUpdated(_changedProperties);
+    super.firstUpdated(_changedProperties);
     this.checkbox?.requestUpdate();
     await this.checkbox?.updateComplete;
     this._disabledSwitch = this.hasAttribute('disabled') || this.disabled;

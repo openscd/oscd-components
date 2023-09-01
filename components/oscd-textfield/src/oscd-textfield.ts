@@ -374,7 +374,7 @@ export class OscdTextfield extends OscdFormComponent {
   async firstUpdated(
     _changedProperties: Map<string | number | symbol, unknown>
   ): Promise<void> {
-    await super.firstUpdated(_changedProperties);
+    super.firstUpdated(_changedProperties);
     await this.textfield.firstUpdated();
     if (this.multiplierMenu)
       this.multiplierMenu.anchor = this.multiplierButton ?? null;

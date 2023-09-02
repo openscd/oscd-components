@@ -5,6 +5,7 @@ import { OscdComponent } from '@openscd/core';
 import styles from './oscd-button.styles.js';
 
 import '@material/mwc-button';
+import { Button } from '@material/mwc-button';
 
 /**
  * @prop {string} label - Text for the Button
@@ -23,7 +24,9 @@ export class OscdButton extends OscdComponent {
    * @internal
    */
   static get scopedElements() {
-    return {};
+    return {
+      'oscd-mwc-button': Button,
+    };
   }
 
   @property({
@@ -52,13 +55,13 @@ export class OscdButton extends OscdComponent {
   outlined?: boolean = false;
 
   render(): TemplateResult {
-    return html`<mwc-button
+    return html`<oscd-mwc-button
       ?disabled=${this.disabled}
       .label=${this.label}
       .icon=${this.icon ?? ''}
       ?raised=${this.raised}
       ?outlined=${this.outlined}
     >
-    </mwc-button>`;
+    </oscd-mwc-button>`;
   }
 }

@@ -70,9 +70,20 @@ export class OscdActionIcon extends OscdComponent {
     > `;
   }
 
+  private renderHeader(): TemplateResult {
+    return html`${this.label ? html`<header>${this.label}</header>` : nothing}`;
+  }
+
+  private renderFooter(): TemplateResult {
+    return html`${this.label ? html`<footer>${this.label}</footer>` : nothing}`;
+  }
+
   render(): TemplateResult {
-    return html`${this.label ? html`<header>${this.label}</header>` : nothing}
-      <section>${this.renderIcon()}<slot name="action"></slot></section>
-      ${this.label ? html`<footer>${this.label}</footer>` : nothing}`;
+    return html`${this.renderHeader()}
+      <section>
+        ${this.renderIcon()}
+        <slot name="action"></slot>
+      </section>
+      ${this.renderFooter()}`;
   }
 }

@@ -19,10 +19,12 @@ const filteredLogs = [
 ];
 
 const browsers = [
-     playwrightLauncher({ product: 'chromium' }),
-     playwrightLauncher({ product: 'firefox' }),
-     playwrightLauncher({ product: 'webkit' }),
-   ];
+  playwrightLauncher({
+    product: 'chromium',
+  }),
+  playwrightLauncher({ product: 'firefox' }),
+  playwrightLauncher({ product: 'webkit' }),
+];
 
 function defaultGetImageDiff({ baselineImage, image, options }) {
   let error = '';
@@ -47,7 +49,14 @@ function defaultGetImageDiff({ baselineImage, image, options }) {
 
   const diff = new PNG({ width, height });
 
-  const numDiffPixels = pixelmatch(basePng.data, png.data, diff.data, width, height, options);
+  const numDiffPixels = pixelmatch(
+    basePng.data,
+    png.data,
+    diff.data,
+    width,
+    height,
+    options
+  );
   const diffPercentage = (numDiffPixels / (width * height)) * 100;
 
   return {
@@ -62,11 +71,11 @@ export default /** @type {import("@web/test-runner").TestRunnerConfig} */ ({
     visualRegressionPlugin({
       update: process.argv.includes('--update-visual-baseline'),
       getImageDiff: (options) => {
-        const result =  defaultGetImageDiff(options);
+        const result = defaultGetImageDiff(options);
         if (result.diffPercentage < thresholdPercentage)
           result.diffPercentage = 0;
         return result;
-      }
+      },
     }),
   ],
 
@@ -76,7 +85,7 @@ export default /** @type {import("@web/test-runner").TestRunnerConfig} */ ({
     {
       name: 'visual',
       files: 'dist/**/*.test.js',
-      testRunnerHtml: testFramework => `
+      testRunnerHtml: (testFramework) => `
 <html>
   <head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:wght@300;400;500&display=swap">
@@ -139,7 +148,10 @@ export default /** @type {import("@web/test-runner").TestRunnerConfig} */ ({
   /** Filter out lit dev mode logs */
   filterBrowserLogs(log) {
     for (const arg of log.args) {
-      if (typeof arg === 'string' && filteredLogs.some(l => arg.includes(l))) {
+      if (
+        typeof arg === 'string' &&
+        filteredLogs.some((l) => arg.includes(l))
+      ) {
         return false;
       }
     }

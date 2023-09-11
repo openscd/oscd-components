@@ -1,0 +1,21 @@
+## Tools
+/tools/ @Pascalwilbrink
+
+## GitHub Actions
+/.github/ @Pascalwilbrink
+
+## Lib
+/lib/ @Pascalwilbrink
+
+# Themes
+/themes/ @Pascalwilbrink
+
+## Components
+/components/oscd-textfield @Pascalwilbrink
+/components/oscd-button @PascalWilbrink
+/components/oscd-switch @PascalWilbrink
+/components/oscd-action-icon @PascalWilbrink
+/components/oscd-action-pane @PascalWilbrink
+/components/oscd-select @PascalWilbrink
+/components/oscd-checkbox @PascalWilbrink
+/components/oscd-dialog @PascalWilbrink

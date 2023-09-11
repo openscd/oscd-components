@@ -1,48 +1,43 @@
-import cssVariablesTheme from '@etchteam/storybook-addon-css-variables-theme';
+import { setCustomElementsManifest } from '@storybook/web-components';
 
-const createStyleTags = (url) => {
-  return {
-    styleTag: null,
-    innerStyles: '',
-    use: async function () {
-      if (!this.styleTag) {
-        this.styleTag = document.createElement('style');
-        this.styleTag.type = 'text/css';
-        this.innerStyles = (await import(/* @vite-ignore */ url)).default;
-        this.styleTag.innerHTML = this.innerStyles;
-        document.body.appendChild(this.styleTag);
-        return;
-      }
-      this.styleTag.innerHTML = this.innerStyles;
-    },
-    unuse: function () {
-      if (this.styleTag) {
-        this.styleTag.innerHTML = '';
-      }
-    },
-  };
-};
+import { withRootAttribute } from 'storybook-addon-root-attribute';
 
-const OpenSCD = createStyleTags('../themes/oscd.css?inline');
+import '../themes/prebuilt/oscd.css';
 
-import { OscdTextfield } from '../components/oscd-textfield/src/oscd-textfield';
+import customElements from '../custom-elements.json';
 
-export const decorators = [cssVariablesTheme];
+setCustomElementsManifest(customElements);
+
+export const decorators = [withRootAttribute];
 
 export const parameters = {
-  cssVariables: {
-    files: {
-      'Oscd Theme': OpenSCD,
+  options: {
+    enableShortcuts: false,
+  },
+  statuses: {
+    released: {
+      background: '#0000ff',
+      color: '#ffffff',
+      description: 'This component is stable and released',
     },
-    defaultTheme: 'Oscd Theme',
+    beta: {
+      background: '#FF0000',
+      color: '#FFFFFF',
+      description: 'This component is still in beta',
+    },
+  },
+  rootAttribute: {
+    defaultState: {
+      name: 'Light',
+      value: null,
+    },
+    attribute: 'dark',
+    tooltip: true,
+    states: [
+      {
+        name: 'Dark',
+        value: 'dark',
+      },
+    ],
   },
 };
-
-function defineCustomElement(
-  name: string,
-  element: CustomElementConstructor
-): void {
-  customElements.get(name) || customElements.define(name, element);
-}
-
-defineCustomElement('oscd-textfield', OscdTextfield);

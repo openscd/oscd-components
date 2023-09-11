@@ -1,0 +1,24 @@
+{
+  "name": "@openscd/form",
+  "version": "0.0.1",
+  "description": "Core for Oscd Form Components",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/index.js",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf .tsbuildinfo dist"
+  },
+  "dependencies": {
+    "lit": "^2.7.6",
+    "@openscd/core": "*",
+    "@openscd/oscd-switch": "*"
+  },
+  "author": "OpenSCD",
+  "license": "ISC",
+  "devDependencies": {
+    "tslib": "^2.6.0",
+    "typescript": "^5.1.6"
+  }
+}

@@ -1,31 +1,139 @@
 {
-    "changelog-sections": [
-        { "type": "feat", "section": "✨ Features" },
-        { "type": "feature", "section": "✨ Features" },
-        { "type": "fix", "section": "🐞 Bug Fixes" },
-        { "type": "perf", "section": "🚀 Performance Improvements" },
-        { "type": "revert", "section": "Reverts" },
-        { "type": "docs", "section": "📚 Documentation" },
-        { "type": "style", "section": "Styles", "hidden": true },
-        { "type": "chore", "section": "📦 Miscellaneous Chores", "hidden": true },
-        { "type": "refactor", "section": "Code Refactoring", "hidden": true },
-        { "type": "test", "section": "Tests", "hidden": true },
-        { "type": "ci", "section": "Continuous Integration", "hidden": true }
-    ],
-    "packages": {
-      "components/oscd-textfield": {
-        "component": "@openscd/oscd-textfield",
-        "changelog-path": "CHANGELOG.md",
-        "release-type": "node",
-        "bump-minor-pre-major": false,
-        "bump-patch-for-minor-pre-major": false,
-        "draft": false,
-        "prerelease": false,
-        "initial-version": "0.0.1"
-      }
+  "changelog-sections": [
+    {
+      "type": "feat",
+      "section": "✨ Features"
     },
-    "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
-    "bootstrap-sha": "9353df5ba29a1429a868c5325a70740d82056191",
-    "last-release-sha": "9353df5ba29a1429a868c5325a70740d82056191",
-    "release-type": "node"
+    {
+      "type": "feature",
+      "section": "✨ Features"
+    },
+    {
+      "type": "fix",
+      "section": "🐞 Bug Fixes"
+    },
+    {
+      "type": "perf",
+      "section": "🚀 Performance Improvements"
+    },
+    {
+      "type": "revert",
+      "section": "Reverts"
+    },
+    {
+      "type": "docs",
+      "section": "📚 Documentation"
+    },
+    {
+      "type": "style",
+      "section": "Styles",
+      "hidden": true
+    },
+    {
+      "type": "chore",
+      "section": "📦 Miscellaneous Chores",
+      "hidden": true
+    },
+    {
+      "type": "refactor",
+      "section": "Code Refactoring",
+      "hidden": true
+    },
+    {
+      "type": "test",
+      "section": "Tests",
+      "hidden": true
+    },
+    {
+      "type": "ci",
+      "section": "Continuous Integration",
+      "hidden": true
+    }
+  ],
+  "packages": {
+    "components/oscd-textfield": {
+      "component": "@openscd/oscd-textfield",
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "node",
+      "bump-minor-pre-major": false,
+      "bump-patch-for-minor-pre-major": false,
+      "draft": false,
+      "prerelease": false,
+      "initial-version": "0.0.1"
+    },
+    "components/oscd-switch": {
+      "component": "@openscd/oscd-switch",
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "node",
+      "bump-minor-pre-major": false,
+      "bump-patch-for-minor-pre-major": false,
+      "draft": false,
+      "prerelease": false,
+      "initial-version": "0.0.1"
+    },
+    "components/oscd-action-icon": {
+      "component": "@openscd/oscd-action-icon",
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "node",
+      "bump-minor-pre-major": false,
+      "bump-patch-for-minor-pre-major": false,
+      "draft": false,
+      "prerelease": false,
+      "initial-version": "0.0.1"
+    },
+    "components/oscd-action-pane": {
+      "component": "@openscd/oscd-action-pane",
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "node",
+      "bump-minor-pre-major": false,
+      "bump-patch-for-minor-pre-major": false,
+      "draft": false,
+      "prerelease": false,
+      "initial-version": "0.0.1"
+    },
+    "components/oscd-select": {
+      "component": "@openscd/oscd-select",
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "node",
+      "bump-minor-pre-major": false,
+      "bump-patch-for-minor-pre-major": false,
+      "draft": false,
+      "prerelease": false,
+      "initial-version": "0.0.1"
+    },
+    "components/oscd-checkbox": {
+      "component": "@openscd/oscd-checkbox",
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "node",
+      "bump-minor-pre-major": false,
+      "bump-patch-for-minor-pre-major": false,
+      "draft": false,
+      "prerelease": false,
+      "initial-version": "0.0.1"
+    },
+    "components/oscd-button": {
+      "component": "@openscd/oscd-button",
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "node",
+      "bump-minor-pre-major": false,
+      "bump-patch-for-minor-pre-major": false,
+      "draft": false,
+      "prerelease": false,
+      "initial-version": "0.0.1"
+    },
+    "components/oscd-dialog": {
+      "component": "@openscd/oscd-dialog",
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "node",
+      "bump-minor-pre-major": false,
+      "bump-patch-for-minor-pre-major": false,
+      "draft": false,
+      "prerelease": false,
+      "initial-version": "0.0.1"
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "bootstrap-sha": "9353df5ba29a1429a868c5325a70740d82056191",
+  "last-release-sha": "9353df5ba29a1429a868c5325a70740d82056191",
+  "release-type": "node"
 }

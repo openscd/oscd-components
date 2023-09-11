@@ -48,7 +48,6 @@ jobs:
       - name: Install component dependencies
         if: ${{ steps.release.outputs.releases_created }}
         run: npm i
-        working-directory: components/oscd-textfield
 
       - name: Build
         if: ${{ steps.release.outputs.releases_created }}

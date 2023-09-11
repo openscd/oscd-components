@@ -1,20 +1,40 @@
+import type { Meta, StoryObj } from '@storybook/web-components';
+import { action } from '@storybook/addon-actions';
+
 import { html, TemplateResult } from 'lit';
 
-export default {
-  title: '<%= name %>/<%= className %>',
+import '../src/<%= className %>';
+
+import { createBadge } from '@oscd/utils';
+
+import pckgJson from '../package.json';
+
+const meta: Meta = {
+  title: 'Forms/<%= className %>>',
   component: '<%= selector %>',
-  argTypes: {},
+  parameters: {
+    status: {
+      type: createBadge(pckgJson),
+    },
+  },
 };
 
-interface Story<T> {
-  (args: T): TemplateResult;
-  args?: Partial<T>;
-  argTypes?: Record<string, unknown>;
-}
+export default meta;
 
-interface ArgTypes {}
+type Story = StoryObj;
 
-const Template: Story<ArgTypes> = ({}: ArgTypes) =>
-  html`<<%= selector %>></<%= selector %>>`;
+/**
+ * Basic
+ */
+export const Basic: Story = {
+  args: {
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Basic <%= selector %>',
+      },
+    },
+  },
+};
 
-export const Regular = Template.bind({});

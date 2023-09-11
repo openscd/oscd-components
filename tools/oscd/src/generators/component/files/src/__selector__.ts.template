@@ -9,14 +9,19 @@ import { OscdComponent } from '@openscd/core';
 import styles from './<%= selector %>.styles.js';
 
 /**
- * @tag <%= selector %>
+ *
+ *
+ * @example <<%= selector %>></<%= selector %>>
+ * @tagname <%= selector %>
  */
 export class <%= className %> extends OscdComponent {
-
   static styles: CSSResultGroup = styles;
 
-  render(): TemplateResult {
-    return html`<span><%= selector %> works!</span>`
+  static get scopedElements() {
+    return {};
   }
 
+  render(): TemplateResult {
+    return html``;
+  }
 }

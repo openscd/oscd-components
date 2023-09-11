@@ -21,8 +21,14 @@
         "^default"
       ]
     },
+    "clean": {
+      "dependsOn": ["^clean"]
+    },
     "build": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["clean", "^build"]
+    },
+    "storybook": {
+      "dependsOn": [ "analyze", "component:readme"]
     }
   }
 }

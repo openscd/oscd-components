@@ -1,0 +1,35 @@
+on:
+  push:
+    branches:
+    - '*'
+    
+permissions: 
+  contents: write
+  pull-requests: write
+
+name: Build Storybook
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+          registry-url: 'https://registry.npmjs.org'
+         
+      - name: Install Dependencies
+        run: |
+          npm i @nx/nx-linux-x64-gnu
+          npm ci
+
+      - name: Build 
+        run: npm run build:all
+
+      - name: Chromatic
+        run: npx chromatic --project-token=${{ secrets.CHROMATIC_TOKEN }}
+

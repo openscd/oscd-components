@@ -10,7 +10,8 @@
     "dist/**/*"
   ],
   "exports": {
-    ".": "./dist/OscdActionIcon.js"
+    ".": "./dist/OscdActionIcon.js",
+    "./oscd-action-icon.js": "./dist/oscd-action-icon.js"
   },
   "type": "module",
   "readme": "./README.md",

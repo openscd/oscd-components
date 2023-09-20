@@ -6,6 +6,13 @@
   "types": "./dist/index.d.ts",
   "type": "module",
   "readme": "./README.md",
+  "files": [
+    "dist/**/*"
+  ],
+  "exports": {
+    ".": "./dist/OscdTextfield.js",
+    "./oscd-textfield.js": "./dist/oscd-textfield.js"
+  },
   "scripts": {
     "analyze": "cem analyze",
     "build": "tsc",

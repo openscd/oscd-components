@@ -10,7 +10,8 @@
     "dist/**/*"
   ],
   "exports": {
-    ".": "./dist/OscdCheckbox.js"
+    ".": "./dist/OscdCheckbox.js",
+    "./oscd-checkbox.js": "./dist/oscd-checkbox.js"
   },
   "type": "module",
   "readme": "./README.md",

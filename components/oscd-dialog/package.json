@@ -10,7 +10,8 @@
     "dist/**/*"
   ],
   "exports": {
-    ".": "./dist/OscdDialog.js"
+    ".": "./dist/OscdDialog.js",
+    "./oscd-dialog.js": "./dist/oscd-dialog.js"
   },
   "type": "module",
   "readme": "./README.md",

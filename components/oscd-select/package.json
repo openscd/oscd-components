@@ -10,7 +10,8 @@
     "dist/**/*"
   ],
   "exports": {
-    ".": "./dist/OscdSelect.js"
+    ".": "./dist/OscdSelect.js",
+    "./oscd-select.js": "./dist/oscd-select.js"
   },
   "type": "module",
   "readme": "./README.md",

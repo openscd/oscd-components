@@ -13,12 +13,12 @@ import '@material/mwc-list/mwc-list-item';
 import '@material/mwc-menu';
 import '@material/mwc-textfield';
 
-import { IconButton } from '@material/mwc-icon-button';
+import type { IconButton } from '@material/mwc-icon-button';
 
-import { Menu } from '@material/mwc-menu';
+import type { Menu } from '@material/mwc-menu';
 import { SingleSelectedEvent } from '@material/mwc-list/mwc-list-foundation';
 
-import { TextField } from '@material/mwc-textfield';
+import type { TextField } from '@material/mwc-textfield';
 
 import { OscdFormComponent } from '@openscd/form';
 

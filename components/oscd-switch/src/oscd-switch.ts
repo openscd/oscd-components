@@ -7,6 +7,7 @@ import {
 } from 'lit-element';
 
 import '@material/mwc-switch';
+
 import type { Switch } from '@material/mwc-switch';
 
 import { OscdComponent } from '@openscd/core';

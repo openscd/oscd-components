@@ -10,13 +10,12 @@ import {
 import '@openscd/oscd-switch';
 import '@material/mwc-select';
 
-import { OscdSwitch, OscdSwitchChangeEvent } from '@openscd/oscd-switch';
-import { Select } from '@material/mwc-select';
+import type { Select } from '@material/mwc-select';
 
 import { redispatchEvent } from '@openscd/core';
+import { OscdFormComponent } from '@openscd/form';
 
 import styles from './oscd-select.styles.js';
-import { OscdFormComponent } from '@openscd/form';
 
 /**
  *

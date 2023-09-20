@@ -10,7 +10,8 @@
     "dist/**/*"
   ],
   "exports": {
-    ".": "./dist/OscdButton.js"
+    ".": "./dist/OscdButton.js",
+    "./oscd-button.js": "./dist/oscd-button.js"
   },
   "type": "module",
   "readme": "./README.md",

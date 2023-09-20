@@ -1,0 +1,28 @@
+import { Meta, Story, Canvas, Source, ArgTypes, Title, Description, Subtitle } from '@storybook/blocks';
+
+import { Markdown } from '@storybook/addon-docs';
+
+import * as OscdActionIconStories from './oscd-action-icon.stories';
+
+import Readme from '../README.md?raw';
+import Changelog from '../CHANGELOG.md?raw';
+
+<Meta name="Docs" of={OscdActionIconStories} />
+<Title>Oscd-Action-Icon</Title>
+<Canvas of={OscdActionIconStories.Basic} />
+
+<Subtitle>Properties</Subtitle>
+<ArgTypes of={OscdActionIconStories} />
+
+<Description of={OscdActionIconStories.Basic} />
+
+<Source of={OscdActionIconStories.Basic} />
+
+# Example
+<Canvas of={OscdActionIconStories.Basic} />
+
+<Markdown>{Readme}</Markdown>
+
+# Changelog
+
+<Markdown>{Changelog}</Markdown>

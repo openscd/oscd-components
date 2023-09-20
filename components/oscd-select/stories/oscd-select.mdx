@@ -1,0 +1,38 @@
+import {
+  Meta,
+  Story,
+  Canvas,
+  Source,
+  ArgTypes,
+  Title,
+  Description,
+  Subtitle,
+} from '@storybook/blocks';
+
+import { Markdown } from '@storybook/addon-docs';
+
+import * as OscdSelectStories from './oscd-select.stories';
+
+import Readme from '../README.md?raw';
+import Changelog from '../CHANGELOG.md?raw';
+
+<Meta name="Docs" of={OscdSelectStories} />
+<Title>oscd-select</Title>
+<Canvas of={OscdSelectStories.Basic} />
+
+<Subtitle>Properties</Subtitle>
+<ArgTypes of={OscdSelectStories} />
+
+<Description of={OscdSelectStories.Basic} />
+
+<Source of={OscdSelectStories.Basic} />
+
+# Example
+
+<Canvas of={OscdSelectStories.Basic} />
+
+<Markdown>{Readme}</Markdown>
+
+# Changelog
+
+<Markdown>{Changelog}</Markdown>

@@ -1,0 +1,33 @@
+on:
+  push:
+    branches:
+    - '*'
+    
+permissions: 
+  contents: write
+  pull-requests: write
+
+name: Build project
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+        with:
+          detached: true
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+          registry-url: 'https://registry.npmjs.org'
+         
+      - name: Install Dependencies
+        run: |
+          npm i @nx/nx-linux-x64-gnu
+          npm ci
+
+      - name: Build 
+        run: npm run build:all

@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "composite": true,
+    "incremental": false,
+    "rootDir": "./"
+  },
+  "exclude": ["./test/**/*.ts"],
+  "include": [
+    "./stories/**/*.stories.ts",
+    "./src/**/*.ts",
+    "./src/*.ts",
+    "./.storybook/*.js",
+    "./.storybook/*.ts"
+  ]
+}

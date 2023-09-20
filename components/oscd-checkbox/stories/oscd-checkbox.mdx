@@ -1,0 +1,38 @@
+import {
+  Meta,
+  Story,
+  Canvas,
+  Source,
+  ArgTypes,
+  Title,
+  Description,
+  Subtitle,
+} from '@storybook/blocks';
+
+import { Markdown } from '@storybook/addon-docs';
+
+import * as OscdCheckboxStories from './oscd-checkbox.stories';
+
+import Readme from '../README.md?raw';
+import Changelog from '../CHANGELOG.md?raw';
+
+<Meta name="Docs" of={OscdCheckboxStories} />
+<Title>oscd-checkbox</Title>
+<Canvas of={OscdCheckboxStories.Basic} />
+
+<Subtitle>Properties</Subtitle>
+<ArgTypes of={OscdCheckboxStories} />
+
+<Description of={OscdCheckboxStories.Basic} />
+
+<Source of={OscdCheckboxStories.Basic} />
+
+# Example
+
+<Canvas of={OscdCheckboxStories.Basic} />
+
+<Markdown>{Readme}</Markdown>
+
+# Changelog
+
+<Markdown>{Changelog}</Markdown>

@@ -1,3 +1,10 @@
 {
-    "components/oscd-textfield": "0.0.21"
+  "components/oscd-textfield": "0.0.20",
+  "components/oscd-switch": "0.0.1",
+  "components/oscd-action-icon": "0.0.1",
+  "components/oscd-action-pane": "0.0.1",
+  "components/oscd-select": "0.0.1",
+  "components/oscd-checkbox": "0.0.1",
+  "components/oscd-button": "0.0.1",
+  "components/oscd-dialog": "0.0.1"
 }

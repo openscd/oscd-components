@@ -1,4 +1,5 @@
-import { <%= className %> } from './<%= selector %>.js';
+import { <%= className %> } from './<%= selector %>';
 
 window.customElements.define('<%= selector %>', <%= className %>);
+
 export { <%= className %> };

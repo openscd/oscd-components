@@ -1,0 +1,26 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
+
+import * as Theme from '../../themes/built/oscd/variables.js';
+
+
+<Meta title="Theme/Colors" />
+
+<ColorPalette>
+  <ColorItem
+    title="theme.color.greyscale"
+    subtitle="Some of the greys"
+    colors={{ White: Theme.ColorOscdWhite, Black: Theme.ColorOscdBlack }}
+  />
+  <ColorItem 
+    title="Primary" 
+    colors={{ 'Primary-100': Theme.ColorOscdRefPrimaryPrimary100, 'Primary-200': Theme.ColorOscdRefPrimaryPrimary200, 'Primary-300': Theme.ColorOscdRefPrimaryPrimary300, 'Primary-400': Theme.ColorOscdRefPrimaryPrimary400, 'Primary-500': Theme.ColorOscdRefPrimaryPrimary500, 'Primary-600': Theme.ColorOscdRefPrimaryPrimary600  }} 
+  />
+  <ColorItem 
+    title="Secondary" 
+    colors={{ 'Secondary-100': Theme.ColorOscdRefSecondarySecondary100, 'Secondary-200': Theme.ColorOscdRefSecondarySecondary200, 'Secondary-300': Theme.ColorOscdRefSecondarySecondary300, 'Secondary-400': Theme.ColorOscdRefSecondarySecondary400, 'Secondary-500': Theme.ColorOscdRefSecondarySecondary500, 'Secondary-600': Theme.ColorOscdRefSecondarySecondary600  }} 
+  />
+  <ColorItem 
+    title="States" 
+    colors={{ 'Success': Theme.ColorOscdSysLightSuccess, 'Info': Theme.ColorOscdSysLightInfo, 'Warning': Theme.ColorOscdSysLightWarning, 'Danger': Theme.ColorOscdSysLightDanger  }} 
+  />
+</ColorPalette>

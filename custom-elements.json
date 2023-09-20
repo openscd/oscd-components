@@ -1,0 +1,1934 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-action-icon/src/OscdActionIcon.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "oscd-action-icon",
+          "declaration": {
+            "name": "OscdActionIcon",
+            "module": "/components/oscd-action-icon/src/oscd-action-icon"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "OscdActionIcon",
+          "declaration": {
+            "name": "OscdActionIcon",
+            "module": "components/oscd-action-icon/src/OscdActionIcon.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-action-icon/src/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./OscdActionIcon.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-action-icon/src/oscd-action-icon.styles.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "components/oscd-action-icon/src/oscd-action-icon.styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-action-icon/src/oscd-action-icon.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "OscdActionIcon",
+          "cssProperties": [
+            {
+              "description": "Border and hover color.",
+              "name": "--oscd-action-icon-theme-primary",
+              "default": "--oscd-theme-primary"
+            },
+            {
+              "description": "Font color inside hover field.",
+              "name": "--oscd-action-icon-theme-on-primary",
+              "default": "--oscd-theme-on-primary"
+            },
+            {
+              "description": "Secondary border and hover color.",
+              "name": "--oscd-action-icon-theme-secondary",
+              "default": "--oscd-theme-secondary"
+            },
+            {
+              "description": "Icon and label color.",
+              "name": "--oscd-action-icon-theme-on-surface",
+              "default": "--oscd-theme-on-surface"
+            },
+            {
+              "description": "Font for label and hover text.",
+              "name": "--oscd-action-icon-theme-font",
+              "default": "--oscd-theme-font"
+            }
+          ],
+          "slots": [
+            {
+              "description": "May contain up to eight icon buttons.",
+              "name": "action"
+            },
+            {
+              "description": "If filled overrides the icon property.",
+              "name": "icon"
+            },
+            {
+              "description": "The default slot will be rendered into the pane body in a single column.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "description": "Caption text, displayed in the header",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "icon",
+              "type": {
+                "text": "string"
+              },
+              "description": "Icon name, displayed unlesss the \"icon\" slot is filled",
+              "attribute": "icon"
+            },
+            {
+              "kind": "field",
+              "name": "secondary",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Color header with secondary theme color while focus is within",
+              "attribute": "secondary",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "highlighted",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Highlight pane with dotted outline",
+              "attribute": "highlighted",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "hideActions",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disabled CSS adoption",
+              "attribute": "hideActions",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "renderIcon",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "TemplateResult"
+                }
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "description": "Caption text, displayed in the header",
+              "fieldName": "label"
+            },
+            {
+              "name": "icon",
+              "type": {
+                "text": "string"
+              },
+              "description": "Icon name, displayed unlesss the \"icon\" slot is filled",
+              "fieldName": "icon"
+            },
+            {
+              "name": "secondary",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Color header with secondary theme color while focus is within",
+              "fieldName": "secondary"
+            },
+            {
+              "name": "highlighted",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Highlight pane with dotted outline",
+              "fieldName": "highlighted"
+            },
+            {
+              "name": "hideActions",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disabled CSS adoption",
+              "fieldName": "hideActions"
+            }
+          ],
+          "superclass": {
+            "name": "OscdComponent",
+            "package": "@openscd/core"
+          },
+          "tagName": "oscd-action-icon",
+          "summary": "A responsive container rendering actions in a header.",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "OscdActionIcon",
+          "declaration": {
+            "name": "OscdActionIcon",
+            "module": "components/oscd-action-icon/src/oscd-action-icon.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-action-pane/src/OscdActionPane.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "oscd-action-pane",
+          "declaration": {
+            "name": "OscdActionPane",
+            "module": "/components/oscd-action-pane/src/oscd-action-pane"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "OscdActionPane",
+          "declaration": {
+            "name": "OscdActionPane",
+            "module": "components/oscd-action-pane/src/OscdActionPane.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-action-pane/src/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./OscdActionPane.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-action-pane/src/oscd-action-pane.styles.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "components/oscd-action-pane/src/oscd-action-pane.styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-action-pane/src/oscd-action-pane.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "OscdActionPane",
+          "cssProperties": [
+            {
+              "description": "Color for border on even levels.",
+              "name": "--oscd-action-icon-theme-primary",
+              "default": "--oscd-theme-primary"
+            },
+            {
+              "description": "Pane color for the uneven levels.",
+              "name": "--oscd-action-icon-theme-on-primary",
+              "default": "--oscd-theme-on-primary"
+            },
+            {
+              "description": "Color for border on uneven levels.",
+              "name": "--oscd-action-icon-theme-secondary",
+              "default": "--oscd-theme-secondary"
+            },
+            {
+              "description": "Pane color for the even levels.",
+              "name": "--oscd-action-pane-theme-surface",
+              "default": "--oscd-theme-surface"
+            },
+            {
+              "description": "Icon and label color.",
+              "name": "--oscd-action-icon-theme-on-surface",
+              "default": "--oscd-theme-on-surface"
+            },
+            {
+              "description": "Font for label.",
+              "name": "--oscd-action-icon-theme-font",
+              "default": "--oscd-theme-font"
+            }
+          ],
+          "slots": [
+            {
+              "description": "May contain up to eight icon buttons.",
+              "name": "`action`"
+            },
+            {
+              "description": "If filled overrides the icon property.",
+              "name": "`icon`"
+            },
+            {
+              "description": "The default slot will be rendered into the pane body in a single column.",
+              "name": "`[default]`"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "description": "Caption text, displayed in the header",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "icon",
+              "type": {
+                "text": "string"
+              },
+              "description": "Icon name, displayed unless the \"icon\" slot is filled",
+              "attribute": "icon"
+            },
+            {
+              "kind": "field",
+              "name": "secondary",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Color header with Secondary theme color while focus is within",
+              "attribute": "secondary"
+            },
+            {
+              "kind": "field",
+              "name": "highlighted",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Highlight pane with dotted outline",
+              "attribute": "highlighted"
+            },
+            {
+              "kind": "field",
+              "name": "level",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "description": "Nesting level, default (closes pane ancestors level) + 1",
+              "attribute": "level"
+            },
+            {
+              "kind": "method",
+              "name": "renderHeader",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "TemplateResult"
+                }
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "description": "Caption text, displayed in the header",
+              "fieldName": "label"
+            },
+            {
+              "name": "icon",
+              "type": {
+                "text": "string"
+              },
+              "description": "Icon name, displayed unless the \"icon\" slot is filled",
+              "fieldName": "icon"
+            },
+            {
+              "name": "secondary",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Color header with Secondary theme color while focus is within",
+              "fieldName": "secondary"
+            },
+            {
+              "name": "highlighted",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Highlight pane with dotted outline",
+              "fieldName": "highlighted"
+            },
+            {
+              "name": "level",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "description": "Nesting level, default (closes pane ancestors level) + 1",
+              "fieldName": "level"
+            }
+          ],
+          "superclass": {
+            "name": "OscdComponent",
+            "package": "@openscd/core"
+          },
+          "tagName": "oscd-action-pane",
+          "summary": "A responsive container rendering actions in a header.",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "OscdActionPane",
+          "declaration": {
+            "name": "OscdActionPane",
+            "module": "components/oscd-action-pane/src/oscd-action-pane.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-checkbox/src/OscdCheckbox.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "oscd-checkbox",
+          "declaration": {
+            "name": "OscdCheckbox",
+            "module": "/components/oscd-checkbox/src/oscd-checkbox"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "OscdCheckbox",
+          "declaration": {
+            "name": "OscdCheckbox",
+            "module": "components/oscd-checkbox/src/OscdCheckbox.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-checkbox/src/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./OscdCheckbox.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-checkbox/src/oscd-checkbox.styles.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "components/oscd-checkbox/src/oscd-checkbox.styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-checkbox/src/oscd-checkbox.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "OscdCheckbox",
+          "cssProperties": [
+            {
+              "description": "Ink color for the checkbox",
+              "name": "--oscd-theme-checkbox-ink"
+            },
+            {
+              "description": "Unchecked color for the checkbox",
+              "name": "--oscd-theme-checkbox-unchecked"
+            },
+            {
+              "description": "Disabled color for the checkbox",
+              "name": "--oscd-theme-checkbox-disabled"
+            },
+            {
+              "description": "Checkobx color",
+              "name": "--oscd-theme-checkbox-secondary",
+              "default": "--oscd-theme-secondary"
+            },
+            {
+              "description": "On Surface color",
+              "name": "--oscd-theme-checkbox-ons-surface",
+              "default": "--oscd-theme-on-surface"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Text label rendered after the checkbox.",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "helper",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Parenthetical information rendered after the label: `label (helper)`",
+              "attribute": "helper"
+            },
+            {
+              "kind": "field",
+              "name": "nullable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether [[`maybeValue`]] may be `null`",
+              "attribute": "nullable"
+            },
+            {
+              "kind": "field",
+              "name": "defaultChecked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "The default `checked` state while [[`maybeValue`]] is `null`.",
+              "attribute": "defaultChecked"
+            },
+            {
+              "kind": "field",
+              "name": "maybeValue",
+              "type": {
+                "text": "string | null"
+              },
+              "description": "Is `\"true\"` when checked, `\"false\"` un-checked, `null` if [[`nullable`]].",
+              "attribute": "maybeValue"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Disables component including null switch",
+              "attribute": "disabled"
+            },
+            {
+              "kind": "field",
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "checked"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Text label rendered after the checkbox.",
+              "fieldName": "label"
+            },
+            {
+              "name": "helper",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Parenthetical information rendered after the label: `label (helper)`",
+              "fieldName": "helper"
+            },
+            {
+              "name": "nullable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether [[`maybeValue`]] may be `null`",
+              "fieldName": "nullable"
+            },
+            {
+              "name": "defaultChecked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "The default `checked` state while [[`maybeValue`]] is `null`.",
+              "fieldName": "defaultChecked"
+            },
+            {
+              "name": "maybeValue",
+              "type": {
+                "text": "string | null"
+              },
+              "description": "Is `\"true\"` when checked, `\"false\"` un-checked, `null` if [[`nullable`]].",
+              "fieldName": "maybeValue"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Disables component including null switch",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "checked"
+            }
+          ],
+          "superclass": {
+            "name": "OscdFormComponent",
+            "package": "@openscd/form"
+          },
+          "tagName": "oscd-checkbox",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "OscdCheckbox",
+          "declaration": {
+            "name": "OscdCheckbox",
+            "module": "components/oscd-checkbox/src/oscd-checkbox.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-button/src/OscdButton.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "oscd-button",
+          "declaration": {
+            "name": "OscdButton",
+            "module": "/components/oscd-button/src/oscd-button"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "OscdButton",
+          "declaration": {
+            "name": "OscdButton",
+            "module": "components/oscd-button/src/OscdButton.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-button/src/oscd-button.styles.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "components/oscd-button/src/oscd-button.styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-button/src/oscd-button.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "OscdButton",
+          "members": [
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether the Button is disabled or not",
+              "attribute": "disabled"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Text for the Button",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "icon",
+              "type": {
+                "text": "string"
+              },
+              "description": "The icon for the Button",
+              "attribute": "icon"
+            },
+            {
+              "kind": "field",
+              "name": "raised",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether the Button is raised or not",
+              "attribute": "raised"
+            },
+            {
+              "kind": "field",
+              "name": "outlined",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether the Button is outlined or not",
+              "attribute": "outlined"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether the Button is disabled or not",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Text for the Button",
+              "fieldName": "label"
+            },
+            {
+              "name": "icon",
+              "type": {
+                "text": "string"
+              },
+              "description": "The icon for the Button",
+              "fieldName": "icon"
+            },
+            {
+              "name": "raised",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether the Button is raised or not",
+              "fieldName": "raised"
+            },
+            {
+              "name": "outlined",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether the Button is outlined or not",
+              "fieldName": "outlined"
+            }
+          ],
+          "superclass": {
+            "name": "OscdComponent",
+            "package": "@openscd/core"
+          },
+          "tagName": "oscd-button",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "OscdButton",
+          "declaration": {
+            "name": "OscdButton",
+            "module": "components/oscd-button/src/oscd-button.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-dialog/src/OscdDialog.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "oscd-dialog",
+          "declaration": {
+            "name": "OscdDialog",
+            "module": "/components/oscd-dialog/src/oscd-dialog"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "OscdDialog",
+          "declaration": {
+            "name": "OscdDialog",
+            "module": "components/oscd-dialog/src/OscdDialog.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-dialog/src/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./OscdDialog.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-dialog/src/oscd-dialog.styles.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "components/oscd-dialog/src/oscd-dialog.styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-dialog/src/oscd-dialog.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "OscdDialog",
+          "members": [
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Determines if the Dialog is open or not",
+              "attribute": "open",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "show",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "hide",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "onClosed",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "evt",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ]
+            }
+          ],
+          "attributes": [
+            {
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Determines if the Dialog is open or not",
+              "fieldName": "open"
+            }
+          ],
+          "superclass": {
+            "name": "OscdComponent",
+            "package": "@openscd/core"
+          },
+          "tagName": "oscd-dialog",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "OscdDialog",
+          "declaration": {
+            "name": "OscdDialog",
+            "module": "components/oscd-dialog/src/oscd-dialog.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-select/src/OscdSelect.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "oscd-select",
+          "declaration": {
+            "name": "OscdSelect",
+            "module": "/components/oscd-select/src/oscd-select"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "OscdSelect",
+          "declaration": {
+            "name": "OscdSelect",
+            "module": "components/oscd-select/src/OscdSelect.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-select/src/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./OscdSelect.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-select/src/oscd-select.styles.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "components/oscd-select/src/oscd-select.styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-select/src/oscd-select.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "OscdSelect",
+          "members": [
+            {
+              "kind": "field",
+              "name": "nullable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether [[`maybeValue]] may be `null`.",
+              "attribute": "nullable"
+            },
+            {
+              "kind": "field",
+              "name": "maybeValue",
+              "type": {
+                "text": "string"
+              },
+              "description": "Replacement for `value`, can only be `null` if [[`nullable`]].",
+              "attribute": "maybeValue"
+            },
+            {
+              "kind": "field",
+              "name": "defaultValue",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The default `value` displayed if [[`maybeValue`]] is `null`.",
+              "attribute": "defaultValue"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "description": "The value of the Form Control",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The label for the Form Control.",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether the Form Control is required or not.",
+              "attribute": "required"
+            },
+            {
+              "kind": "field",
+              "name": "helper",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The Helper text for the Form Control.",
+              "attribute": "helper"
+            },
+            {
+              "kind": "field",
+              "name": "validationMessage",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The Validation Message for the Form Control.",
+              "attribute": "validationMessage"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Whether the Form Control is disabled or not.",
+              "attribute": "disabled"
+            },
+            {
+              "kind": "method",
+              "name": "checkValidity",
+              "return": {
+                "type": {
+                  "text": "boolean"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "renderSelect",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "TemplateResult"
+                }
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "nullable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether [[`maybeValue]] may be `null`.",
+              "fieldName": "nullable"
+            },
+            {
+              "name": "maybeValue",
+              "type": {
+                "text": "string"
+              },
+              "description": "Replacement for `value`, can only be `null` if [[`nullable`]].",
+              "fieldName": "maybeValue"
+            },
+            {
+              "name": "defaultValue",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The default `value` displayed if [[`maybeValue`]] is `null`.",
+              "fieldName": "defaultValue"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "description": "The value of the Form Control",
+              "fieldName": "value"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The label for the Form Control.",
+              "fieldName": "label"
+            },
+            {
+              "name": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether the Form Control is required or not.",
+              "fieldName": "required"
+            },
+            {
+              "name": "helper",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The Helper text for the Form Control.",
+              "fieldName": "helper"
+            },
+            {
+              "name": "validationMessage",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The Validation Message for the Form Control.",
+              "fieldName": "validationMessage"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Whether the Form Control is disabled or not.",
+              "fieldName": "disabled"
+            }
+          ],
+          "superclass": {
+            "name": "OscdFormComponent",
+            "package": "@openscd/form"
+          },
+          "tagName": "oscd-select",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "OscdSelect",
+          "declaration": {
+            "name": "OscdSelect",
+            "module": "components/oscd-select/src/oscd-select.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-switch/src/OscdSwitch.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "oscd-switch",
+          "declaration": {
+            "name": "OscdSwitch",
+            "module": "/components/oscd-switch/src/oscd-switch.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "OscdSwitch",
+          "declaration": {
+            "name": "OscdSwitch",
+            "module": "components/oscd-switch/src/OscdSwitch.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "OscdSwitchChangeEvent",
+          "declaration": {
+            "name": "OscdSwitchChangeEvent",
+            "module": "./oscd-switch.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-switch/src/oscd-switch.styles.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "components/oscd-switch/src/oscd-switch.styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-switch/src/oscd-switch.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "OscdSwitch",
+          "members": [
+            {
+              "kind": "field",
+              "name": "selected",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Selected state of the Switch",
+              "attribute": "selected"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disabled state of the Switch",
+              "attribute": "disabled"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "'on'",
+              "description": "Value of the Switch",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Name of the Switch",
+              "attribute": "name"
+            },
+            {
+              "kind": "method",
+              "name": "onClick"
+            }
+          ],
+          "events": [
+            {
+              "description": "{OscdSwitchChangeEvent} Fired whenever `selected` changes due to user interaction (bubbles and composed).",
+              "name": "change"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "selected",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Selected state of the Switch",
+              "fieldName": "selected"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disabled state of the Switch",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "'on'",
+              "description": "Value of the Switch",
+              "fieldName": "value"
+            },
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Name of the Switch",
+              "fieldName": "name"
+            }
+          ],
+          "superclass": {
+            "name": "OscdComponent",
+            "package": "@openscd/core"
+          },
+          "tagName": "oscd-switch",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "OscdSwitch",
+          "declaration": {
+            "name": "OscdSwitch",
+            "module": "components/oscd-switch/src/oscd-switch.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-textfield/src/OscdTextfield.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "oscd-textfield",
+          "declaration": {
+            "name": "OscdTextfield",
+            "module": "/components/oscd-textfield/src/oscd-textfield"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "OscdTextfield",
+          "declaration": {
+            "name": "OscdTextfield",
+            "module": "components/oscd-textfield/src/OscdTextfield.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-textfield/src/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./OscdTextfield.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-textfield/src/oscd-textfield.styles.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "components/oscd-textfield/src/oscd-textfield.styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/oscd-textfield/src/oscd-textfield.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "OscdTextfield",
+          "cssProperties": [
+            {
+              "description": "Color when errored of the underline, the outline, the caret and the icons.",
+              "name": "--oscd-theme-textfield-error",
+              "default": "--oscd-theme-error"
+            },
+            {
+              "description": "Color when active of the underline, ripple, the outline, and the caret.",
+              "name": "--oscd-theme-textfield-primary",
+              "default": "--oscd-theme-primary"
+            },
+            {
+              "description": "Color of the Switch track",
+              "name": "--oscd-theme-textfield-primary-surface",
+              "default": "--oscd-theme-primary-surface"
+            },
+            {
+              "description": "Color of the Switch Hover state",
+              "name": "--oscd-theme-textfield-primary-surface-active",
+              "default": "--oscd-theme-primary-surface-active"
+            },
+            {
+              "description": "Color of the Switch Hover state",
+              "name": "--oscd-theme-textfield-primary-active",
+              "default": "--oscd-theme-primary-active"
+            },
+            {
+              "description": "Color of the textfield Fill",
+              "name": "--oscd-theme-textfield-fill"
+            },
+            {
+              "description": "Color of the textfield Text",
+              "name": "--oscd-theme-textfield-ink"
+            },
+            {
+              "description": "Color of the textfield Line",
+              "name": "--oscd-theme-textfield-line"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "nullable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Textfield is nullable",
+              "attribute": "nullable"
+            },
+            {
+              "kind": "field",
+              "name": "multipliers",
+              "type": {
+                "text": "array"
+              },
+              "default": "[null, '']",
+              "description": "Multipliers",
+              "attribute": "multipliers"
+            },
+            {
+              "kind": "field",
+              "name": "multiplier",
+              "type": {
+                "text": "string"
+              },
+              "description": "Multiplier",
+              "attribute": "multiplier"
+            },
+            {
+              "kind": "field",
+              "name": "unit",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Unit",
+              "attribute": "unit"
+            },
+            {
+              "kind": "field",
+              "name": "maybeValue",
+              "type": {
+                "text": "string"
+              },
+              "description": "Maybevalue",
+              "attribute": "maybeValue"
+            },
+            {
+              "kind": "field",
+              "name": "defaultValue",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Default Value",
+              "attribute": "defaultValue"
+            },
+            {
+              "kind": "field",
+              "name": "reservedValues",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]",
+              "description": "Reserved Values",
+              "attribute": "reservedValues"
+            },
+            {
+              "kind": "field",
+              "name": "suffix",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Suffix",
+              "attribute": "suffix"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Textfield is disabled",
+              "attribute": "disabled"
+            },
+            {
+              "kind": "field",
+              "name": "helperPersistent",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Helper message is persistent",
+              "attribute": "helperPersistent"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "description": "Textfield Value",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Textfield Label",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Textfield is required",
+              "attribute": "required"
+            },
+            {
+              "kind": "field",
+              "name": "helper",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Helper Text",
+              "attribute": "helper"
+            },
+            {
+              "kind": "field",
+              "name": "validationMessage",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Validation Message",
+              "attribute": "validationMessage"
+            },
+            {
+              "kind": "field",
+              "name": "pattern",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Textfield Pattern",
+              "attribute": "pattern"
+            },
+            {
+              "kind": "field",
+              "name": "minLength",
+              "type": {
+                "text": "number"
+              },
+              "default": "-1",
+              "description": "Minimum length of Textfield value",
+              "attribute": "minLength"
+            },
+            {
+              "kind": "field",
+              "name": "maxLength",
+              "type": {
+                "text": "number"
+              },
+              "default": "-1",
+              "description": "Maximum length of Textfield value",
+              "attribute": "maxLength"
+            },
+            {
+              "kind": "field",
+              "name": "min",
+              "type": {
+                "text": "number"
+              },
+              "default": "-1",
+              "description": "Minimum of Textfield value",
+              "attribute": "min"
+            },
+            {
+              "kind": "field",
+              "name": "max",
+              "type": {
+                "text": "number"
+              },
+              "default": "-1",
+              "description": "Maximum of Textfield value",
+              "attribute": "max"
+            },
+            {
+              "kind": "method",
+              "name": "styleTextfield",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "checkValidity",
+              "return": {
+                "type": {
+                  "text": "boolean"
+                }
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "nullable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Textfield is nullable",
+              "fieldName": "nullable"
+            },
+            {
+              "name": "multipliers",
+              "type": {
+                "text": "array"
+              },
+              "default": "[null, '']",
+              "description": "Multipliers",
+              "fieldName": "multipliers"
+            },
+            {
+              "name": "multiplier",
+              "type": {
+                "text": "string"
+              },
+              "description": "Multiplier",
+              "fieldName": "multiplier"
+            },
+            {
+              "name": "unit",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Unit",
+              "fieldName": "unit"
+            },
+            {
+              "name": "maybeValue",
+              "type": {
+                "text": "string"
+              },
+              "description": "Maybevalue",
+              "fieldName": "maybeValue"
+            },
+            {
+              "name": "defaultValue",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Default Value",
+              "fieldName": "defaultValue"
+            },
+            {
+              "name": "reservedValues",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]",
+              "description": "Reserved Values",
+              "fieldName": "reservedValues"
+            },
+            {
+              "name": "suffix",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Suffix",
+              "fieldName": "suffix"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Textfield is disabled",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "helperPersistent",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Helper message is persistent",
+              "fieldName": "helperPersistent"
+            },
+            {
+              "name": "value",
+              "description": "Textfield Value",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "value"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Textfield Label",
+              "fieldName": "label"
+            },
+            {
+              "name": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Textfield is required",
+              "fieldName": "required"
+            },
+            {
+              "name": "helper",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Helper Text",
+              "fieldName": "helper"
+            },
+            {
+              "name": "validationMessage",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Validation Message",
+              "fieldName": "validationMessage"
+            },
+            {
+              "name": "pattern",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Textfield Pattern",
+              "fieldName": "pattern"
+            },
+            {
+              "name": "minLength",
+              "type": {
+                "text": "number"
+              },
+              "default": "-1",
+              "description": "Minimum length of Textfield value",
+              "fieldName": "minLength"
+            },
+            {
+              "name": "maxLength",
+              "type": {
+                "text": "number"
+              },
+              "default": "-1",
+              "description": "Maximum length of Textfield value",
+              "fieldName": "maxLength"
+            },
+            {
+              "name": "min",
+              "type": {
+                "text": "number"
+              },
+              "default": "-1",
+              "description": "Minimum of Textfield value",
+              "fieldName": "min"
+            },
+            {
+              "name": "max",
+              "type": {
+                "text": "number"
+              },
+              "default": "-1",
+              "description": "Maximum of Textfield value",
+              "fieldName": "max"
+            }
+          ],
+          "superclass": {
+            "name": "OscdFormComponent",
+            "package": "@openscd/form"
+          },
+          "tagName": "oscd-textfield",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "OscdTextfield",
+          "declaration": {
+            "name": "OscdTextfield",
+            "module": "components/oscd-textfield/src/oscd-textfield.ts"
+          }
+        }
+      ]
+    }
+  ]
+}

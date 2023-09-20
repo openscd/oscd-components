@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../src/index.ts"],"names":[],"mappings":"AAAA,cAAc,kBAAkB,CAAC;AACjC,cAAc,yBAAyB,CAAC","sourcesContent":["export * from './oscd-component';\nexport * from './oscd-component.styles';\n"]}

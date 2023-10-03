@@ -1,6 +1,6 @@
-import { css } from 'lit-element';
+import { css, CSSResult } from 'lit-element';
 
-export const styles = css`
+export const styles: CSSResult = css`
   :host {
     box-sizing: border-box;
   }

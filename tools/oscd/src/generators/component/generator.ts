@@ -15,6 +15,12 @@ export async function componentGenerator(
 ) {
   const projectRoot = `components/${options.name}`;
 
+  const contents = tree.read('CODEOWNERS').toString();
+
+  const newContents = [contents, `/${projectRoot} ${options.codeOwner}`];
+
+  tree.write('CODEOWNERS', newContents.join('\n'));
+
   addProjectConfiguration(tree, options.name, {
     root: projectRoot,
     projectType: 'library',

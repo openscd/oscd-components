@@ -4,6 +4,11 @@
         "factory": "./src/generators/component/generator",
         "schema": "./src/generators/component/schema.json",
         "description": "oscd-component generator"
+      },
+      "status": {
+        "factory": "./src/generators/status/generator",
+        "schema": "./src/generators/status/schema.json",
+        "description": "Oscd Component Status setter"
       }
     }
   }

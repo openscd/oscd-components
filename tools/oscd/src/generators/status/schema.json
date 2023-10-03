@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "OscdStatus",
+  "title": "",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string",
+      "description": "",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What status is the component in?"
+    },
+    "project": {
+      "type": "string",
+      "description": "The project where the component will be located.",
+      "x-prompt": "Which project will this component be located in?",
+      "x-dropdown": "projects"
+    }
+  },
+  "required": [
+    "status"
+  ]
+}

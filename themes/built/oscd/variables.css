@@ -1,0 +1,60 @@
+/**
+ * Do not edit directly
+ * Generated on Wed, 20 Sep 2023 09:46:02 GMT
+ */
+
+:root {
+  --color-oscd-white: #ffffff;
+  --color-oscd-black: #000000;
+  --color-oscd-sys-light-primary: #389add;
+  --color-oscd-sys-light-on-primary: #ffffff;
+  --color-oscd-sys-light-primary-surface: #b2dbf8;
+  --color-oscd-sys-light-primary-surface-active: #72bcf0;
+  --color-oscd-sys-light-primary-active: #1779bd;
+  --color-oscd-sys-light-secondary: #ae7ce9;
+  --color-oscd-sys-light-success: #66bf3b;
+  --color-oscd-sys-light-on-success: #ffffff;
+  --color-oscd-sys-light-info: #3b72bf;
+  --color-oscd-sys-light-on-info: #ffffff;
+  --color-oscd-sys-light-warning: #ea9e08;
+  --color-oscd-sys-light-on-warning: #ffffff;
+  --color-oscd-sys-light-danger: #bf3b3b;
+  --color-oscd-sys-light-on-danger: #ffffff;
+  --color-oscd-sys-dark-primary: #389add;
+  --color-oscd-sys-dark-on-primary: #000000;
+  --color-oscd-sys-dark-primary-surface: #b2dbf8;
+  --color-oscd-sys-dark-primary-surface-active: #72bcf0;
+  --color-oscd-sys-dark-primary-active: #1779bd;
+  --color-oscd-sys-dark-secondary: #ae7ce9;
+  --color-oscd-sys-dark-success: #66bf3b;
+  --color-oscd-sys-dark-on-success: #ffffff;
+  --color-oscd-sys-dark-info: #3b72bf;
+  --color-oscd-sys-dark-on-info: #ffffff;
+  --color-oscd-sys-dark-warning: #ea9e08;
+  --color-oscd-sys-dark-on-warning: #ffffff;
+  --color-oscd-sys-dark-danger: #bf3b3b;
+  --color-oscd-sys-dark-on-danger: #ffffff;
+  --color-oscd-ref-primary-primary100: #b2dbf8;
+  --color-oscd-ref-primary-primary200: #72bcf0;
+  --color-oscd-ref-primary-primary300: #389add;
+  --color-oscd-ref-primary-primary400: #1779bd;
+  --color-oscd-ref-primary-primary500: #0a5b93;
+  --color-oscd-ref-primary-primary600: #053e66;
+  --color-oscd-ref-secondary-secondary100: #e9caff;
+  --color-oscd-ref-secondary-secondary200: #d0a0ff;
+  --color-oscd-ref-secondary-secondary300: #ae7ce9;
+  --color-oscd-ref-secondary-secondary400: #8c61be;
+  --color-oscd-ref-secondary-secondary500: #6a4792;
+  --color-oscd-ref-secondary-secondary600: #483164;
+  --color-oscd-ref-gray-gray0: #ffffff;
+  --color-oscd-ref-gray-gray100: #f5f5f5;
+  --color-oscd-ref-gray-gray200: #e5e5e5;
+  --color-oscd-ref-gray-gray300: #dadada;
+  --color-oscd-ref-gray-gray400: #969696;
+  --color-oscd-ref-gray-gray500: #727272;
+  --color-oscd-ref-gray-gray600: #646464;
+  --color-oscd-ref-gray-gray700: #424242;
+  --color-oscd-ref-gray-gray800: #363636;
+  --color-oscd-ref-gray-gray900: #242424;
+  --color-oscd-ref-gray-gray1000: #000000;
+}

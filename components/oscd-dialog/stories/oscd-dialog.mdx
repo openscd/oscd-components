@@ -1,0 +1,38 @@
+import {
+  Meta,
+  Story,
+  Canvas,
+  Source,
+  ArgTypes,
+  Title,
+  Description,
+  Subtitle,
+} from '@storybook/blocks';
+
+import { Markdown } from '@storybook/addon-docs';
+
+import * as OscdDialogStories from './oscd-dialog.stories';
+
+import Readme from '../README.md?raw';
+import Changelog from '../CHANGELOG.md?raw';
+
+<Meta name="Docs" of={OscdDialogStories} />
+<Title>oscd-dialog</Title>
+<Canvas of={OscdDialogStories.Basic} />
+
+<Subtitle>Properties</Subtitle>
+<ArgTypes of={OscdDialogStories} />
+
+<Description of={OscdDialogStories.Basic} />
+
+<Source of={OscdDialogStories.Basic} />
+
+# Example
+
+<Canvas of={OscdDialogStories.Basic} />
+
+<Markdown>{Readme}</Markdown>
+
+# Changelog
+
+<Markdown>{Changelog}</Markdown>

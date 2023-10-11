@@ -11,7 +11,11 @@
         "$source": "argv",
         "index": 0
       },
-      "x-prompt": "What status is the component in?"
+      "x-prompt": {
+        "message": "What status is the component in?",
+        "type": "list",
+        "items": [ "WIP", "beta", "stable", "deprecated" ]
+      }
     },
     "project": {
       "type": "string",

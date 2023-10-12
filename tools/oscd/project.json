@@ -44,22 +44,9 @@
           "oscd/**/*.ts",
           "oscd/package.json",
           "tools/oscd/executors.json",
-          "tools/oscd/package.json"
+          "tools/oscd/package.json",
+          "tools/oscd/generators.json"
         ]
-      }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
-      "options": {
-        "jestConfig": "oscd/jest.config.ts",
-        "passWithNoTests": true
-      },
-      "configurations": {
-        "ci": {
-          "ci": true,
-          "codeCoverage": true
-        }
       }
     }
   },

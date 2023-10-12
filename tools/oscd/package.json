@@ -3,5 +3,11 @@
   "version": "0.0.1",
   "type": "commonjs",
   "executors": "./executors.json",
-  "generators": "./generators.json"
+  "generators": "./generators.json",
+  "dependencies": {
+    "@nx/devkit": "16.6.0"
+  },
+  "devDependencies": {
+    "mem": "^9.0.2"
+  }
 }

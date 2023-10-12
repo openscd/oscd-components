@@ -8,23 +8,13 @@
 ## npm
 /node_modules/
 /npm-debug.log
-
-## failed screenshots
-/screenshots/*/failed/
+.tsbuildinfo
 
 ## testing
 /coverage/
 
-## local debug
-/.npmrc
-
-## temp folders
-/.tmp/
+## docs
+/doc/
 
 # build
-/_site/
 /dist/
-/out-tsc/
-
-storybook-static
-custom-elements.json

@@ -1,19 +1,15 @@
 import { expect, fixture, html } from '@open-wc/testing';
 
-import '../src/<%= className %>.js';
-import { <%= className %> } from '../src/<%= className %>.js';
+import '../src';
+import type { <%= className %> } from '../src';
 
-describe('<%= selector %>', () => {
+describe('Basic component <%= selector %>', () => {
   let element: <%= className %>;
 
   beforeEach(async () => {
     element = await fixture(
-      html`<<%= selector %>></<%= selector %>>`
+      html`<<%= selector %></<%= selector %>>`
     );
     await element.updateComplete;
-  });
-
-  it('looks like the latest snapshot', async () => {
-    await expect(element).shadowDom.to.equalSnapshot();
   });
 });

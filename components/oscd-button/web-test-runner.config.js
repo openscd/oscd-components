@@ -15,7 +15,6 @@ const thresholdPercentage = fuzzy && local ? 0 : 0;
 const filteredLogs = [
   'Running in dev mode',
   'Lit is in dev mode',
-  'mwc-list-item scheduled an update',
 ];
 
 const browsers = [

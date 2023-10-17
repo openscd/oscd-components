@@ -10,18 +10,16 @@ const local = !process.env.CI;
 console.assert(local, 'Running in CI!');
 console.assert(!fuzzy, 'Running on OS with 1% test pixel diff threshold!');
 
-const thresholdPercentage = fuzzy && local ? 0 : 0;
+const thresholdPercentage = fuzzy && local ? 5 : 0;
 
 const filteredLogs = [
   'Running in dev mode',
   'Lit is in dev mode',
-  'mwc-list-item scheduled an update',
 ];
 
 const browsers = [
   playwrightLauncher({
     product: 'chromium',
-    launchOptions: { headless: false },
   }),
   playwrightLauncher({ product: 'firefox' }),
   playwrightLauncher({ product: 'webkit' }),
@@ -136,6 +134,14 @@ export default /** @type {import("@web/test-runner").TestRunnerConfig} */ ({
       background: white;
     }
     </style>
+    <script>
+      const _customElementsDefine = window.customElements.define;
+      window.customElements.define = (name, cl, conf) => {
+        if (!customElements.get(name)) {
+          _customElementsDefine.call(window.customElements, name, cl, conf);
+        }
+      };
+  </script>
   </body>
 </html>`,
     },

@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas } from '@storybook/blocks';
+import { Meta, Story, Canvas, Source, ArgTypes, Title, Description, Subtitle } from '@storybook/blocks';
 
 import { Markdown } from '@storybook/addon-docs';
 
@@ -7,16 +7,22 @@ import * as OscdTextfieldStories from './oscd-textfield.stories';
 import Readme from '../README.md?raw';
 import Changelog from '../CHANGELOG.md?raw';
 
-<Meta title="MDX/oscd-textfield" of={OscdTextfieldStories} />
+<Meta name="Docs" of={OscdTextfieldStories} />
+<Title>Oscd-Textfield</Title>
+<Canvas of={OscdTextfieldStories.Basic} />
+
+<Subtitle>Properties</Subtitle>
+<ArgTypes of={OscdTextfieldStories} />
+
+<Description of={OscdTextfieldStories.Basic} />
+
+<Source of={OscdTextfieldStories.Basic} />
 
 # Example
-<Canvas>
-  <Story of={OscdTextfieldStories.Regular} />
-</Canvas>
+<Canvas of={OscdTextfieldStories.Basic} />
 
 <Markdown>{Readme}</Markdown>
 
 # Changelog
 
 <Markdown>{Changelog}</Markdown>
-

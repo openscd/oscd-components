@@ -1,0 +1,317 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/OscdTextfield.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "oscd-textfield",
+          "declaration": {
+            "name": "OscdTextfield",
+            "module": "/src/oscd-textfield"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "OscdTextfield",
+          "declaration": {
+            "name": "OscdTextfield",
+            "module": "src/OscdTextfield.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./OscdTextfield.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/oscd-textfield.styles.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/oscd-textfield.styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/oscd-textfield.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "OscdTextfield",
+          "cssProperties": [
+            {
+              "description": "Color when errored of the underline, the outline, the caret and the icons.",
+              "name": "--oscd-theme-textfield-error",
+              "default": "--oscd-theme-error"
+            },
+            {
+              "description": "Color when active of the underline, ripple, the outline, and the caret.",
+              "name": "--oscd-theme-textfield-primary",
+              "default": "--oscd-theme-primary"
+            },
+            {
+              "description": "Color of the Switch track",
+              "name": "--oscd-theme-textfield-primary-surface",
+              "default": "--oscd-theme-primary-surface"
+            },
+            {
+              "description": "Color of the Switch Hover state",
+              "name": "--oscd-theme-textfield-primary-surface-active",
+              "default": "--oscd-theme-primary-surface-active"
+            },
+            {
+              "description": "Color of the Switch Hover state",
+              "name": "--oscd-theme-textfield-primary-active",
+              "default": "--oscd-theme-primary-active"
+            },
+            {
+              "description": "Color of the textfield Fill",
+              "name": "--oscd-theme-textfield-fill"
+            },
+            {
+              "description": "Color of the textfield Text",
+              "name": "--oscd-theme-textfield-ink"
+            },
+            {
+              "description": "Color of the textfield Line",
+              "name": "--oscd-theme-textfield-line"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "nullable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Textfield is nullable"
+            },
+            {
+              "kind": "field",
+              "name": "multipliers",
+              "type": {
+                "text": "array"
+              },
+              "default": "[null, '']",
+              "description": "Multipliers"
+            },
+            {
+              "kind": "field",
+              "name": "multiplier",
+              "type": {
+                "text": "string"
+              },
+              "description": "Multiplier"
+            },
+            {
+              "kind": "field",
+              "name": "unit",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Unit"
+            },
+            {
+              "kind": "field",
+              "name": "maybeValue",
+              "type": {
+                "text": "string"
+              },
+              "description": "Maybevalue"
+            },
+            {
+              "kind": "field",
+              "name": "defaultValue",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Default Value"
+            },
+            {
+              "kind": "field",
+              "name": "reservedValues",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]",
+              "description": "Reserved Values"
+            },
+            {
+              "kind": "field",
+              "name": "suffix",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Suffix"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Textfield is disabled"
+            },
+            {
+              "kind": "field",
+              "name": "helperPersistent",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Helper message is persistent"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "description": "Textfield Value",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Textfield Label"
+            },
+            {
+              "kind": "field",
+              "name": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Textfield is required"
+            },
+            {
+              "kind": "field",
+              "name": "helper",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Helper Text"
+            },
+            {
+              "kind": "field",
+              "name": "validationMessage",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Validation Message"
+            },
+            {
+              "kind": "field",
+              "name": "pattern",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Textfield Pattern"
+            },
+            {
+              "kind": "field",
+              "name": "minLength",
+              "type": {
+                "text": "number"
+              },
+              "default": "-1",
+              "description": "Minimum length of Textfield value"
+            },
+            {
+              "kind": "field",
+              "name": "maxLength",
+              "type": {
+                "text": "number"
+              },
+              "default": "-1",
+              "description": "Maximum length of Textfield value"
+            },
+            {
+              "kind": "field",
+              "name": "min",
+              "type": {
+                "text": "number"
+              },
+              "default": "-1",
+              "description": "Minimum of Textfield value"
+            },
+            {
+              "kind": "field",
+              "name": "max",
+              "type": {
+                "text": "number"
+              },
+              "default": "-1",
+              "description": "Maximum of Textfield value"
+            },
+            {
+              "kind": "method",
+              "name": "styleTextfield",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "checkValidity",
+              "return": {
+                "type": {
+                  "text": "boolean"
+                }
+              }
+            }
+          ],
+          "superclass": {
+            "name": "OscdFormComponent",
+            "package": "@openscd/form"
+          },
+          "tagName": "oscd-textfield",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "OscdTextfield",
+          "declaration": {
+            "name": "OscdTextfield",
+            "module": "src/oscd-textfield.ts"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -7,6 +7,8 @@ import {
 } from 'lit-element';
 import { classMap } from 'lit/directives/class-map.js';
 
+import '@material/mwc-icon';
+
 import { OscdComponent } from '@openscd/core';
 
 import styles from './oscd-action-pane.styles.js';

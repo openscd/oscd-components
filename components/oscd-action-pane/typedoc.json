@@ -1,0 +1,4 @@
+{
+  "entryPoints": ["src/OscdActionPane.ts"],
+  "out": "docs"
+}

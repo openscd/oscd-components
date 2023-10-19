@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/OscdSwitch.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "oscd-switch",
+          "declaration": {
+            "name": "OscdSwitch",
+            "module": "/src/oscd-switch.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "OscdSwitch",
+          "declaration": {
+            "name": "OscdSwitch",
+            "module": "src/OscdSwitch.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "OscdSwitchChangeEvent",
+          "declaration": {
+            "name": "OscdSwitchChangeEvent",
+            "module": "./oscd-switch.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/oscd-switch.styles.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/oscd-switch.styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/oscd-switch.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "OscdSwitch",
+          "members": [
+            {
+              "kind": "field",
+              "name": "selected",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Selected state of the Switch"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disabled state of the Switch"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "'on'",
+              "description": "Value of the Switch"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Name of the Switch"
+            },
+            {
+              "kind": "method",
+              "name": "onClick"
+            }
+          ],
+          "events": [
+            {
+              "description": "{OscdSwitchChangeEvent} Fired whenever `selected` changes due to user interaction (bubbles and composed).",
+              "name": "change"
+            }
+          ],
+          "superclass": {
+            "name": "OscdComponent",
+            "package": "@openscd/core"
+          },
+          "tagName": "oscd-switch",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "OscdSwitch",
+          "declaration": {
+            "name": "OscdSwitch",
+            "module": "src/oscd-switch.ts"
+          }
+        }
+      ]
+    }
+  ]
+}

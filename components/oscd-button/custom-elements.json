@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/OscdButton.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "oscd-button",
+          "declaration": {
+            "name": "OscdButton",
+            "module": "/src/oscd-button"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "OscdButton",
+          "declaration": {
+            "name": "OscdButton",
+            "module": "src/OscdButton.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/oscd-button.styles.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/oscd-button.styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/oscd-button.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "OscdButton",
+          "members": [
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether the Button is disabled or not"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Text for the Button"
+            },
+            {
+              "kind": "field",
+              "name": "icon",
+              "type": {
+                "text": "string"
+              },
+              "description": "The icon for the Button"
+            },
+            {
+              "kind": "field",
+              "name": "raised",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether the Button is raised or not"
+            },
+            {
+              "kind": "field",
+              "name": "outlined",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether the Button is outlined or not"
+            }
+          ],
+          "superclass": {
+            "name": "OscdComponent",
+            "package": "@openscd/core"
+          },
+          "tagName": "oscd-button",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "OscdButton",
+          "declaration": {
+            "name": "OscdButton",
+            "module": "src/oscd-button.ts"
+          }
+        }
+      ]
+    }
+  ]
+}
